@@ -1,0 +1,20 @@
+// Variables
+$primaryBtn : rgb(92, 159, 232);
+
+@import './header';
+header {
+  background-color: lightblue;
+
+  // nest
+  button {
+    background: $primaryBtn;
+    // hover, focus, before, after
+    &:hover {
+      background: blue;
+    }
+    &::after{
+      content: 'hey';
+    }
+  }
+
+}

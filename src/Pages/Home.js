@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Test from './Test'
-
+// Need to change all this to REACT
 function Home() {
   return (
     <section>

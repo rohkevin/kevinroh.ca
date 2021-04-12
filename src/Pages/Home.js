@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import Test from './Test'
-// Need to change all this to REACT
+
+
+
 function Home() {
   return (
     <section>
-      <section class="intro">
+      {/* <section class="intro">
         <div class="intro-flex">
           <figure>
             <img src="../Images/Mobile Version/ams-mobile.jpg" class="mobile-image" alt="Front page main banner"/>
@@ -42,7 +45,7 @@ function Home() {
           </div>
         </div>
         <Link to="/">VIEW ALL WORKS</Link>
-      </section>
+      </section> */}
     </section>
   )
 }

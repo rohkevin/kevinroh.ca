@@ -1,0 +1,8 @@
+************************************************
+************************************************
+TODO LIST FOR KEVINROH.CA
+
+SIDENAV
+- Import colors from variables
+- Once header is complete, make sure it is in top right corner
+

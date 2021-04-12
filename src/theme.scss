@@ -1,7 +1,9 @@
-:root {
-  /* Setpoints */
-  --setpoint-1: 300px;
-}
+/*
+Change all of this to SASS variables for example: 
+$primaryBtn: rgb(1, 2, 3);
+
+*/
+
 .light-mode{
   --primary-color: #121212;
   --secondary-color: rgb(245,245,245);
@@ -23,10 +25,4 @@
   --side-menu-color: rgb(34, 34, 34);
   --header-weight: 400;
   --footer-icon-color: rgb(138, 148, 153);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
 }

@@ -1,10 +1,13 @@
 import React from 'react'
+import { useGlobalContext } from '../context';
 
 function Navbar() {
+  const { darkMode } = useGlobalContext();
+
   return (
-    <div>
+    <nav>
       
-    </div>
+    </nav>
   )
 }
 

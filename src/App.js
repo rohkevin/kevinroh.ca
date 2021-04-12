@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './Components/Navbar'
-import Sidenav from './Components/Sidenav'
+import Sidenav from './Components/Sidenav/Sidenav'
 import Contact from './Components/Contact'
 import Error from './Components/Error'
 import Home from './Pages/Home'

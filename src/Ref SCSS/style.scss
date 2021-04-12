@@ -1,0 +1,29 @@
+@import './header';
+// If variables are in a different file
+@import './variables'; 
+
+
+.contact {
+  background-color: lightblue;
+
+  // nest
+  button {
+    background: $primaryBtn;
+    // hover, focus, before, after
+    &:hover {
+      background: blue;
+    }
+    &::after{
+      content: 'hey';
+    }
+  }
+
+  // Extensions
+  // Imports all styles of header, and overwrite after
+  @extend header;
+  background: lightcoral;
+
+  // Calculations
+  width: 100% - 20%;
+
+}

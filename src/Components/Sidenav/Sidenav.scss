@@ -1,4 +1,5 @@
 #side-nav{
+  
   padding: 10px;
   padding-top: 14px;
   visibility: visible;
@@ -17,6 +18,7 @@
     opacity: 0;
     z-index: 4;
   }
+
   span{
     display: flex;
     position: relative;
@@ -27,29 +29,29 @@
     background: black;
     border-radius: 3px;
     z-index: 3;
-    transform-origin: 5px 0px;
+    // transform-origin: 5px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), 
                 background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), 
                 opacity 0.55s ease;
   }
-  span.first {
+  .first {
     transform-origin: top right;
   }
-  span:nth-last-child(2){
+  .second {
     transform-origin: bottom right;
   }
-  span:nth-last-child(3){
-    transform-origin: top right;
+  .third {
+    transform-origin: bottom right;
   }
-  input:checked ~ span.first{
+  .show-first{
     opacity: 0.9;
     transform: rotate(-45deg) translate(0, -2px);
   }
-  input:checked ~ span:nth-last-child(3){
+  .show-second{
     opacity: 0;
     transform: rotate(-45deg) scale(0.2, 0.2);
   }
-  input:checked ~ span:nth-last-child(2){
+  .show-third{
     opacity: 0.9;
     transform: rotate(45deg) translate(0, 2px);
   }
@@ -66,7 +68,7 @@
   display: grid;
   place-items: center;
   // TODO: background-color: var(--side-menu-color);
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(245, 245, 245);
   transform-origin: right;
   transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   z-index: 2;
@@ -75,11 +77,30 @@
 
   .side-menu-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 
-    li {
-      list-style: none;
-      padding-top: 20px;
-      margin: 0;
+    .link *{
+      transition: none;
+    }
+    
+    .link {
+      padding: 10px;
+      display: flex;
+      
+      .sidenav-chevron{
+        opacity: 0;
+        display: none;
+      }
+
+      &:hover .sidenav-chevron{
+        opacity: 1;
+        display: block;
+      }
+      &:hover p{
+        font-weight: 600;
+      }
     }
     a {
       font-family: "Barlow", sans-serif;
@@ -92,6 +113,7 @@
     }
   }
 }
+
 .show-sidenav{
   visibility: visible;
   position: fixed;
@@ -99,8 +121,4 @@
   top: 0;
   opacity: 1;
   transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  
 }
-// #side-nav input:checked ~ #side-nav-menu{
-//   transform: none;
-// }

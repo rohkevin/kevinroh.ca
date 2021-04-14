@@ -19,6 +19,7 @@ function AppProvider({ children }) {
         darkMode,
         toggleDarkMode,
         sidenavOpen,
+        setSidenavOpen,
         toggleSidenav
 
       }}

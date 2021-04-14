@@ -1,0 +1,20 @@
+#contact-btn {
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  background-color: #e8e8e8;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+
+  &:hover{
+    background: rgb(255,153,249);
+    background: linear-gradient(145deg, rgba(255,153,249,1) 0%, rgba(255,153,249,1) 4%, rgba(0,237,255,0.7772511848341233) 100%);
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -9,7 +9,6 @@ import Works from './Pages/Works'
 import Perspectives from './Pages/Perspectives'
 import Musings from './Pages/Musings'
 import About from './Pages/About'
-import './global.scss';
 
 function App() {
   return (

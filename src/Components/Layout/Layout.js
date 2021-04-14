@@ -6,6 +6,7 @@ import Sidenav from '../Sidenav/Sidenav'
 import './Layout.scss'
 
 function Layout({ children }) {
+  
   return (
     <div className="layout-container">
       <Navbar className="layout-navbar" />

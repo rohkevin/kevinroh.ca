@@ -5,6 +5,7 @@ const AppContext = React.createContext();
 function AppProvider({ children }) {
   const [darkMode, setDarkMode] = useState(false);
   const [sidenavOpen, setSidenavOpen] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
@@ -16,12 +17,9 @@ function AppProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
-        darkMode,
-        toggleDarkMode,
-        sidenavOpen,
-        setSidenavOpen,
-        toggleSidenav
-
+        darkMode, toggleDarkMode,
+        sidenavOpen, setSidenavOpen, toggleSidenav,
+        openContact, setOpenContact
       }}
     >
       { children }

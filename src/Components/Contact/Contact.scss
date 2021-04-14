@@ -23,9 +23,29 @@ TODO:
       transform: rotate(180deg);
     }
   }
+  &:focus{
+    outline: none;
+  }
 }
 .tilt-btn{
   transform: rotate(225deg);
+}
+.contact-form-mask{
+  visibility: hidden;
+  opacity: 0;
+  // transform: scale(0);
+  transform-origin: bottom right;
+  positioN: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background: #0000008c;
+}
+.show-mask{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
 }
 .contact-form{
   visibility: hidden;
@@ -42,13 +62,16 @@ TODO:
   padding: 2rem;
   background: #fcfcfc;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px 5px #e4e4e4;
+  // box-shadow: 5px 5px 15px 5px #e4e4e4;
   transition: 0.3s ease-in-out;
 
   form {
     display: grid;
     place-items: center;
     width: 100%;
+  }
+  a {
+    color: #3e6bff;
   }
 }
 .show-contact{
@@ -84,5 +107,6 @@ textarea {
   &:hover{
     background: #505050;
     color: #fcfcfc;
+    cursor: pointer;
   }
 }

@@ -1,9 +1,30 @@
+/*
+TODO:
+> ADD HOVER EFFECT FOR ICON COLOR
+> MAKE ICONS ROTATE LIKE SUN IS SETTING (TRANSFORM ORIGIN)
+*/
+
 .button {
-  border: none;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
   background-color: inherit;
+  margin: 0.5rem;
   padding: 0.5rem;
   width: 40px;
   height: 40px;
   display: grid;
   place-items: center;
+
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    border: 1px solid #aeaeae;
+  }
+}
+.moon {
+
+}
+.sun{
+  font-size: 1.1rem;
 }

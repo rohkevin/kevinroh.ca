@@ -8,12 +8,8 @@ function Darkmode() {
   const { darkMode, toggleDarkMode } = useGlobalContext();
 
   return (
-    // <div className="dark-mode">
-    //   <input type="checkbox" onChange={toggleDarkMode} />
-    //   <label className={darkMode ? "toggle show-dark" : "toggle"}></label>
-    // </div>
     <button onClick={toggleDarkMode} className="button">
-      {darkMode ? <FaRegMoon /> : <FiSun />}
+      {darkMode ? <FaRegMoon className="moon"/> : <FiSun className="sun"/>}
     </button>
   )
 }

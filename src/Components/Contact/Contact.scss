@@ -1,3 +1,9 @@
+/*
+TODO:
+> ADD VARIABLE COLORS, TRANSITIONS, BOXSHADOW TO ALL OF THESE
+*/ 
+
+
 #contact-btn {
   border: 1px solid #e8e8e8;
   border-radius: 50%;
@@ -8,13 +14,75 @@
   height: 40px;
   display: grid;
   place-items: center;
-
+  z-index: 10;
   &:hover{
-    background: rgb(255,153,249);
-    background: linear-gradient(145deg, rgba(255,153,249,1) 0%, rgba(255,153,249,1) 4%, rgba(0,237,255,0.7772511848341233) 100%);
+    // background: rgb(255,153,249);
+    // background: linear-gradient(145deg, rgba(255,153,249,1) 0%, rgba(255,153,249,1) 4%, rgba(0,237,255,0.7772511848341233) 100%);
 
     svg {
       transform: rotate(180deg);
     }
+  }
+}
+.tilt-btn{
+  transform: rotate(225deg);
+}
+.contact-form{
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom right;
+  position: absolute;
+  bottom: 10vh;
+  right: 10vw;
+  width: 80vw;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: #fcfcfc;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #e4e4e4;
+  transition: 0.3s ease-in-out;
+
+  form {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+}
+.show-contact{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.contact-input{
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  width: 100%;
+  border: none;
+  font-size: 0.75rem;
+  background: inherit;
+  
+  &:focus{
+    outline: none;
+  }
+  
+}
+textarea {
+  resize: none;
+}
+
+.submit-btn{
+  width: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  background: inherit;
+  
+  &:hover{
+    background: #505050;
+    color: #fcfcfc;
   }
 }

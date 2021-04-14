@@ -2,6 +2,7 @@ import { TextField } from '@material-ui/core';
 import React, { useState } from 'react'
 import { FiPlus } from 'react-icons/fi'
 import { useGlobalContext } from '../../context'
+import emailjs from 'emailjs-com'
 import './Contact.scss';
 
 function Contact() {
@@ -18,7 +19,14 @@ function Contact() {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
+    emailjs.sendForm('service_2gpcaw7', 'template_4ndnlnz', e.target, 'user_6AFPNwufrS2CfylNiruzA')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
     setName('');
     setEmail('');
     setMessage('');
@@ -40,20 +48,21 @@ function Contact() {
               value={name}
               onChange={(e)=>setName(e.target.value)}
               className="contact-input"
-              name="contact-name"
+              name="name"
               placeholder="Name"
             />
             <input 
               value={email}
               onChange={(e)=>setEmail(e.target.value)}
               className="contact-input"
-              name="contact-email"
+              name="email"
               placeholder="Email"
             />
             <textarea
+              value={message}
               onChange={(e)=>setMessage(e.target.value)}
               className="contact-input"
-              name="contact-message"
+              name="message"
               placeholder="Message"
             />
             <button type="submit" className="submit-btn">Submit</button>

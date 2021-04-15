@@ -8,6 +8,7 @@ function AppProvider({ children }) {
   const [openContact, setOpenContact] = useState(false);
 
   const toggleDarkMode = () => {
+    // window.localStorage.setItem('theme', )
     setDarkMode(!darkMode)
   }
   const toggleSidenav = () => {
@@ -17,7 +18,7 @@ function AppProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
-        darkMode, toggleDarkMode,
+        darkMode, setDarkMode, toggleDarkMode,
         sidenavOpen, setSidenavOpen, toggleSidenav,
         openContact, setOpenContact
       }}

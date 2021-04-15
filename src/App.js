@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import { useGlobalContext } from './context'
 
+import './theme.scss'
 import Layout from './Components/Layout/Layout'
 import Error from './Components/Error'
 import Home from './Pages/Home'
@@ -10,10 +11,12 @@ import Perspectives from './Pages/Perspectives'
 import Musings from './Pages/Musings'
 import About from './Pages/About'
 
+
 function App() {
+  const { darkMode } = useGlobalContext();
   return (
     <Router>
-      <Layout>
+      <Layout className = { darkMode ? "dark-mode" : "light-mode"}>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/works" component={Works}/>

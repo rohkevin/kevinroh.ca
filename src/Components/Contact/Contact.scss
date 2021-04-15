@@ -2,7 +2,7 @@
 TODO:
 > ADD VARIABLE COLORS, TRANSITIONS, BOXSHADOW TO ALL OF THESE
 */ 
-
+@import '../../theme.scss';
 
 #contact-btn {
   border: 1px solid #e8e8e8;
@@ -15,12 +15,17 @@ TODO:
   display: grid;
   place-items: center;
   z-index: 10;
+
+  svg {
+    transition: var(--transition-fast);
+  }
+  
   &:hover{
     // background: rgb(255,153,249);
     // background: linear-gradient(145deg, rgba(255,153,249,1) 0%, rgba(255,153,249,1) 4%, rgba(0,237,255,0.7772511848341233) 100%);
-
     svg {
       transform: rotate(180deg);
+      transition: var(--transition-fast);
     }
   }
   &:focus{
@@ -29,11 +34,11 @@ TODO:
 }
 .tilt-btn{
   transform: rotate(225deg);
+  transition: var(--transition-fast);
 }
 .contact-form-mask{
   visibility: hidden;
   opacity: 0;
-  // transform: scale(0);
   transform-origin: bottom right;
   positioN: fixed;
   width: 100vw;
@@ -63,7 +68,7 @@ TODO:
   background: #fcfcfc;
   border-radius: 10px;
   // box-shadow: 5px 5px 15px 5px #e4e4e4;
-  transition: 0.3s ease-in-out;
+  transition: var(--transition-fast);
 
   form {
     display: grid;
@@ -78,7 +83,7 @@ TODO:
   visibility: visible;
   opacity: 1;
   transform: scale(1);
-  transition: 0.3s ease-in-out;
+  transition: var(--transition-fast);
 }
 .contact-input{
   margin: 0.5rem 0;

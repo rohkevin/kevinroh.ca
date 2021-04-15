@@ -9,13 +9,13 @@ function Layout({ children }) {
   
   return (
     <div className="layout-container">
-      <Navbar className="layout-navbar" />
+      <Navbar />
       <div className="layout-side-container">
         <div className="layout-side-top">
-          <Sidenav className="layout-sidenav" />
-          <Darkmode className="layout-darkmode" />
+          <Sidenav />
+          <Darkmode />
         </div>
-        <Contact className="layout-contact" />
+        <Contact />
       </div>
 
       <div className="layout-children">

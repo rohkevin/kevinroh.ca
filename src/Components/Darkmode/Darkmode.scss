@@ -3,9 +3,9 @@ TODO:
 > ADD HOVER EFFECT FOR ICON COLOR
 > MAKE ICONS ROTATE LIKE SUN IS SETTING (TRANSFORM ORIGIN)
 */
-
+@import '../../theme.scss';
 .button {
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--gray500);
   border-radius: 12px;
   background-color: inherit;
   margin: 0.5rem;
@@ -23,8 +23,9 @@ TODO:
   }
 }
 .moon {
-
+  color: var(--text-primary);
 }
 .sun{
   font-size: 1.1rem;
+  color: var(--text-primary);
 }

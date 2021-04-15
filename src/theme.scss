@@ -51,6 +51,11 @@ body.light{
 
   --background-paper: #fff;
   --background-default: #fafafa;
+
+  --button-background: inherit;
+  --button-color: #fcfcfc;
+  --button-hover: #505050;
+  --button-hover-color: #fcfcfc;
   
   // --primary-color: #121212;
   // --secondary-color: rgb(245,245,245);
@@ -115,6 +120,11 @@ body.dark{
 
   --background-paper: #424242;
   --background-default: #303030;
+
+  --button-background: inherit;
+  --button-color: #212121;
+  --button-hover: #d5d5d5;
+  --button-hover-color: #424242;
 
   // --primary-color: white;
   // --secondary-color: rgb(69,69,69);

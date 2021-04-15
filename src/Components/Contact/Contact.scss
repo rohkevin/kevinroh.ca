@@ -5,9 +5,9 @@ TODO:
 @import '../../theme.scss';
 
 #contact-btn {
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--gray300);
   border-radius: 50%;
-  background-color: #e8e8e8;
+  background-color: var(--gray300);
   margin: 1rem 0;
   padding: 0.5rem;
   width: 40px;
@@ -15,6 +15,7 @@ TODO:
   display: grid;
   place-items: center;
   z-index: 10;
+  transition: var(--transition-fast);
 
   svg {
     transition: var(--transition-fast);
@@ -46,6 +47,7 @@ TODO:
   bottom: 0;
   right: 0;
   background: #0000008c;
+  transition: var(--transition-fast);
 }
 .show-mask{
   visibility: visible;
@@ -65,15 +67,15 @@ TODO:
   display: grid;
   place-items: center;
   padding: 2rem;
-  background: #fcfcfc;
+  background: var(--background-default);
   border-radius: 10px;
-  // box-shadow: 5px 5px 15px 5px #e4e4e4;
   transition: var(--transition-fast);
 
   form {
     display: grid;
     place-items: center;
     width: 100%;
+    color: var(--text-primary);
   }
   a {
     color: #3e6bff;
@@ -84,14 +86,21 @@ TODO:
   opacity: 1;
   transform: scale(1);
   transition: var(--transition-fast);
+  color: var(--text-primary);
+
+  h1, p {
+    padding: 0 0.5rem;
+  }
 }
 .contact-input{
   margin: 0.5rem 0;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   width: 100%;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
   font-size: 0.75rem;
   background: inherit;
+  color: var(--text-primary);
   
   &:focus{
     outline: none;
@@ -101,17 +110,29 @@ TODO:
 textarea {
   resize: none;
 }
+.error {
+  border: 1px solid var(--error-main);
+  transition: var(--transition-fast);
+}
 
 .submit-btn{
   width: 100%;
   border: 1px solid;
   border-radius: 5px;
   padding: 0.5rem 0;
-  background: inherit;
-  
+  background: var(--button-background);
+  color: var(--text-primary);
+
   &:hover{
-    background: #505050;
-    color: #fcfcfc;
+    background: var(--button-hover);
+    color: var(--button-hover-color);
     cursor: pointer;
   }
+  &:focus {
+    outline: none;
+  }
+}
+.success {
+  border: 1px solid var(--success-light);
+  background: var(--success-light);
 }

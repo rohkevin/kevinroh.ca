@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiPlus } from 'react-icons/fi'
 import { useGlobalContext } from '../../context'
 import emailjs from 'emailjs-com'
@@ -8,6 +8,10 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const {openContact, setOpenContact} = useGlobalContext();
   const toggleContactOpen = () => {
@@ -15,26 +19,51 @@ function Contact() {
     setName('');
     setEmail('');
     setMessage('');
+    setNameError(false);
+    setEmailError(false);
+    setMessageError(false);
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_2gpcaw7', 'template_4ndnlnz', e.target, 'user_6AFPNwufrS2CfylNiruzA')
+    setNameError(false);
+    setEmailError(false);
+    setMessageError(false);
+    if (name && email && message) {
+      emailjs.sendForm('service_2gpcaw7', 'template_4ndnlnz', e.target, 'user_6AFPNwufrS2CfylNiruzA')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
-
-    setName('');
-    setEmail('');
-    setMessage('');
+      setSuccess(true);
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
+    if (!name) {
+      setNameError(true);
+    }
+    if (!email) {
+      setEmailError(true);
+    }
+    if (!message) {
+      setMessageError(true);
+    }
   }
   const handleOutsideClick = (e) => {
     if (e.target.classList.contains('contact-form-mask')){
       setOpenContact(false);
     }
   }
+
+  useEffect(()=>{
+    const timer = setTimeout(()=>{
+      setSuccess(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  },[success]);
+
+
   return (
     <>
       <button id="contact-btn" onClick={toggleContactOpen} className={openContact ? 'tilt-btn': null}><FiPlus/></button>
@@ -46,25 +75,25 @@ function Contact() {
             <input 
               value={name}
               onChange={(e)=>setName(e.target.value)}
-              className="contact-input"
+              className={nameError ? "contact-input error" : "contact-input"}
               name="name"
               placeholder="Name"
             />
             <input 
               value={email}
               onChange={(e)=>setEmail(e.target.value)}
-              className="contact-input"
+              className={emailError ? "contact-input error" : "contact-input"}
               name="email"
               placeholder="Email"
             />
             <textarea
               value={message}
               onChange={(e)=>setMessage(e.target.value)}
-              className="contact-input"
+              className={messageError ? "contact-input error" : "contact-input"}
               name="message"
               placeholder="Message"
             />
-            <button type="submit" className="submit-btn">Submit</button>
+            <button type="submit" className={success ? "submit-btn success" : "submit-btn"}>{success ? "Sent!" : "Submit"}</button>
           </form>
         </div>
       </div>

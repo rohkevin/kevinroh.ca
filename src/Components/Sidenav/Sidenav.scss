@@ -24,11 +24,9 @@
     width: 24px;
     height: 2px;
     margin-bottom: 5px;
-    // TODO: background: var(--font-color);
-    background: black;
+    background: var(--text-primary);
     border-radius: 3px;
     z-index: 3;
-    // transform-origin: 5px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), 
                 background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), 
                 opacity 0.55s ease;
@@ -66,8 +64,7 @@
   height: 100vh;
   display: grid;
   place-items: center;
-  // TODO: background-color: var(--side-menu-color);
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background-paper);
   transform-origin: right;
   transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   z-index: 2;
@@ -107,8 +104,7 @@
       font-size: 1.1rem;
       letter-spacing: 2px;
       text-decoration: none;
-      // TODO: 
-      color: var(--font-color);
+      color: var(--text-primary);
     }
   }
 }

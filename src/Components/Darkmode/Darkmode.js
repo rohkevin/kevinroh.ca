@@ -1,11 +1,11 @@
 import React from 'react'
-import { useGlobalContext } from '../../context'
 import './Darkmode.scss'
 import { FaRegMoon } from 'react-icons/fa'
 import { FiSun } from 'react-icons/fi'
+import { useThemeContext } from '../../themeContext'
 
 function Darkmode() {
-  const { darkMode, setDarkMode } = useGlobalContext();
+  const { darkMode, setDarkMode } = useThemeContext();
 
   let clickedClass = 'clicked';
   const body = document.body;

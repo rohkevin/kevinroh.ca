@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { useGlobalContext } from './context'
 
 import './theme.scss'
 import Layout from './Components/Layout/Layout'
@@ -13,10 +12,9 @@ import About from './Pages/About'
 
 
 function App() {
-  const { darkMode } = useGlobalContext();
   return (
     <Router>
-      <Layout className = { darkMode ? "dark-mode" : "light-mode"}>
+      <Layout>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/works" component={Works}/>

@@ -5,6 +5,12 @@
   width: 100vw;
   min-height: 100vh;
   border: 5px solid;
+  z-index: 500;
+
+  .layout-children{
+    position: relative;
+    z-index: 400;
+  }
 }
 .layout-side-container{
   display: flex;
@@ -14,6 +20,8 @@
   position: fixed;
   right: 0;
   height: 100vh;
+  width: var(--sidenav-width);
+  z-index: 1000;
 
   .layout-side-top{
     display: flex;

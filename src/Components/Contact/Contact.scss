@@ -5,6 +5,7 @@ TODO:
 @import '../../theme.scss';
 
 #contact-btn {
+  position: relative;
   border: 1px solid var(--gray300);
   border-radius: 50%;
   background-color: var(--gray300);
@@ -14,19 +15,16 @@ TODO:
   height: 40px;
   display: grid;
   place-items: center;
-  z-index: 10;
-  transition: var(--transition-fast);
+  transition: var(--transition-fast2);
 
   svg {
-    transition: var(--transition-fast);
+    transition: var(--transition-fast2);
   }
   
   &:hover{
-    // background: rgb(255,153,249);
-    // background: linear-gradient(145deg, rgba(255,153,249,1) 0%, rgba(255,153,249,1) 4%, rgba(0,237,255,0.7772511848341233) 100%);
     svg {
       transform: rotate(180deg);
-      transition: var(--transition-fast);
+      transition: var(--transition-fast2);
     }
   }
   &:focus{
@@ -35,24 +33,27 @@ TODO:
 }
 .tilt-btn{
   transform: rotate(225deg);
-  transition: var(--transition-fast);
+  transition: var(--transition-fast2);
 }
 .contact-form-mask{
   visibility: hidden;
   opacity: 0;
   transform-origin: bottom right;
-  positioN: fixed;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   bottom: 0;
   right: 0;
+  display: grid;
+  place-items: center;
   background: #0000008c;
-  transition: var(--transition-fast);
+  transition: var(--transition-fast2);
 }
 .show-mask{
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+  position: absolute;
 }
 .contact-form{
   visibility: hidden;
@@ -60,16 +61,15 @@ TODO:
   transform: scale(0);
   transform-origin: bottom right;
   position: absolute;
-  bottom: 10vh;
   right: 10vw;
   width: 80vw;
-  min-height: 80vh;
+  min-height: 50vh;
   display: grid;
   place-items: center;
   padding: 2rem;
   background: var(--background-default);
   border-radius: 10px;
-  transition: var(--transition-fast);
+  transition: var(--transition-fast2);
 
   form {
     display: grid;
@@ -85,15 +85,15 @@ TODO:
   visibility: visible;
   opacity: 1;
   transform: scale(1);
-  transition: var(--transition-fast);
+  transition: var(--transition-fast2);
   color: var(--text-primary);
-
   h1, p {
     padding: 0 0.5rem;
   }
+  position: absolute;
 }
 .contact-input{
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
   padding: 0.5rem;
   width: 100%;
   border: 1px solid transparent;
@@ -112,13 +112,14 @@ textarea {
 }
 .error {
   border: 1px solid var(--error-main);
-  transition: var(--transition-fast);
+  transition: var(--transition-fast2);
 }
 
 .submit-btn{
   width: 100%;
   border: 1px solid;
   border-radius: 5px;
+  margin: 1rem 0;
   padding: 0.5rem 0;
   background: var(--button-background);
   color: var(--text-primary);

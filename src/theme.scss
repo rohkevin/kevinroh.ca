@@ -56,6 +56,10 @@ body.light{
   --button-color: #fcfcfc;
   --button-hover: #505050;
   --button-hover-color: #fcfcfc;
+
+  --text-link-underline-color: rgba(255, 123, 123, 0.18);
+
+  --url-link-color: #ffa538;
   
   // --primary-color: #121212;
   // --secondary-color: rgb(245,245,245);
@@ -125,6 +129,10 @@ body.dark{
   --button-color: #212121;
   --button-hover: #d5d5d5;
   --button-hover-color: #424242;
+
+  --text-link-underline-color: rgba(255, 144, 144, 0.358);
+
+  --url-link-color: #ffe2bf;
 
   // --primary-color: white;
   // --secondary-color: rgb(69,69,69);

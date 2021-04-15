@@ -43,12 +43,12 @@ function Sidenav() {
       <span className={sidenavOpen ? "second show-second" : "second"}></span>   {/* <!--nth-last-child(3)!--> */}
       <span className={sidenavOpen ? "third show-third" : "third"}></span>   {/* <!--nth-last-child(2)!--> */}
       
-      <ul className={sidenavOpen ? 'sidenav-menu show-sidenav' : 'sidenav-menu'}> {/* <!--nth-last-child(1)!--> */}
+      <div className={sidenavOpen ? 'sidenav-menu show-sidenav' : 'sidenav-menu'}> {/* <!--nth-last-child(1)!--> */}
         <div className="side-menu-container">
         {
           links.map((link) => {
             return (
-              <Link key={link.name} to={link.path} className="link" onMouseOver={()=>hoverLink} onClick={()=>setSidenavOpen(false)}>
+              <Link key={link.name} to={link.path} className="sidenav-link" onMouseOver={()=>hoverLink} onClick={()=>setSidenavOpen(false)}>
                 <FaChevronRight className="sidenav-chevron"/>
                 <p>{link.name.toUpperCase()}</p>
               </Link>
@@ -56,7 +56,7 @@ function Sidenav() {
           })
         }
         </div>
-      </ul>
+      </div>
     </nav>
   )
 }

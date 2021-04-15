@@ -63,32 +63,50 @@ function Contact() {
     return () => clearTimeout(timer);
   },[success]);
 
+  const handleNameChange = (e) => {
+    if (e.target.value) {
+      setName(e.target.value);
+      setNameError(false);
+    }
+  }
+  const handleEmailChange = (e) => {
+    if (e.target.value) {
+      setEmail(e.target.value);
+      setEmailError(false);
+    }
+  }
+  const handleMessageChange = (e) => {
+    if (e.target.value) {
+      setMessage(e.target.value);
+      setMessageError(false);
+    }
+  }
 
   return (
     <>
       <button id="contact-btn" onClick={toggleContactOpen} className={openContact ? 'tilt-btn': null}><FiPlus/></button>
       <div className={openContact ? 'contact-form-mask show-mask' : 'contact-form-mask'} onClick={handleOutsideClick}>
         <div className={openContact ? 'contact-form show-contact' : 'contact-form'} >
-          <h1>Connect with me</h1>
-          <p>Feel free to get in touch if you'd like to discuss work, share your stories, or debate on why "Let Me Love You" by Mario is the best R&B song up to date. Any constructive feedback is very much appreciated! You can also email me at: <a href="mailto:kevinrohmail@gmail.com">kevinrohmail@gmail.com</a></p>
+          <h1 className="h4">Connect with me</h1>
+          <p className="body2">Feel free to get in touch if you'd like to discuss work, share your stories, or debate on why "Let Me Love You" by Mario is the best R&B song up to date. Any constructive feedback is very much appreciated! You can also email me at: <a href="mailto:kevinrohmail@gmail.com" className="body2">kevinrohmail@gmail.com</a></p>
           <form noValidate autoComplete="off" onSubmit={handleSubmit}>
             <input 
               value={name}
-              onChange={(e)=>setName(e.target.value)}
+              onChange={handleNameChange}
               className={nameError ? "contact-input error" : "contact-input"}
               name="name"
               placeholder="Name"
             />
             <input 
               value={email}
-              onChange={(e)=>setEmail(e.target.value)}
+              onChange={handleEmailChange}
               className={emailError ? "contact-input error" : "contact-input"}
               name="email"
               placeholder="Email"
             />
             <textarea
               value={message}
-              onChange={(e)=>setMessage(e.target.value)}
+              onChange={handleMessageChange}
               className={messageError ? "contact-input error" : "contact-input"}
               name="message"
               placeholder="Message"

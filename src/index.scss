@@ -1,22 +1,28 @@
 @import './theme.scss';
 
 :root {
-  /* Setpoints */
+  // Setpoints
   --breakpoint1: 600px;
   --breakpoint2: 960px;
   --breakpoint3: 1280px;
   --breakpoint4: 19200px;
 
-  --transition-fast: all 0.3s ease-in-out;
+  // Transitions
+  --transition-fast1: all 0.1s ease-in-out;
+  --transition-fast2: all 0.3s ease-in-out;
   --transition-slow: all 0.7s ease-in-out;
 
+  // Font Weights
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  --shadow-light: #ebebebd4;
-  --shadow-dark: #545454d4;
+  // Shadow Types
+  --shadow-light: 5px 5px 15px 5px #ebebebd4;
+  --shadow-dark: 5px 5px 15px 5px #545454d4;
+
+  --sidenav-width: 60px;
 
 }
 * {
@@ -29,7 +35,11 @@
 body {
   background-color: var(--background-default);
 }
-h1{
+main {
+  position: relative;
+  z-index: 100;
+}
+h1, .h1{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
   font-weight: 300;
   font-size: 6rem;
@@ -37,7 +47,7 @@ h1{
   letter-spacing: -0.01562em;
   color: var(--text-primary);
 }
-h2{
+h2, .h2{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
   font-weight: 300;
   font-size: 3.75rem;
@@ -45,7 +55,7 @@ h2{
   letter-spacing: -0.00833em;
   color: var(--text-primary);
 }
-h3{
+h3, .h3{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
   font-weight: 400;
   font-size: 3rem;
@@ -53,7 +63,7 @@ h3{
   letter-spacing: 0em;
   color: var(--text-primary);
 }
-h4{
+h4, .h4{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
   font-weight: 400;
   font-size: 2.125rem;
@@ -61,7 +71,7 @@ h4{
   letter-spacing: 0.00735em;
   color: var(--text-primary);
 }
-h5{
+h5, .h5{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -69,7 +79,7 @@ h5{
   letter-spacing: 0em;
   color: var(--text-primary);
 }
-h6{
+h6, .h6{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
@@ -116,4 +126,51 @@ button {
   line-height: 1.75;
   letter-spacing: 0.02857em;
   text-transform: uppercase;
+}
+img {
+  color: var(--text-primary);
+}
+
+span {
+  z-index: 100;
+}
+.page{
+  border: 1px solid;
+  width: calc(100% - var(--sidenav-width));
+  height: 100%;
+  padding: 2rem 1rem;
+  padding-right: 0;
+
+}
+.url-link {
+  text-decoration: none;
+  color: var(--url-link-color);
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.text-link {
+  z-index: 1;
+  position: relative;
+  &::before{
+    z-index: 1;
+    content: "";
+    position: absolute;;
+    left: -4px;
+    bottom: 0;
+    width: calc(100% + 8px);
+    height: 8px;
+    background-color: var(--text-link-underline-color);
+    transform: skewX(-20deg);
+    transition: var(--transition-fast1);
+  }
+  &:hover{
+    cursor: pointer;
+    &::before {
+      
+      height: 100%;
+      transform: translateX(2px) skewX(-20deg);
+      transition: var(--transition-fast1);
+    }
+  }
 }

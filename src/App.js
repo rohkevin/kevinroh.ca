@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './theme.scss'
 import Layout from './Components/Layout/Layout'
 import Error from './Components/Error'
-import Home from './Pages/Home'
-import Works from './Pages/Works'
-import Perspectives from './Pages/Perspectives'
-import Musings from './Pages/Musings'
-import About from './Pages/About'
+import Home from './Pages/Home/Home'
+import Works from './Pages/Works/Works'
+import Perspectives from './Pages/Perspectives/Perspectives'
+import Musings from './Pages/Musings/Musings'
+import About from './Pages/About/About'
 
 
 function App() {

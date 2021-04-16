@@ -157,16 +157,21 @@ span {
   color: var(--text-primary);
   text-decoration: none;
 
+}
+.highlight {
+  position: relative;
+  font-size: inherit;
+  color: inherit;
   &::before{
     z-index: 1;
     content: "";
     position: absolute;;
-    left: -6px;
-    bottom: 0;
-    width: calc(100% + 8px);
-    height: 8px;
+    left: calc(-1*0.1em);
+    bottom: calc(0.1em);
+    width: calc(100% + 0.25*1em);
+    height: calc(0.4*1em);
     border: 1px transparent;
-    border-radius: 3px;
+    border-radius: calc(0.1*1em);
     background-color: var(--text-link-underline-color);
     transform: skewX(-20deg);
     transition: var(--transition-fast1);
@@ -174,9 +179,8 @@ span {
   &:hover{
     cursor: pointer;
     &::before {
-      
       height: 100%;
-      transform: translateX(2px) skewX(-20deg);
+      transform: translateX(calc(0.1em)) skewX(-20deg);
       transition: var(--transition-fast1);
     }
   }

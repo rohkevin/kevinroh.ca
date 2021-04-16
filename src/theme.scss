@@ -51,6 +51,7 @@ body.light{
 
   --background-paper: #fff;
   --background-default: #fafafa;
+  --background-gray: #f5f5f5;
 
   --button-background: inherit;
   --button-color: #fcfcfc;
@@ -59,7 +60,8 @@ body.light{
 
   --text-link-underline-color: rgba(255, 123, 123, 0.18);
 
-  --url-link-color: #ffa538;
+  --url-link-color: #757575;
+  --url-link-hover: #212121;
   
   // --primary-color: #121212;
   // --secondary-color: rgb(245,245,245);
@@ -124,7 +126,8 @@ body.dark{
 
   --background-paper: #424242;
   --background-default: #303030;
-
+  --background-gray: #212121;
+  
   --button-background: inherit;
   --button-color: #212121;
   --button-hover: #d5d5d5;
@@ -132,7 +135,8 @@ body.dark{
 
   --text-link-underline-color: rgba(255, 144, 144, 0.358);
 
-  --url-link-color: #ffe2bf;
+  --url-link-color: #bdbdbd;
+  --url-link-hover: #f5f5f5;
 
   // --primary-color: white;
   // --secondary-color: rgb(69,69,69);

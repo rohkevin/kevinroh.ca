@@ -63,6 +63,13 @@ function Contact() {
     return () => clearTimeout(timer);
   },[success]);
 
+  useEffect(()=>{
+    document.body.style.overflowY="auto";
+    if(openContact){
+      document.body.style.overflowY="scroll";
+    }
+  },[openContact])
+
   const handleNameChange = (e) => {
     if (e.target.value) {
       setName(e.target.value);

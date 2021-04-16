@@ -1,0 +1,56 @@
+@import '../../theme.scss';
+
+footer {
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+  padding: 3rem 0 1rem;
+  background-color: var(--background-gray);
+  .footer-container{
+    padding: 0 1rem;
+  }
+  .footer-links{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+  }
+  .footer-nav{
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: var(--url-link-color);
+    transition: var(--transition-fast2);
+
+    &:hover{
+      cursor: pointer;
+      font-weight: 400;
+      color: var(--url-link-hover);
+      transition: var(--transition-fast2);
+    }
+  }
+  .icon-list {
+    padding: 1rem 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-icon{
+    transition: var(--transition-fast1);
+    margin-right: 0.75rem;
+    svg {
+      color: var(--url-link-color);
+    }
+    &:hover {
+      svg{
+        color: var(--url-link-hover);
+        transition: var(--transition-fast1);
+      }
+    }
+  }
+  .copyright {
+    color: var(--url-link-color);
+    font-size: 0.625rem;
+    text-align: center;
+  }
+}

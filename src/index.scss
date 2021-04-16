@@ -31,6 +31,7 @@
   box-sizing: border-box;
   font-size: 16px;
   font-family: 'Open Sans';
+  text-decoration: none;
 }
 body {
   background-color: var(--background-default);
@@ -136,7 +137,8 @@ span {
 }
 .page{
   border: 1px solid;
-  width: calc(100% - var(--sidenav-width));
+  // width: calc(100% - var(--sidenav-width));
+  width: 100%;
   height: 100%;
   padding: 2rem 1rem;
   padding-right: 0;
@@ -152,14 +154,19 @@ span {
 .text-link {
   z-index: 1;
   position: relative;
+  color: var(--text-primary);
+  text-decoration: none;
+
   &::before{
     z-index: 1;
     content: "";
     position: absolute;;
-    left: -4px;
+    left: -6px;
     bottom: 0;
     width: calc(100% + 8px);
     height: 8px;
+    border: 1px transparent;
+    border-radius: 3px;
     background-color: var(--text-link-underline-color);
     transform: skewX(-20deg);
     transition: var(--transition-fast1);

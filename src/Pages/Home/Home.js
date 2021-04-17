@@ -9,6 +9,8 @@ const projectPreviews = [
     name: "project1",
     description: "Short description lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
     stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
     imageSm: "/MobileVersion/iphonemockup-2.jpg",
     imageMed: "/DesktopVersion/mockup1.jpg",
     imageLg: "/DesktopVersion/mockup1",
@@ -17,6 +19,8 @@ const projectPreviews = [
     name: "project2",
     description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
     stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
     imageSm: "/MobileVersion/iphonemockup-2.jpg",
     imageMed: "/DesktopVersion/mockup1.jpg",
     imageLg: "/DesktopVersion/mockup1",
@@ -25,6 +29,8 @@ const projectPreviews = [
     name: "project3",
     description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
     stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
     imageSm: "/MobileVersion/iphonemockup-2.jpg",
     imageMed: "/DesktopVersion/mockup1.jpg",
     imageLg: "/DesktopVersion/mockup1",
@@ -47,7 +53,7 @@ function Home() {
         {
           projectPreviews.map(preview => {
             return (
-              <ProjectPreview key={preview.name} name={preview.name} img={preview.imageMed} description={preview.description} stack={preview.stack} />
+              <ProjectPreview key={preview.name} name={preview.name} img={preview.imageMed} description={preview.description} stack={preview.stack} github={preview.github} live={preview.live}/>
             )
           })
         }

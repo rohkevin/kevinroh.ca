@@ -1,5 +1,6 @@
 import React from 'react'
 import { useGlobalContext } from '../../context'
+
 import Contact from '../Contact/Contact'
 import Darkmode from '../Darkmode/Darkmode'
 import Footer from '../Footer/Footer'

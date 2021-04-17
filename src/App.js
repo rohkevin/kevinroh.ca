@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom'
 
 import './theme.scss'
 import Layout from './Components/Layout/Layout'
@@ -10,10 +10,19 @@ import Perspectives from './Pages/Perspectives/Perspectives'
 import Musings from './Pages/Musings/Musings'
 import About from './Pages/About/About'
 
+function ScrollToTop(){
+  const { pathname } = useLocation();
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[pathname]);  
+  return null;
+}
 
 function App() {
+
   return (
     <Router>
+      <ScrollToTop/>
       <Layout>
         <Switch>
           <Route exact path="/" component={Home}/>

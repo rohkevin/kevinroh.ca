@@ -4,17 +4,20 @@ const AppContext = React.createContext();
 
 function AppProvider({ children }) {
   const [sidenavOpen, setSidenavOpen] = useState(false);
-  const [openContact, setOpenContact] = useState(false);
+  const [contactModal, setContactModal] = useState(false);
 
   const toggleSidenav = () => {
     setSidenavOpen(!sidenavOpen);
   }
 
+  const openContact = () => {
+    setContactModal(true);
+  }
   return (
     <AppContext.Provider
       value={{
         sidenavOpen, setSidenavOpen, toggleSidenav,
-        openContact, setOpenContact
+        contactModal, setContactModal, openContact
       }}
     >
       { children }

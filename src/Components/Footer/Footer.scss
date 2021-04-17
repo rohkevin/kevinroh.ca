@@ -17,14 +17,15 @@ footer {
     font-size: 0.875rem;
     letter-spacing: 2px;
     font-weight: 300;
+    text-transform: uppercase;
     color: var(--url-link-color);
-    transition: var(--transition-fast2);
+    transition: var(--transition-fast1);
 
     &:hover{
       cursor: pointer;
       font-weight: 400;
       color: var(--url-link-hover);
-      transition: var(--transition-fast2);
+      transition: var(--transition-fast1);
     }
   }
   .icon-list {

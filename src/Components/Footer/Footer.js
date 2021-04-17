@@ -2,6 +2,7 @@ import React from 'react'
 import './Footer.scss'
 import { Link } from 'react-router-dom'
 import { FaLinkedinIn, FaGithub, FaRegEnvelopeOpen, FaInstagram, FaSpotify } from 'react-icons/fa'
+import { useGlobalContext } from '../../context';
 const social = [
   {
     name: "linkedin",
@@ -31,6 +32,7 @@ const social = [
 ];
 
 function Footer() {
+  const { openContact } = useGlobalContext();
   return (
     <footer>
       <div className="footer-container">
@@ -41,6 +43,7 @@ function Footer() {
             <Link to="/perspectives" className="footer-nav">PERSPECTIVES</Link>
             <Link to="/musings" className="footer-nav">MUSINGS</Link>
             <Link to="/about" className="footer-nav">ABOUT</Link>
+            <p type="button" onClick={openContact} className="footer-nav">Contact</p>
         </div>
         <div className="icon-list">
           {social.map(social => <a key={social.name} href={social.url} className="social-icon" target="_blank" rel="noopener noreferrer">{social.icon}</a>)}

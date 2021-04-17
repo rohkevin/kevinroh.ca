@@ -32,11 +32,10 @@ footer {
     padding: 1rem 0 2rem;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .social-icon{
     transition: var(--transition-fast1);
-    margin-right: 0.75rem;
     svg {
       color: var(--url-link-color);
     }

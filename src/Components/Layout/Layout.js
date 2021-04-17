@@ -1,4 +1,5 @@
 import React from 'react'
+import { useGlobalContext } from '../../context'
 import Contact from '../Contact/Contact'
 import Darkmode from '../Darkmode/Darkmode'
 import Footer from '../Footer/Footer'
@@ -7,7 +8,10 @@ import Sidenav from '../Sidenav/Sidenav'
 import './Layout.scss'
 
 function Layout({ children }) {
-  
+  const {isLoading} = useGlobalContext();
+  if (isLoading) {
+    return <h1>Loading...</h1>
+  }
   return (
     <div className="layout-container">
       <Navbar />

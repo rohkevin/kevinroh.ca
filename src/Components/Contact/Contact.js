@@ -14,7 +14,7 @@ function Contact() {
   const [messageError, setMessageError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const {contactModal, setContactModal} = useGlobalContext();
+  const {contactModal, setContactModal, socialData} = useGlobalContext();
   const toggleContactOpen = () => {
     setContactModal(!contactModal);
     setName('');
@@ -121,6 +121,9 @@ function Contact() {
               placeholder="What would you like to ask?"
             />
             <button type="submit" className={success ? "submit-btn success" : "submit-btn"}>{success ? "Sent!" : "Submit"}</button>
+            <div className="icon-list">
+              {socialData.map(social => <a key={social.name} href={social.url} className="social-icon" target="_blank" rel="noopener noreferrer">{social.icon}</a>)}
+            </div>
           </form>
         </div>
       </div>

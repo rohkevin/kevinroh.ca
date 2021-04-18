@@ -1,46 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useThemeContext } from '../../themeContext'
 import { FaChevronRight } from 'react-icons/fa'
+import { projectPreviews } from '../../tempdata'
 import './Home.scss'
+
+import { useGlobalContext } from '../../context'
+import { useThemeContext } from '../../themeContext'
 
 import ProjectPreview from '../../Components/ProjectPreview/ProjectPreview'
 import OtherPreview from '../../Components/OtherPreview.js/OtherPreview'
-import { useGlobalContext } from '../../context'
-
-
-const projectPreviews = [
-  {
-    name: "project1",
-    description: "Short description lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
-    stack: "React NodeJS API",
-    github: "https://github.com",
-    live: "https://google.com",
-    imageSm: "/MobileVersion/iphonemockup-2.jpg",
-    imageMed: "/DesktopVersion/mockup1.jpg",
-    imageLg: "/DesktopVersion/mockup1",
-  },
-  {
-    name: "project2",
-    description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
-    stack: "React NodeJS API",
-    github: "https://github.com",
-    live: "https://google.com",
-    imageSm: "/MobileVersion/iphonemockup-2.jpg",
-    imageMed: "/DesktopVersion/mockup1.jpg",
-    imageLg: "/DesktopVersion/mockup1",
-  },
-  {
-    name: "project3",
-    description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
-    stack: "React NodeJS API",
-    github: "https://github.com",
-    live: "https://google.com",
-    imageSm: "/MobileVersion/iphonemockup-2.jpg",
-    imageMed: "/DesktopVersion/mockup1.jpg",
-    imageLg: "/DesktopVersion/mockup1",
-  },
-]
 
 function Home() {
   const { darkMode } = useThemeContext();
@@ -63,7 +31,7 @@ function Home() {
       <section className="home-section-outer">
         <Link to="/works" className="h2 section-title"><span className={darkMode ? "h2" : "highlight"}>Works</span></Link>
         
-        <div className="home-section-inner">
+        <div id="home-works">
         {
           projectPreviews.map(preview => {
             return (
@@ -79,8 +47,7 @@ function Home() {
 
       {/* OTHERS SECTION */}
       <section className="home-section-outer">
-        <div className="home-section-inner">
-
+        <div id="home-others">
           <OtherPreview 
             title="I take pictures, sometimes"
             subtitle="About life, travels, and whatever catches my attention"
@@ -95,8 +62,10 @@ function Home() {
           />
         </div>
       </section>
+      <div className="divider"></div>
+
       <section className="home-section-outer">
-        <div className="home-section-inner">
+        <div id="home-more">
           <h2 className="h3">Want to know more?</h2>
           <p className="subtitle1">Check out my <Link to="/about" className="highlight">bio here</Link> or just <span onClick={openContact} className=" highlight">say hi!</span></p>
         </div>

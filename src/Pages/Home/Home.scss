@@ -16,12 +16,17 @@
   .section-title{
 
   }
-  
-  .home-section-inner{
-    margin: 2rem 0;
+  #home-others{
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
-  
+  #home-more{
+    margin: 12rem 0;
+  }
 }
 .hover-chevron{
   display: none;

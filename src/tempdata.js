@@ -27,3 +27,35 @@ export const social = [
     icon: <FaSpotify className="social-icon"/>
   },
 ];
+export const projectPreviews = [
+  {
+    name: "project1",
+    description: "Short description lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
+    imageSm: "/MobileVersion/iphonemockup-2.jpg",
+    imageMed: "/DesktopVersion/mockup1.jpg",
+    imageLg: "/DesktopVersion/mockup1",
+  },
+  {
+    name: "project2",
+    description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
+    imageSm: "/MobileVersion/iphonemockup-2.jpg",
+    imageMed: "/DesktopVersion/mockup1.jpg",
+    imageLg: "/DesktopVersion/mockup1",
+  },
+  {
+    name: "project3",
+    description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
+    imageSm: "/MobileVersion/iphonemockup-2.jpg",
+    imageMed: "/DesktopVersion/mockup1.jpg",
+    imageLg: "/DesktopVersion/mockup1",
+  },
+]

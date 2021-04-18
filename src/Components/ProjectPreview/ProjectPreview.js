@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './ProjectPreview.scss'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+
 function ProjectPreview({name, img, description, stack, github, live}) {
   let imgSrc=require('../../Images' + img);
   return (

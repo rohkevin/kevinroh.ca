@@ -1,0 +1,29 @@
+#musings{
+  display: grid;
+  place-items: center;
+  .musings-intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    h1{
+      margin-bottom: 2rem;
+    }
+  }
+  .musings-container {
+    display: grid;
+    place-items: center;
+    
+    .view-more-btn{
+      background: inherit;
+      border: 2px solid var(--accent1-main);
+      color: var(--accent1-main);
+      padding: 0.25rem 1rem;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+}

@@ -16,7 +16,7 @@ function About() {
         </figure>
         <div className="page">
           <h1>About Kevin</h1>
-          <p className="subtitle1">The future is something which everyone reaches at the rate of sixty minutes an hour, whatever he does, whoever he is.</p>
+          <p className="subtitle1 italic">"The future is something which everyone reaches at the rate of sixty minutes an hour, whatever he does, whoever he is."</p>
           <p className="subtitle1">C. S. Lewis</p>
         </div>
       </section>
@@ -30,7 +30,7 @@ function About() {
         <br/>
         <p className="body1">Look around and feel free to drop a message!</p>
         <br/>
-        <span onClick={openContact} className=" highlight">Get in touch</span>
+        <p className="body1"><span onClick={openContact} className=" highlight">Get in touch</span></p>
       </section>
 
       <section className="about-container">

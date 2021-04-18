@@ -164,6 +164,9 @@ span {
     transition: var(--transition-fast2);
   }
 }
+.italic{
+  font-style: italic;
+}
 .highlight {
   position: relative;
   font-size: inherit;
@@ -224,9 +227,11 @@ span {
   right: 0;
 }
 .divider {
-  margin: 2rem 0;
   content: "";
   width: 100%;
   height: 1px;
   background-color: var(--divider);
+}
+.display-none{
+  display: none;
 }

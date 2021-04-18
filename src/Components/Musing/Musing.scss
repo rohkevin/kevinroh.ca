@@ -1,0 +1,20 @@
+.musing-card{
+  margin-bottom: 15rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  .divider{
+    margin-bottom: 15rem;
+  }
+  .quote-icon {
+    margin-bottom: 1rem;
+    color: var(--accent1-main);
+  }
+  .quote {
+    margin-bottom: 2rem;
+  }
+  .author {
+    color: var(--accent1-main);
+  }
+}

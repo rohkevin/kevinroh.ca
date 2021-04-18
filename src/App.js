@@ -9,6 +9,7 @@ import Works from './Pages/Works/Works'
 import Perspectives from './Pages/Perspectives/Perspectives'
 import Musings from './Pages/Musings/Musings'
 import About from './Pages/About/About'
+import ProjectPage from './Pages/ProjectPage/ProjectPage'
 
 function ScrollToTop(){
   const { pathname } = useLocation();
@@ -26,7 +27,8 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/works" component={Works}/>
+          <Route exact path="/works" component={Works}/>
+          <Route path="/works/:projectname" component={ProjectPage}/>
           <Route path="/perspectives" component={Perspectives}/>
           <Route path="/musings" component={Musings}/>
           <Route path="/about" component={About}/>

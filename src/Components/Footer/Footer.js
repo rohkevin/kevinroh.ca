@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer>
       <div className="footer-container">
-        <Link to="/" className="h5">KEVIN ROH</Link>
+        {/* <Link to="/" className="h5">KEVIN ROH</Link> */}
         <div className="footer-links">
             <Link to="/" className="footer-nav">HOME</Link>
             <Link to="/works" className="footer-nav">WORKS</Link>

@@ -9,11 +9,32 @@
   }
 }
 .home-section-outer{
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  .section-title{
 
+  }
+  
   .home-section-inner{
     margin: 2rem 0;
     width: 100%;
   }
   
+}
+.hover-chevron{
+  display: none;
+  opacity: 0;
+  position: relative;
+  left: 0;
+  font-size: 0.8rem;
+  transition: var(--transition-fast2);
+}
+.url-link{
+  &:hover .hover-chevron{
+    display: inline-block;
+    opacity: 1;
+    transition: var(--transition-fast2);
+  }
 }

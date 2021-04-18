@@ -1,0 +1,58 @@
+.others-card{
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+  width: 100%;
+  min-height: 30vh;
+  background-color: var(--background-paper);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  // box-shadow: 5px 5px var(--text-link-underline-color);
+
+  h5{
+    color: var(--accent1-main);
+  }
+  p {
+    margin: 1rem 0;
+  }
+}
+
+.others-btn {
+  position: relative;
+  padding: 0.25rem 1rem;
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  border: 2px var(--accent1-main) solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: var(--transition-fast1);
+}
+
+.fill:hover {
+  color: var(--background-paper);
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: var(--accent1-main);
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 100%;
+  z-index: -1;
+  transition: var(--transition-fast2);
+}
+
+.fill:hover:before {
+  right: 0;
+}

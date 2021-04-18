@@ -20,7 +20,7 @@ body.light{
   --success-text: rgba(0, 0, 0, 0.87);
 
   --accent1-light: #7986cb;
-  --accent1-main: #7986cb;
+  --accent1-main: #608051;
   --accent1-dark: #7986cb;
   --accent1-text: #fff;
 
@@ -45,13 +45,18 @@ body.light{
   --grayA700: #616161;
 
   --text-primary: rgba(0, 0, 0, 0.87);
+  --text-primary-hover: #e0e0e0;
   --text-secondary: rgba(0, 0, 0, 0.54);
+  --text-secondary-hover: #f5f5f5;
 
   --divider: rgba(0, 0, 0, 0.12);
 
-  --background-paper: #fff;
-  --background-default: #fafafa;
-  --background-gray: #f5f5f5;
+  // --background-paper: #fff;
+  // --background-default: #fafafa;
+  // --background-gray: #f5f5f5;
+  --background-paper: #f8f7ea;
+  --background-default: #fffefa;
+  --background-gray: #eeeade;
 
   --button-background: inherit;
   --button-color: #fcfcfc;
@@ -120,7 +125,9 @@ body.dark{
   --grayA700: #616161;
 
   --text-primary: #fff;
+  --text-primary-hover: #e0e0e0;
   --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-secondary-hover: #e0e0e0;
 
   --divider: rgba(255, 255, 255, 0.12);
 

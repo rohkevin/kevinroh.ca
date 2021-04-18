@@ -141,11 +141,10 @@ span {
   padding: 2rem 1rem;
 }
 .url-link {
+  position: relative;
   text-decoration: none;
   color: var(--url-link-color);
-  &:hover{
-    text-decoration: underline;
-  }
+  transition: var(--transition-fast2);
 }
 .text-link {
   z-index: 1;
@@ -179,7 +178,8 @@ span {
     height: calc(0.4*1em);
     border: 1px transparent;
     border-radius: calc(0.1*1em);
-    background-color: var(--text-link-underline-color);
+    background-color: var(--accent1-main);
+    opacity: 0.3;
     transform: skewX(-20deg);
     transition: var(--transition-fast1);
   }
@@ -191,4 +191,42 @@ span {
       transition: var(--transition-fast1);
     }
   }
+}
+.fill {
+  position: relative;
+  color: var(--text-primary);
+  border: 2px var(--accent1-main) solid;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: var(--transition-fast1);
+}
+
+.fill:hover {
+  color: var(--background-paper);
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: var(--accent1-main);
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 100%;
+  z-index: -1;
+  transition: var(--transition-fast2);
+}
+
+.fill:hover:before {
+  right: 0;
+}
+.divider {
+  margin: 2rem 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--divider);
 }

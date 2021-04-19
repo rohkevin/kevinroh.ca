@@ -60,7 +60,21 @@ export const projectPreviews = [
   },
 ]
 export const musings = [
-  
+  {
+    date: "March 4, 2021",
+    quote: "Courage doesn't always roar. Sometimes courage is the quiet voice at the end of the day saying, I will try again tomorrow.",
+    author: "Mary Anne Radmacher"
+  },
+  {
+    date: "February 23, 2021",
+    quote: "You were born an original. Don't die a copy.",
+    author: "John Landis Mason"
+  },
+  {
+    date: "January 30, 2021",
+    quote: "One, remember to look up at the stars and not down at your feet. Two, never give up work. Work gives you meaning and purpose and life is empty without it. Three, if you are lucky enough to find love, remember it is there and don't throw it away.",
+    author: "Stephen Hawking"
+  },
   {
     date: "December 3, 2020",
     quote: "Never give up on a dream just because of the time it will take to accomplish it, time will pass anyway.",
@@ -168,20 +182,16 @@ export const musings = [
     quote: "In any moment we have two options: to step forward into growth or step back into safety.",
     author: "Abraham Maslow",
   },
-
   {
     date: "May 15, 2020",
     quote: "Watch your thoughts; they become words. Watch your words; they become actions. Watch your actions; they become habits. Watch your habits; they become character. Watch your character; it becomes your destiny.",
     author: "Frank Outlaw",
   },
-  
-
   {
     date: "May 1, 2020",
     quote: "In the end, love is what makes us see life in different color.",
     author: "Marivi Fuentes, Money Heist",
   },
-
   {
     date: "April 15, 2020",
     quote: "The ones who are crazy enough to think they can change the world are the ones that do.",
@@ -203,5 +213,31 @@ export const musings = [
     date: "March 3, 2020",
     quote: "When you want to succeed as bad as you want to breathe, then you will be successful.",
     author: "Eric Thomas",
+  },
+]
+export const photos = [
+  {
+    path: "/Edited/vn1.jpg",
+    name: "Vietnamese roads"
+  },
+  {
+    path: "/Edited/vn4.jpg",
+    name: "Trang An rivers"
+  },
+  {
+    path: "/Edited/vn5.jpg",
+    name: "After a storm in Ha Long Bay"
+  },
+  {
+    path: "/Edited/vn7.jpg",
+    name: "Lanterns in Hoi An"
+  },
+  {
+    path: "/Edited/ph1.jpg",
+    name: "Sunset in El Nido"
+  },
+  {
+    path: "/Edited/ph2.jpg",
+    name: "Morning sunrise in Oslob"
   },
 ]

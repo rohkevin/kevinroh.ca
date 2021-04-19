@@ -99,14 +99,15 @@
       &:hover p{
         font-weight: 600;
       }
-    }
-    a {
-      font-family: "Barlow", sans-serif;
-      font-weight: 300;
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      text-decoration: none;
-      color: var(--text-primary);
+      p{
+        font-family: "Barlow", sans-serif;
+        font-weight: 300;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        // color: var(--accent1-main);
+        color: var(--text-primary);
+      }
     }
   }
 }

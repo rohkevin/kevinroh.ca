@@ -4,11 +4,10 @@ import './ProjectPreview.scss'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 function ProjectPreview({name, img, description, stack, github, live}) {
-  let imgSrc=require('../../Images' + img);
   return (
     <div className="preview-card">
       <Link to={`/works/${name}`}>
-        <figure className="preview-pic"><img src={imgSrc.default} alt={name} /></figure>
+        <figure className="preview-pic"><img src={`/assets/Images${img}`} alt={name} /></figure>
       </Link>
       <Link to={`/works/${name}`}><h5>{name}</h5></Link>
       <p className="subtitle2">{description}</p>

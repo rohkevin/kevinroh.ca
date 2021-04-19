@@ -1,18 +1,20 @@
 import React from 'react'
 import { useGlobalContext } from '../../context'
 import './About.scss'
-import kevimg from '../../Images/DesktopVersion/kevin-desktop.jpg'
-import kevams from '../../Images/DesktopVersion/kevinatamsterdam.JPG'
-import kevsev from '../../Images/DesktopVersion/kevinatsevilla.JPG'
-import kevgra from '../../Images/DesktopVersion/kevinatgranada.jpg'
+
 // Photos are 5 x 4
+const kevimg = '/assets/Images/DesktopVersion/kevin-desktop.jpg'
+const kevams = '/assets/Images/DesktopVersion/kevinatamsterdam.JPG';
+const kevsev = '/assets/Images/DesktopVersion/kevinatsevilla.JPG'
+const kevgra = '/assets/Images/DesktopVersion/kevinatgranada.jpg'
+
 function About() {
   const { openContact } = useGlobalContext();
   return (
     <main>
       <section className="about-header">
         <figure>
-          <img src={kevimg} alt="Kevin" />
+          <img src={`/assets/Images/DesktopVersion/kevin-desktop.jpg`} alt="Kevin" />
         </figure>
         <div className="page">
           <h1>About Kevin</h1>

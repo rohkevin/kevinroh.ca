@@ -14,7 +14,7 @@ function About() {
     <main>
       <section className="about-header">
         <figure>
-          <img src={`/assets/Images/DesktopVersion/kevin-desktop.jpg`} alt="Kevin" />
+          <img src={kevimg} alt="Kevin" />
         </figure>
         <div className="page">
           <h1>About Kevin</h1>

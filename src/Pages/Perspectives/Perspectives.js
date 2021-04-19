@@ -9,13 +9,12 @@ function Perspectives() {
     1100: 2,
     700: 1
   };
-  const imgBase = "";
 
   return (
     <main id="perspectives">
-      <div className="page full">
+      <div className="page full perspectives-intro">
         <h1>Perspectives</h1>
-        <p className="subtitle1">Here's a bit of what I've seen.</p>
+        <p className="subtitle1">It's incredible to know that everyone interprets the world in their own way. Let me share with you a bit of what I've seen from my perspective.</p>
 
       </div>
 
@@ -25,14 +24,13 @@ function Perspectives() {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-        {/* {photos.map(photo => {
-          let imgSrc = require(imgBase + photo.path);
+        {photos.map(photo => {
           return (
-            <figure key={photo.name}>
-              <img src={imgSrc.default} alt={photo.name} />
+            <figure key={photo.name} className="perspectives-figure">
+              <img src={`/assets/Images${photo.path}`} alt={photo.name} />
             </figure>
           )
-        })} */}
+        })}
         </Masonry>
       </div>
     </main>

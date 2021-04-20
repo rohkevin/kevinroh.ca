@@ -27,10 +27,10 @@ export const social = [
     icon: <FaSpotify className="social-icon"/>
   },
 ];
-export const projectPreviews = [
+export const projects = [
   {
     name: "project1",
-    description: "Short description lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    summary: "Short description lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
     stack: "React NodeJS API",
     github: "https://github.com",
     live: "https://google.com",
@@ -40,7 +40,7 @@ export const projectPreviews = [
   },
   {
     name: "project2",
-    description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    summary: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
     stack: "React NodeJS API",
     github: "https://github.com",
     live: "https://google.com",
@@ -50,7 +50,27 @@ export const projectPreviews = [
   },
   {
     name: "project3",
-    description: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    summary: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
+    imageSm: "/MobileVersion/iphonemockup-2.jpg",
+    imageMed: "/DesktopVersion/mockup1.jpg",
+    imageLg: "/DesktopVersion/mockup1",
+  },
+  {
+    name: "project4",
+    summary: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    stack: "React NodeJS API",
+    github: "https://github.com",
+    live: "https://google.com",
+    imageSm: "/MobileVersion/iphonemockup-2.jpg",
+    imageMed: "/DesktopVersion/mockup1.jpg",
+    imageLg: "/DesktopVersion/mockup1",
+  },
+  {
+    name: "project5",
+    summary: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
     stack: "React NodeJS API",
     github: "https://github.com",
     live: "https://google.com",

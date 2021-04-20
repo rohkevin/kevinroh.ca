@@ -12,7 +12,7 @@ function Perspectives() {
 
   return (
     <main id="perspectives">
-      <div className="page full perspectives-intro">
+      <div className="page full full-mid">
         <h1>Perspectives</h1>
         <p className="subtitle1">It's incredible to know that everyone interprets the world in their own way. Let me share with you a bit of what I've seen from my perspective.</p>
 

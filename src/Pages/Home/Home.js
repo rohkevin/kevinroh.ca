@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaChevronRight } from 'react-icons/fa'
-import { projectPreviews } from '../../tempdata'
+import { projects } from '../../tempdata'
 import './Home.scss'
 
 import { useGlobalContext } from '../../context'
@@ -20,8 +20,8 @@ function Home() {
   }
 
   return (
-    <main className="page">
-      <section className="home-intro">
+    <main id="home" className="page">
+      <section className="home-intro full full-mid">
         <h1>Hi I'm Kevin</h1>
         <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>software engineer</Link> from Toronto.</p>
         <p className="subtitle2">I love clean design & clean code.</p>
@@ -32,13 +32,11 @@ function Home() {
         <Link to="/works" className="h2 section-title"><span className={darkMode ? "h2" : "highlight"}>Works</span></Link>
         
         <div id="home-works">
-        {
-          projectPreviews.map(preview => {
+          {projects.slice(0,3).map(preview => {
             return (
-              <ProjectPreview key={preview.name} name={preview.name} img={preview.imageMed} description={preview.description} stack={preview.stack} github={preview.github} live={preview.live}/>
+              <ProjectPreview key={preview.name} name={preview.name} img={preview.imageMed} summary={preview.summary} stack={preview.stack} github={preview.github} live={preview.live}/>
             )
-          })
-        }
+          })}
         </div>
         <Link to="/works" className="url-link displace-btn-up" onMouseOver={()=>hoverLink}><FaChevronRight className="hover-chevron" />VIEW ALL WORKS</Link>
       </section>

@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import './ProjectPreview.scss'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
-function ProjectPreview({name, img, description, stack, github, live}) {
+function ProjectPreview({ name, img, summary, stack, github, live }) {
   return (
     <div className="preview-card">
       <Link to={`/works/${name}`}>
         <figure className="preview-pic"><img src={`/assets/Images${img}`} alt={name} /></figure>
       </Link>
-      <Link to={`/works/${name}`}><h5>{name}</h5></Link>
-      <p className="subtitle2">{description}</p>
+      <h5><Link to={`/works/${name}`} className="h5">{name}</Link></h5>
+      <p className="subtitle2">{summary}</p>
       <p className="subtitle2 stack">{stack}</p>
       <div className="preview-icons-container">
         <Link to={`/works/${name}`}><button className="fill preview-btn">Go to project</button></Link>

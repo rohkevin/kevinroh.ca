@@ -148,6 +148,12 @@ span {
 .full {
   min-height: 100vh;
 }
+.full-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .url-link {
   position: relative;
   text-decoration: none;

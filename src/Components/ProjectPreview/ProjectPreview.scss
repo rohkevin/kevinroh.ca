@@ -1,6 +1,8 @@
 .preview-card {
   width: 100%;
   margin: 8rem 0;
+  display: flex;
+  flex-direction: column;
 
   figure {
     position: relative;
@@ -11,8 +13,8 @@
     &::after{
       content: "";
       z-index: -1;
-      width: 100%;
-      height: 100%;
+      width: 98%;
+      height: 95%;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -23,8 +25,9 @@
     }
 
     &:hover{
+      transform: translateX(0.4rem) translateY(0.3rem);
       &::after{
-        transform: translateX(0.8rem) translateY(0.5rem);
+        transform: translateX(0.3rem) translateY(0.1rem);
         transition: var(--transition-fast1);
       }
     }
@@ -38,14 +41,14 @@
   }
 
   h5{
+    display: inline;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
   }
-  p{
+  p {
     margin: 0.5rem 0;
   }
   .stack {
-    margin: 0.5rem 0;
+    // margin: 0.5rem 0;
     font-weight: var(--font-weight-bold);
   }
   .preview-icons-container{
@@ -53,7 +56,6 @@
     justify-content: flex-start;
     align-items: center;
     height: 100%;
-    margin-top: 1rem;
     margin-right: 1rem;
 
     .preview-btn{

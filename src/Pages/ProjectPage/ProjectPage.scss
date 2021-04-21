@@ -1,0 +1,21 @@
+.project-summary{
+  display: flex;
+  border: 1px solid;
+  margin: 1rem 0;
+
+  p {
+    margin-right: 1rem;
+  }
+}
+.preview-icons {
+  margin-right: 1rem;
+  color: var(--url-link-color);
+  transition: var(--transition-fast1);
+  height: 100%;
+  font-size: 1rem;
+  &:hover {
+    transition: var(--transition-fast1);
+    cursor: pointer;
+    color: var(--accent1-main);
+  }
+}

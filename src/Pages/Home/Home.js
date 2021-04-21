@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaChevronRight } from 'react-icons/fa'
-import { projects } from '../../tempdata'
 import './Home.scss'
 
 import { useGlobalContext } from '../../context'
@@ -12,7 +11,7 @@ import OtherPreview from '../../Components/OtherPreview.js/OtherPreview'
 
 function Home() {
   const { darkMode } = useThemeContext();
-  const { openContact } = useGlobalContext();
+  const { openContact, projectsData } = useGlobalContext();
   const [showHover, setShowHover] = useState(false);
 
   const hoverLink = (e) => {
@@ -32,9 +31,9 @@ function Home() {
         <Link to="/works" className="h2 section-title"><span className={darkMode ? "h2" : "highlight"}>Works</span></Link>
         
         <div id="home-works">
-          {projects.slice(0,3).map(preview => {
+          {projectsData.slice(0,3).map(project => {
             return (
-              <ProjectPreview key={preview.name} name={preview.name} img={preview.imageMed} summary={preview.summary} stack={preview.stack} github={preview.github} live={preview.live}/>
+              <ProjectPreview key={project.name} img={project.imageMed} {...project}/>
             )
           })}
         </div>

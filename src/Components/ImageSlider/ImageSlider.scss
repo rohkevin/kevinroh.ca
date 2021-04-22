@@ -34,8 +34,7 @@
   }
 
   .slider-location {
-    border: 1px solid;
-    height: 1rem;
+    margin: 0.5rem 0;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -47,9 +46,20 @@
   .location {
     content: "";
     display: block;
-    border: 1px solid;
+    margin: 0 0.25rem;
+    border: 1px solid var(--button-hover);
     border-radius: 50%;
     width: 10px;
     height: 10px;
+    transition: var(--transition-fast1);
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  .active-location {
+    background-color: var(--button-hover);
   }
 }

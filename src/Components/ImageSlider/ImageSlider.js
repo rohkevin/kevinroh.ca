@@ -23,7 +23,9 @@ function ImageSlider({ projectName, sliderImages }) {
     let nextIndex = ++currentIndex % images.length;
     setImageIndex(nextIndex);
   }
-
+  const handleChangeImageLocation = (index) => {
+    setImageIndex(index);
+  }
   return (
     <div id="image-slider">
       <button onClick={prevReview} className="img-btn left"><FaChevronLeft /></button>
@@ -31,7 +33,15 @@ function ImageSlider({ projectName, sliderImages }) {
         <img src={`/assets/Images/Projects/${projectName}${images[imageIndex]}`} alt={`TEMPNAME`} />
       </figure>
       <div className="slider-location">
-        {images.forEach((image, index)=> (<div className={ index === imageIndex ? "active-location location" : "location"} />))}
+        {images.map((image, index) => {
+          return (
+            <button 
+              key={`slider${index}`} 
+              className={ index === imageIndex ? "active-location location" : "location"} 
+              onClick={()=>handleChangeImageLocation(index)}
+            />
+          )
+        })}
       </div>
       <button onClick={nextReview} className="img-btn right"><FaChevronRight /></button>
     </div>

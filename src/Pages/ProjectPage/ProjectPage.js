@@ -7,28 +7,23 @@ import './ProjectPage.scss'
 import Loading from '../../Components/Loading'
 
 const ProjectPage = () => {
-  
-  const { projectsData, project, setProject, setIsLoading, attachName } = useGlobalContext();
+  const [project, setProject] = useState({});
+  const { projectsData, setIsLoading, attachName } = useGlobalContext();
   const { projectName } = useParams();
 
   useEffect(()=>{
     setIsLoading(true);
-    if (projectsData){
-      const pageProject = projectsData.find((data)=> attachName(data.name) === projectName);
-      setProject(pageProject);
-      localStorage.setItem('project', JSON.stringify(pageProject));
-    } else {
-      <h2>No Projects</h2>
-    }
+    const pageProject = projectsData.find((data)=> attachName(data.name) === projectName);
+    setProject(pageProject);
     setIsLoading(false);
-  },[])
-
+  })
 
   if (!project) {
     return <Loading/>
   } else {
     return (
       <main className="page" id="project-page">
+      {console.log('rerender')}
         <h1 className="h2">{project.name}</h1>
         <div className="project-summary">
           <p className="subtitle1 stack">{project.stack}</p>

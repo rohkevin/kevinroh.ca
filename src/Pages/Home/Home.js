@@ -30,10 +30,10 @@ function Home() {
       <section className="home-section-outer">
         <Link to="/works" className="h2 section-title"><span className={darkMode ? "h2" : "highlight"}>Works</span></Link>
         
-        <div id="home-works">
-          {projectsData.slice(0,3).map(project => {
+        <div className="home-works">
+          {projectsData.slice(0,3).map((project, index) => {
             return (
-              <ProjectPreview key={project.name} img={project.imageMed} {...project}/>
+              <ProjectPreview key={project.name} index={index} img={project.imageMed} {...project}/>
             )
           })}
         </div>
@@ -44,7 +44,7 @@ function Home() {
 
       {/* OTHERS SECTION */}
       <section className="home-section-outer">
-        <div id="home-others">
+        <div className="home-others">
           <OtherPreview 
             title="I take pictures, sometimes"
             subtitle="About life, travels, and whatever catches my attention"
@@ -62,7 +62,7 @@ function Home() {
       <div className="divider"></div>
 
       <section className="home-section-outer">
-        <div id="home-more">
+        <div className="home-more">
           <h2 className="h3">Want to know more?</h2>
           <p className="subtitle1">Check out my <Link to="/about" className="highlight">bio here</Link> or just <span onClick={openContact} className=" highlight">say hi!</span></p>
         </div>

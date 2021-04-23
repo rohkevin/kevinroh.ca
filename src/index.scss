@@ -1,12 +1,6 @@
 @import './theme.scss';
 
 :root {
-  // Setpoints
-  --breakpoint1: 600px;
-  --breakpoint2: 960px;
-  --breakpoint3: 1280px;
-  --breakpoint4: 19200px;
-
   // Transitions
   --transition-fast1: all 0.1s ease-in-out;
   --transition-fast2: all 0.3s ease-in-out;
@@ -248,4 +242,24 @@ span {
 }
 .display-none{
   display: none;
+}
+
+/* 
+  Setpoints
+  --breakpoint1: 600px;
+  --breakpoint2: 960px;
+  --breakpoint3: 1280px;
+  --breakpoint4: 1920px;
+*/
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  html {
+    font-size: 20px;
+  }
+
+}
+@media only screen and (min-width: 901px) and (max-width: 1280px) {
+  html {
+    font-size: 20px;
+  }
 }

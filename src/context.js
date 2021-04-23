@@ -8,21 +8,21 @@ function AppProvider({ children }) {
   const [socialData, setSocialData] = useState([]);
   const [projectsData, setProjectsData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
+  const checkSize = () => {
+    setWindowSize(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', checkSize);
+    return () => {
+      window.removeEventListener('resize',checkSize);
+    }
+  },[])
+  
   // When live, this needs to be changed to a fetch for data
   // isLoading is set to return "Loading..." in Layout.js
-  
-  // Get items stored in localStorage at reload
-  // useEffect(()=>{
-  //   const projectStorage = localStorage.getItem('project');
-  //   if (projectStorage) {
-  //     setProject(JSON.parse(projectStorage));
-  //   }
-  // },[])
-
-  // useEffect(()=>{
-  //   localStorage.setItem('project', JSON.stringify(project));
-  // }, [project])
   
   useEffect(() => {
     setIsLoading(true);
@@ -45,6 +45,7 @@ function AppProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
+        windowSize,
         isLoading, setIsLoading,
         sidenavOpen, setSidenavOpen, toggleSidenav,
         contactModal, setContactModal, openContact,

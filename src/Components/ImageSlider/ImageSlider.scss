@@ -62,4 +62,30 @@
   .active-location {
     background-color: var(--button-hover);
   }
+
+  .image-container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+
+  }
+  .image-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: var(--transition-fast2);
+  }
+  .active-slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .last-slide {
+    transform: translateX(-100%);
+  }
+  .next-slide {
+    transform: translateX(100%);
+  }
 }

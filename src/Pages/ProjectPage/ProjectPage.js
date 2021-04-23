@@ -36,7 +36,6 @@ const ProjectPage = () => {
         </div>
         <p className="subtitle1 summary">{summary}</p>
 
-        <img src={`/assets/Images${imageMed}`} alt={name}></img>
         <ImageSlider projectName={projectName} sliderImages={sliderImages} />
 
         {description.map((line, index)=>(

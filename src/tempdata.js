@@ -39,11 +39,10 @@ export const projects = [
     imageMed: "/DesktopVersion/mockup1.jpg",
     imageLg: "/DesktopVersion/mockup1",
     sliderImages: [
-      "/1.png",
-      "/2.png",
-      "/3.png",
-      "/4.png",
-      "/5.png",
+      "/mockup1.jpg",
+      "/mockup1.jpg",
+      "/mockup1.jpg",
+      "/mockup1.jpg",
     ]
   },
   {

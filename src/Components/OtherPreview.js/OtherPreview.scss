@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  // box-shadow: 5px 5px var(--text-link-underline-color);
 
   h5{
     color: var(--accent1-main);
@@ -56,3 +55,27 @@
 .fill:hover:before {
   right: 0;
 }
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .others-card{
+    min-height: 0;
+    margin: 0;
+    padding: 4rem 2rem;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 901px) and (max-width: 1280px)  {
+  .others-card{
+    min-height: 0;
+    margin: 0;
+    padding: 6rem 2rem;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  .others-card{
+    min-height: 0;
+    margin: 0;
+    padding: 8rem 4rem;
+    height: 100%;
+  }
+} 

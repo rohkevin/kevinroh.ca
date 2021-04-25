@@ -32,12 +32,13 @@ body {
 }
 main {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   z-index: 100;
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   width: 100%;
-  // overflow: hidden;
 }
 h1, .h1{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
@@ -138,6 +139,8 @@ span {
   width: 100%;
   height: 100%;
   padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
 }
 .full {
   min-height: 100vh;
@@ -243,6 +246,11 @@ span {
 .display-none{
   display: none;
 }
+// .max-width {
+//   margin: 0;
+//   padding: 0;
+//   max-width: none;
+// }
 
 /* 
   Setpoints
@@ -261,5 +269,10 @@ span {
 @media only screen and (min-width: 901px) and (max-width: 1280px) {
   html {
     font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  .max-width { 
+    max-width: 1200px;
   }
 }

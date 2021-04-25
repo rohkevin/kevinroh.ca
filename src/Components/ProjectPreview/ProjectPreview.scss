@@ -101,10 +101,7 @@
     }
   }
 }
-.displace-btn-up{
-  position: relative;
-  top: -6rem;
-}
+
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .preview-card {
     flex-direction: row;
@@ -112,7 +109,7 @@
     align-items: center;
     margin-bottom: 4rem;
     .image-container{ 
-      margin-right: 4rem;
+
     }
     .preview-description{
     }
@@ -122,5 +119,8 @@
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
+
+}
+@media only screen and (min-width: 901px) and (max-width: 1280px)  {
 
 }

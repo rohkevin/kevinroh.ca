@@ -13,6 +13,7 @@ TODO:
   display: grid;
   place-items: center;
   transition: var(--transition-fast2);
+
   &:focus{
     outline: none;
   }
@@ -32,6 +33,6 @@ TODO:
   color: var(--gray500);
 }
 .sun{
-  font-size: 1.1rem;
+  // font-size: 1.1rem;
   color: var(--gray500);
 }

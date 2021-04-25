@@ -1,9 +1,30 @@
 #works {
-
   h1{
     margin-bottom: 2rem;
   }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  #works {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (min-width: 901px) and (max-width: 1280px)  {
+  #works {
+    margin-bottom: 8rem;
+  }
   .works-container {
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  #works {
+    margin-bottom: 8rem;
+  }
+  .works-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
   }
 }

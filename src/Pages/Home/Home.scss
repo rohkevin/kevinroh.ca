@@ -67,10 +67,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    margin-bottom: 4rem;
   }
   .displace-btn-up {
-    top: -4rem;
+    top: 0;
     align-self: center;
+    margin-bottom: 4rem;
   }
   .home-section-outer{
     .home-others{

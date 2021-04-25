@@ -165,30 +165,6 @@ export const musings = [
   },
 
   {
-    date: "August 21, 2020",
-    quote: "Now, here, you see, it takes all the running you can do, to keep in the same place. If you want to get somewhere else, you must run at least twice as fast as that.",
-    author: "Lewis Carroll, Through the Looking Glass",
-  },
-
-  {
-    date: "July 28, 2020",
-    quote: "Be tolerant with others and strict with yourself.",
-    author: "Marcus Aurelius",
-  },
-
-  {
-    date: "July 7, 2020",
-    quote: "If you can't fly then run, if you can't run then walk, if you can't walk then crawl. But whatever you do, you have to keep moving forward.",
-    author: "Martin Luther King Jr.",
-  },
-
-  {
-    date: "June 21, 2020",
-    quote: "The greatest lesson that I learned in all of this is that you have to start. Start now, start here, start small and keep it simple.",
-    author: "Jack Dorsey",
-  },
-
-  {
     date: "June 21, 2020",
     quote: "The most important thing to remember is this: To be ready at any moment to give up what you are for what you might become.",
     author: "W.E.B. Du Bois",

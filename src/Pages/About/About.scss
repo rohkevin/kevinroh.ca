@@ -1,6 +1,6 @@
 .about-header{
   margin-top: 8rem;
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   figure {
     width: 100%;
     img {
@@ -12,13 +12,106 @@
   }
 }
 .about-container{
-  margin-bottom: 12rem;
-
+  margin-bottom: 8rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  
   figure {
+    position: relative;
     margin: 1rem 0;
     width: 100%;
+
     img{
+      position: relative;
       width: 100%;
     }
+  }
+}
+.page-nomargin {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .about-header{
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    .page {
+      padding: 0 1rem;
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1280px)  {
+  .about-header{
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    .page {
+      padding: 0 1rem;
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+  }
+  .about-container{
+    margin-bottom: 4rem;
+  }
+  .about-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 1rem 4rem;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .about-header{
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    max-width: 1700px;
+
+    figure {
+      img {
+        max-width: 800px;
+      }
+    }
+
+    .page {
+      padding: 0 1rem;
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+  }
+  .about-description {
+    margin-left: 2rem;
+  }
+  .about-container{
+    margin-bottom: 4rem;
+
+  }
+  .about-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 1rem 4rem;
   }
 }

@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import './Perspectives.scss'
+import { useGlobalContext } from '../../context';
 import Masonry from 'react-masonry-css'
-import {photos} from '../../tempdata'
+import { photos } from '../../tempdata'
 
 function Perspectives() {
-  const [images, setImages] = useState(photos);
+  const [images, setImages] = useState(null);
   const [modalImage, setModalImage] = useState(null);
   const [imageModal, setImageModal] = useState(false);
+  const { setPageName } = useGlobalContext();
 
-  const breakpoints = {
-    default: 3,
-    1280: 2,
-    900: 1
-  };
+  useEffect(() => {
+    setPageName('Perspectives');
+    if (photos) {
+      setImages(photos);
+    }
+  }, [setPageName]);
 
   useEffect(() => {
     const handleEsc = (e) => {
@@ -36,6 +39,12 @@ function Perspectives() {
     setImageModal(true);
     setModalImage(img);
   }
+
+  const breakpoints = {
+    default: 3,
+    1280: 2,
+    900: 1
+  };
 
   return (
     <main id="perspectives">
@@ -63,13 +72,13 @@ function Perspectives() {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-          {images.map(image => {
+          {images ? images.map(image => {
             return (
               <figure key={image.name} className="perspectives-figure" >
                 <img src={`/assets/Images${image.path}`} alt={image.name} onClick={()=> handleImageClick(image)}/>
               </figure>
             )
-          })}
+          }) : null}
           </Masonry>
         </div>
 

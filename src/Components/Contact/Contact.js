@@ -97,7 +97,7 @@ function Contact() {
         <div className={contactModal ? 'contact-form show-contact' : 'contact-form'} >
           <FaTimes className="close" onClick={()=>setContactModal(false)}/>
           <h1 className="h4">Connect with me</h1>
-          <p className="body2">Feel free to get in touch if you'd like to discuss work, share your stories, or debate on why "Let Me Love You" by Mario is the best R&B song up to date. Any constructive feedback is very much appreciated! You can also email me at: <a href="mailto:kevinrohmail@gmail.com" className="body2">kevinrohmail@gmail.com</a></p>
+          <p className="body2">Feel free to get in touch if you'd like to discuss work, share your stories, or debate on why "Let Me Love You" by Mario is the best R&B song up to date. Any constructive feedback is very much appreciated! You can also email me at: <a href="mailto:kevinrohmail@gmail.com" className="body2 email">kevinrohmail@gmail.com</a></p>
           <form noValidate autoComplete="off" onSubmit={handleSubmit}>
             <input 
               value={name}

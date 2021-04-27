@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../context'
 import './About.scss'
 
@@ -10,8 +10,9 @@ const kevgra = '/assets/Images/DesktopVersion/kevinatgranada.jpg'
 
 
 function About() {
-  const { openContact } = useGlobalContext();
-
+  const { setPageName, openContact } = useGlobalContext();
+  useEffect(()=>setPageName('About'));
+  
   return (
     <main className='page-nomargin'>
         <section className="about-header">

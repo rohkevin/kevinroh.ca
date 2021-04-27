@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../context'
 import './ProjectPreview.scss'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
-function ProjectPreview({ index, name, img, summary, description, stack, github, live }) {
+function ProjectPreview({ index, id, name, img, summary, description, stack, github, live }) {
   const projectName = name.replace(/\s/g, '');
   const { windowSize } = useGlobalContext();
 
@@ -16,13 +16,13 @@ function ProjectPreview({ index, name, img, summary, description, stack, github,
         to={`/works/${projectName}`} 
         className="image-container"
         style={check ? {order: 1, marginRight: '4rem'} : {order: 2, marginRight: 0}}>
-        <figure className="preview-pic"><img src={`/assets/Images${img}`} alt={name} /></figure>
+        <figure className="preview-pic"><img src={`/assets/Images/Projects/${id}/${img}`} alt={name} /></figure>
       </Link>
       <div 
         className="preview-description" 
         style={check ? {order: 2, marginRight: 0} : {order: 1, marginRight: '2rem'}}>
         <h5><Link to={`/works/${projectName}`} className="h5">{name}</Link></h5>
-        <p className="subtitle2">{summary}</p>
+        <p className="subtitle2 preview-summary">{summary}</p>
         <p className="subtitle2 stack">{stack}</p>
 
         <div className="preview-icons-container">

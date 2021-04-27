@@ -74,7 +74,7 @@
     color: var(--text-primary);
   }
   a {
-    color: #3e6bff;
+    color: var(--accent1-main);
   }
   p {
     padding: 0 0.5rem;
@@ -166,5 +166,21 @@ textarea {
       color: var(--url-link-hover);
       transition: var(--transition-fast1);
     }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+
+}
+@media only screen and (min-width: 901px) and (max-width: 1280px)  {
+  .contact-form {
+    right: 20vw;
+    width: 60vw;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  .contact-form {
+    right: 30vw;
+    width: 40vw;
   }
 }

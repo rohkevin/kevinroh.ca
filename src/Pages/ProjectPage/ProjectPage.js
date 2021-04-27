@@ -9,20 +9,27 @@ import ImageSlider from '../../Components/ImageSlider/ImageSlider'
 
 const ProjectPage = () => {
   const [project, setProject] = useState(null);
-  const { projectsData, setIsLoading, attachName } = useGlobalContext();
+  const { setPageName, projectsData, setIsLoading, attachName } = useGlobalContext();
   const { projectName } = useParams();
 
-  useEffect(()=>{
+  
+  useEffect(() => {
     setIsLoading(true);
     const pageProject = projectsData.find((data)=> attachName(data.name) === projectName);
     setProject(pageProject);
     setIsLoading(false);
-  })
+  }, [projectsData, projectName, attachName, setIsLoading])
+  
+  useEffect(()=> {
+    if (project) {
+      setPageName(project.name.charAt(0).toUpperCase() + project.name.slice(1));
+    }
+  }, [project, setPageName])
 
   if (!project) {
     return <Loading/>
   } else {
-    const { name, stack, github, live, summary, imageMed, sliderImages, description } = project;
+    const { id, name, stack, github, live, summary, sliderImages, description } = project;
 
     return (
       <main className="page" id="project-page">
@@ -37,7 +44,7 @@ const ProjectPage = () => {
           </div>
           <p className="subtitle1 summary">{summary}</p>
 
-          <ImageSlider projectName={projectName} sliderImages={sliderImages} />
+          <ImageSlider id={id} projectName={projectName} sliderImages={sliderImages} />
 
           {description.map((line, index)=>(
             <Fragment key={`descriptionline${index}`}>

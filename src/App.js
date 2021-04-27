@@ -13,6 +13,7 @@ import ProjectPage from './Pages/ProjectPage/ProjectPage'
 
 function ScrollToTop(){
   const { pathname } = useLocation();
+
   useEffect(()=>{
     window.scrollTo(0,0);
   },[pathname]);  
@@ -20,7 +21,6 @@ function ScrollToTop(){
 }
 
 function App() {
-
   return (
     <Router>
       <ScrollToTop/>

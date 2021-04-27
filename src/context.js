@@ -3,6 +3,7 @@ import {social, projects} from './tempdata'
 const AppContext = React.createContext();
 
 function AppProvider({ children }) {
+  const [pageName, setPageName] = useState(null);
   const [sidenavOpen, setSidenavOpen] = useState(false);
   const [contactModal, setContactModal] = useState(false);
   const [socialData, setSocialData] = useState([]);
@@ -21,6 +22,10 @@ function AppProvider({ children }) {
     }
   },[])
   
+  useEffect(() => {
+    document.title = pageName;
+  }, [pageName])
+
   // When live, this needs to be changed to a fetch for data
   // isLoading is set to return "Loading..." in Layout.js
   
@@ -45,6 +50,7 @@ function AppProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
+        pageName, setPageName,
         windowSize,
         isLoading, setIsLoading,
         sidenavOpen, setSidenavOpen, toggleSidenav,

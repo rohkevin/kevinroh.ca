@@ -57,6 +57,9 @@
     p {
       margin: 0.5rem 0;
     }
+    .preview-summary {
+      height: 100%;
+    }
     .stack {
       // margin: 0.5rem 0;
       font-weight: var(--font-weight-bold);
@@ -107,12 +110,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4rem;
-    .image-container{ 
-
-    }
-    .preview-description{
-    }
+    margin-bottom: 2rem;
   }
   .displace-btn-up {
     top: 0;

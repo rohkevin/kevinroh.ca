@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Works.scss'
 import { useGlobalContext } from '../../context'
 
 import ProjectPreview from '../../Components/ProjectPreview/ProjectPreview'
 
 function Works() {
-  const { projectsData } = useGlobalContext();
+  const { setPageName, projectsData } = useGlobalContext();
+  useEffect(() => {
+    setPageName('Works')
+  }, [setPageName])
   return (
     <main id="works" className="page" >
       <div className="max-width">
@@ -19,7 +22,7 @@ function Works() {
           {
           projectsData.map((project, index) => {
             return (
-              <ProjectPreview key={project.name} index={index} img={project.imageMed} {...project}/>
+              <ProjectPreview key={project.id} index={index} img={project.sliderImages[0]} {...project}/>
             )
           })
         }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaChevronRight } from 'react-icons/fa'
 import './Home.scss'
@@ -11,8 +11,10 @@ import OtherPreview from '../../Components/OtherPreview.js/OtherPreview'
 
 function Home() {
   const { darkMode } = useThemeContext();
-  const { openContact, projectsData } = useGlobalContext();
+  const { setPageName, openContact, projectsData } = useGlobalContext();
   const [showHover, setShowHover] = useState(false);
+
+  useEffect(()=>setPageName('Kevin Roh'));
 
   const hoverLink = (e) => {
     showHover(!setShowHover);
@@ -23,18 +25,18 @@ function Home() {
       <div className="max-width">
         <section className="home-intro full full-mid">
           <h1>Hi I'm Kevin</h1>
-          <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>software engineer</Link> from Toronto.</p>
+          <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>full stack software engineer</Link> from Toronto.</p>
           <p className="subtitle2">I love clean design & clean code.</p>
         </section>
 
         {/* WORKS SECTION */}
         <section className="home-section-outer">
-          <Link to="/works" className="h2 section-title"><span className={darkMode ? "h2" : "highlight"}>Works</span></Link>
+          <Link to="/works" className="h2 section-title"><span className="highlight">Works</span></Link>
           
           <div className="home-works">
             {projectsData.slice(0,3).map((project, index) => {
               return (
-                <ProjectPreview key={project.name} index={index} img={project.imageMed} {...project}/>
+                <ProjectPreview key={project.id} index={index} img={project.sliderImages[0]} {...project}/>
               )
             })}
           </div>

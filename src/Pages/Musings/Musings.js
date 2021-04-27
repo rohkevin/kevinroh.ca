@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Musings.scss'
-import {musings} from '../../tempdata'
+import { useGlobalContext } from '../../context';
+import { musings } from '../../tempdata'
 
 import Musing from '../../Components/Musing/Musing'
 
 function Musings() {
   const [musingsIndex, setMusingsIndex] = useState(5);
+  const { setPageName } = useGlobalContext();
+  useEffect(()=>setPageName('Musings'));
 
   const handleViewMore = () => {
     const newIndex = (musingsIndex + 5 > musings.length) ? musings.length : musingsIndex + 5;

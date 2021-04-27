@@ -14,7 +14,7 @@ function ImageSlider({ id, projectName, sliderImages }) {
   }, [sliderImages])
 
   useEffect(() => {
-    if (images) {
+    if (images && images.length > 1) {
       const lastIndex = images.length - 1;
       if (imageIndex < 0){
         setImageIndex(lastIndex);
@@ -60,7 +60,7 @@ function ImageSlider({ id, projectName, sliderImages }) {
       <>
         <div className={imageModal ? 'image-overlay' : 'display-none'} onClick={handleOutsideClick}>
           <figure>
-            <img src={`/assets/Images/Projects/${id}${images[imageIndex]}`} alt={`${projectName} img-${imageIndex}`}  onClick={() => null}/>
+            <img src={`/assets/Images/Projects/${id}${images[imageIndex]}`} alt={`${projectName} img-${imageIndex} full`}  onClick={() => null}/>
           </figure>
         </div>
         <div id="image-slider">
@@ -71,12 +71,12 @@ function ImageSlider({ id, projectName, sliderImages }) {
                 position = 'active-slide';
               }
               
-              if (index === imageIndex -1 || (imageIndex === 0 && index === images.length -1) || imageIndex > index) {
+              if (index === imageIndex - 1 || (imageIndex === 0 && index === images.length - 1 && images.length > 1) || imageIndex > index) {
                 position = 'last-slide';
               }
               if (imageIndex < index) {position='next-slide'};
               return (
-                <figure className={`image-slide ${position}`} key={id}>
+                <figure className={`image-slide ${position}`} key={`${projectName} img-${index}`}>
                   <img src={`/assets/Images/Projects/${id}${image}`} alt={`${projectName} img-${index}`}  onClick={() => setImageModal(true)}/>
                 </figure>
               )
@@ -84,18 +84,19 @@ function ImageSlider({ id, projectName, sliderImages }) {
           </div>
 
           <div className="slider-location">
-            {images.map((image, index) => {
-              return (
-                <button 
-                  key={`slider${index}`} 
-                  className={ index === imageIndex ? "active-location location" : "location"} 
-                  onClick={()=>handleChangeImageLocation(index)}
-                />
-              )
-            })}
+            {images.length > 1 ? 
+              images.map((image, index) => {
+                return (
+                  <button 
+                    key={`slider${index}`} 
+                    className={ index === imageIndex ? "active-location location" : "location"} 
+                    onClick={()=>handleChangeImageLocation(index)}
+                  />
+                )
+            }) : null}
           </div>
-          <button onClick={() => setImageIndex(imageIndex -1)} className="img-btn left"><FaChevronLeft /></button>
-          <button onClick={() => setImageIndex(imageIndex + 1)} className="img-btn right"><FaChevronRight /></button>
+          <button onClick={() => setImageIndex(imageIndex - 1)} className={images.length > 1 ? "img-btn left" : "display-none"}><FaChevronLeft /></button>
+          <button onClick={() => setImageIndex(imageIndex + 1)} className={images.length > 1 ? "img-btn right" : "display-none"}><FaChevronRight /></button>
         </div>
       </>
     )

@@ -53,6 +53,7 @@ export const projects = [
     live: "https://google.com",
     sliderImages: [
       "/mockup1.jpg",
+
     ]
   },
   {

@@ -8,6 +8,7 @@ function ProjectPreview({ index, id, name, img, summary, description, stack, git
   const projectName = name.replace(/\s/g, '');
   const { windowSize } = useGlobalContext();
 
+
   const check = ((windowSize > 600 && index % 2 === 0) || windowSize < 600 || windowSize > 900);
 
   return (

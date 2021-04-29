@@ -59,7 +59,7 @@ function Perspectives() {
           imageModal && modalImage ? 
             <div className={imageModal && modalImage ? 'image-overlay' : 'display-none'} onClick={handleOutsideClick}>
               <figure>
-                <img src={`/assets/Images${modalImage.path}`} alt={modalImage.name} onClick={()=>setImageModal(false)}/>
+                <img src={process.env.PUBLIC_URL + `/assets/Images${modalImage.path}`} alt={modalImage.name} onClick={()=>setImageModal(false)}/>
               </figure>
             </div>
           :

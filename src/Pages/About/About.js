@@ -3,10 +3,10 @@ import { useGlobalContext } from '../../context'
 import './About.scss'
 
 // Photos are 5 x 4
-const kevimg = '/assets/Images/DesktopVersion/kevin-desktop.jpg'
-const kevams = '/assets/Images/DesktopVersion/kevinatamsterdam.JPG';
-const kevsev = '/assets/Images/DesktopVersion/kevinatsevilla.JPG'
-const kevgra = '/assets/Images/DesktopVersion/kevinatgranada.jpg'
+const kevimg = process.env.PUBLIC_URL + '/assets/Images/DesktopVersion/kevin-desktop.jpg'
+const kevams = process.env.PUBLIC_URL + '/assets/Images/DesktopVersion/kevinatamsterdam.JPG';
+const kevsev = process.env.PUBLIC_URL + '/assets/Images/DesktopVersion/kevinatsevilla.JPG'
+const kevgra = process.env.PUBLIC_URL + '/assets/Images/DesktopVersion/kevinatgranada.jpg'
 
 
 function About() {

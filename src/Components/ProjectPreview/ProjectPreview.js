@@ -17,7 +17,7 @@ function ProjectPreview({ index, id, name, img, summary, description, stack, git
         to={`/works/${projectName}`} 
         className="image-container"
         style={check ? {order: 1, marginRight: '4rem'} : {order: 2, marginRight: 0}}>
-        <figure className="preview-pic"><img src={`/assets/Images/Projects/${id}/${img}`} alt={name} /></figure>
+        <figure className="preview-pic"><img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}/${img}`} alt={name} /></figure>
       </Link>
       <div 
         className="preview-description" 

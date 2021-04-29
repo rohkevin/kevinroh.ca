@@ -77,7 +77,7 @@ function ImageSlider({ id, projectName, sliderImages }) {
               if (imageIndex < index) {position='next-slide'};
               return (
                 <figure className={`image-slide ${position}`} key={`${projectName} img-${index}`}>
-                  <img src={`/assets/Images/Projects/${id}${image}`} alt={`${projectName} img-${index}`}  onClick={() => setImageModal(true)}/>
+                  <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}${image}`} alt={`${projectName} img-${index}`}  onClick={() => setImageModal(true)}/>
                 </figure>
               )
             })}

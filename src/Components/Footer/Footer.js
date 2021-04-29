@@ -8,13 +8,12 @@ function Footer() {
   return (
     <footer>
       <div className="footer-container">
-        {/* <Link to="/" className="h5">KEVIN ROH</Link> */}
         <div className="footer-links">
-            <Link to="/" className="footer-nav">HOME</Link>
-            <Link to="/works" className="footer-nav">WORKS</Link>
-            <Link to="/perspectives" className="footer-nav">PERSPECTIVES</Link>
-            <Link to="/musings" className="footer-nav">MUSINGS</Link>
-            <Link to="/about" className="footer-nav">ABOUT</Link>
+            <Link to={process.env.PUBLIC_URL + "/"} className="footer-nav">HOME</Link>
+            <Link to={process.env.PUBLIC_URL + "/works"} className="footer-nav">WORKS</Link>
+            <Link to={process.env.PUBLIC_URL + "/perspectives"} className="footer-nav">PERSPECTIVES</Link>
+            <Link to={process.env.PUBLIC_URL + "/musings"} className="footer-nav">MUSINGS</Link>
+            <Link to={process.env.PUBLIC_URL + "/about"} className="footer-nav">ABOUT</Link>
             <p type="button" onClick={openContact} className="footer-nav">Contact</p>
         </div>
         <div className="icon-list">

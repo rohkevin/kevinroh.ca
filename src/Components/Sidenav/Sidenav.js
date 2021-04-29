@@ -48,7 +48,7 @@ function Sidenav() {
         {
           links.map((link) => {
             return (
-              <Link key={link.name} to={link.path} className="sidenav-link" onMouseOver={()=>hoverLink} onClick={()=>setSidenavOpen(false)}>
+              <Link key={link.name} to={process.env.PUBLIC_URL + link.path} className="sidenav-link" onMouseOver={()=>hoverLink} onClick={()=>setSidenavOpen(false)}>
                 <FaChevronRight className="sidenav-chevron"/>
                 <p>{link.name.toUpperCase()}</p>
               </Link>

@@ -34,7 +34,7 @@ const ProjectPage = () => {
     return (
       <main className="page" id="project-page">
         <div className="max-width">
-          <Link to="/works" className="back-to"><FaChevronLeft /><p className="url-link">Back to Works</p></Link>
+          <Link to={process.env.PUBLIC_URL + "/works"} className="back-to"><FaChevronLeft /><p className="url-link">Back to Works</p></Link>
           <h1 className="h2">{name}</h1>
           <div className="project-subheader">
             <p className="subtitle1 stack">{stack}</p>

@@ -25,13 +25,13 @@ function Home() {
       <div className="max-width">
         <section className="home-intro full full-mid">
           <h1>Hi I'm Kevin</h1>
-          <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>full stack software engineer</Link> from Toronto.</p>
+          <p className="subtitle2">I'm a <Link to={process.env.PUBLIC_URL + "/about"} className={darkMode ? "bold" : "highlight"}>full stack software engineer</Link> from Toronto.</p>
           <p className="subtitle2">I love clean design & clean code.</p>
         </section>
 
         {/* WORKS SECTION */}
         <section className="home-section-outer">
-          <Link to="/works" className="h2 section-title"><span className="highlight">Works</span></Link>
+          <Link to={process.env.PUBLIC_URL + "/works"} className="h2 section-title"><span className="highlight">Works</span></Link>
           
           <div className="home-works">
             {projectsData.slice(0,3).map((project, index) => {
@@ -40,7 +40,7 @@ function Home() {
               )
             })}
           </div>
-          <Link to="/works" className="url-link displace-btn-up" onMouseOver={()=>hoverLink}><FaChevronRight className="hover-chevron" />VIEW ALL WORKS</Link>
+          <Link to={process.env.PUBLIC_URL + "/works"} className="url-link displace-btn-up" onMouseOver={()=>hoverLink}><FaChevronRight className="hover-chevron" />VIEW ALL WORKS</Link>
         </section>
         <div className="divider"></div>
 
@@ -67,7 +67,7 @@ function Home() {
         <section className="home-section-outer">
           <div className="home-more">
             <h2 className="h3">Want to know more?</h2>
-            <p className="subtitle1">Check out my <Link to="/about" className="highlight">bio here</Link> or just <span onClick={openContact} className=" highlight">say hi!</span></p>
+            <p className="subtitle1">Check out my <Link to={process.env.PUBLIC_URL + "/about"} className="highlight">bio here</Link> or just <span onClick={openContact} className=" highlight">say hi!</span></p>
           </div>
         </section>
       </div>

@@ -26,13 +26,13 @@ function App() {
       <ScrollToTop/>
       <Layout>
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/works" component={Works}/>
-          <Route path="/works/:projectName" children={<ProjectPage/>}/>
-          <Route path="/perspectives" component={Perspectives}/>
-          <Route path="/musings" component={Musings}/>
-          <Route path="/about" component={About}/>
-          <Route path="*" component={Error}/>
+          <Route exact path={process.env.PUBLIC_URL + "/"} component={Home}/>
+          <Route exact path={process.env.PUBLIC_URL + "/works"} component={Works}/>
+          <Route path={process.env.PUBLIC_URL + "/works/:projectName"} children={<ProjectPage/>}/>
+          <Route path={process.env.PUBLIC_URL + "/perspectives"} component={Perspectives}/>
+          <Route path={process.env.PUBLIC_URL + "/musings"} component={Musings}/>
+          <Route path={process.env.PUBLIC_URL + "/about"} component={About}/>
+          <Route path={process.env.PUBLIC_URL + "*"} component={Error}/>
         </Switch>
       </Layout>
     </Router>

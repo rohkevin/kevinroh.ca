@@ -14,7 +14,7 @@ function ProjectPreview({ index, id, name, img, summary, description, stack, git
   return (
     <div className="preview-card">
       <Link 
-        to={`/works/${projectName}`} 
+        to={process.env.PUBLIC_URL + `/works/${projectName}`} 
         className="image-container"
         style={check ? {order: 1, marginRight: '4rem'} : {order: 2, marginRight: 0}}>
         <figure className="preview-pic"><img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}/${img}`} alt={name} /></figure>
@@ -22,12 +22,12 @@ function ProjectPreview({ index, id, name, img, summary, description, stack, git
       <div 
         className="preview-description" 
         style={check ? {order: 2, marginRight: 0} : {order: 1, marginRight: '2rem'}}>
-        <h5><Link to={`/works/${projectName}`} className="h5">{name}</Link></h5>
+        <h5><Link to={process.env.PUBLIC_URL + `/works/${projectName}`} className="h5">{name}</Link></h5>
         <p className="subtitle2 preview-summary">{summary}</p>
         <p className="subtitle2 stack">{stack}</p>
 
         <div className="preview-icons-container">
-          <Link to={`/works/${projectName}`}><button className="fill preview-btn">Go to project</button></Link>
+          <Link to={process.env.PUBLIC_URL + `/works/${projectName}`}><button className="fill preview-btn">Go to project</button></Link>
           <a href={github} target="_blank" rel="noopener noreferrer" ><FaGithub className="preview-icons" /></a>
           <a href={live} target="_blank" rel="noopener noreferrer" ><FaExternalLinkAlt className="preview-icons" /></a>
         </div>

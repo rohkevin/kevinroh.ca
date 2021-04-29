@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, useLocation } from 'react-router-dom'
 
 import './theme.scss'
 import Layout from './Components/Layout/Layout'

@@ -75,7 +75,7 @@ function Perspectives() {
           {images ? images.map(image => {
             return (
               <figure key={image.name} className="perspectives-figure" >
-                <img src={`/assets/Images${image.path}`} alt={image.name} onClick={()=> handleImageClick(image)}/>
+                <img src={process.env.PUBLIC_URL + `/assets/Images${image.path}`} alt={image.name} onClick={()=> handleImageClick(image)}/>
               </figure>
             )
           }) : null}

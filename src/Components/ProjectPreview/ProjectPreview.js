@@ -22,7 +22,7 @@ function ProjectPreview({ index, id, name, img, summary, description, stack, git
       <div 
         className="preview-description" 
         style={check ? {order: 2, marginRight: 0} : {order: 1, marginRight: '2rem'}}>
-        <h5><Link to={`/works/${projectName}`} className="h5">{name}</Link></h5>
+        <h1 className="h5"><Link to={`/works/${projectName}`} className="h5">{name}</Link></h1>
         <p className="subtitle2 preview-summary">{summary}</p>
         <p className="subtitle2 stack">{stack}</p>
 

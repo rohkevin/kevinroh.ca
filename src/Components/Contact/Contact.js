@@ -92,7 +92,13 @@ function Contact() {
 
   return (
     <>
-      <button id="contact-btn" onClick={toggleContactOpen} className={contactModal ? 'tilt-btn': null}><FiPlus/></button>
+      <button 
+        id="contact-btn" 
+        onClick={toggleContactOpen} 
+        className={contactModal ? 'tilt-btn': null}
+        aria-label="Contact page open button">
+        <FiPlus/>
+      </button>
       <div className={contactModal ? 'contact-form-mask show-mask' : 'contact-form-mask'} onClick={handleOutsideClick}>
         <div className={contactModal ? 'contact-form show-contact' : 'contact-form'} >
           <FaTimes className="close" onClick={()=>setContactModal(false)}/>

@@ -48,7 +48,7 @@ export const projects = [
     name: "Personal Website",
     summary: "Third iteration of my personal website, and what you're currently seeing.",
     description: ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium ex sint facere, architecto quisquam natus. Fuga, quae est sint accusamus sed quisquam! Laudantium tempora sapiente, explicabo provident facere omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero ipsa numquam eos, perferendis quaerat! Ipsa perferendis minima deserunt nostrum pariatur ex consectetur hic, molestias cumque, dolorem deleniti ea. Eveniet!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique exercitationem corporis, voluptas totam maxime unde iure quod, dicta magni nobis excepturi minima praesentium quasi molestias, eos ipsum odio repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima voluptatem exercitationem, laboriosam asperiores iusto nisi obcaecati praesentium magnam omnis officia ab doloremque eius itaque atque modi repudiandae? Possimus, quo?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat at cupiditate vero et sapiente sed, iusto vitae inventore dignissimos? Atque reiciendis nesciunt sed hic accusantium maxime corporis dicta deserunt obcaecati?", ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla tempora, explicabo impedit porro, suscipit officia assumenda amet excepturi pariatur, quia tempore ea. Ad iure velit ipsa nam quae molestiae."]],
-    stack: "React Sass WebHosting",
+    stack: "React Sass Netlify",
     github: "https://github.com",
     live: "https://google.com",
     sliderImages: [

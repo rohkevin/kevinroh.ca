@@ -46,6 +46,7 @@ function Darkmode() {
     <button
       className={theme === 'dark' ? clickedClass + ' button' : 'button'}
       id="darkMode"
+      aria-label="Dark mode toggle button"
       onClick={(e) => switchTheme(e)}
     >{ darkMode ? <FaRegMoon className="moon"/> : <FiSun className="sun"/> }</button>
   )

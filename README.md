@@ -1,5 +1,6 @@
 # kevinroh.ca
 Welcome to my personal website repository! 
+It's currently still under construction but you're more than welcome to browse through the template of it. 
 
 ## Table of Contents
 * [General Info](#general-info)

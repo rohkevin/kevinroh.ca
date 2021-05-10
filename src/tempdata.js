@@ -64,9 +64,9 @@ export const projects = [
     id: "project03",
     name: "CocktailDB",
     summary: "A database for all your favorite cocktails",
-    description: ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium ex sint facere, architecto quisquam natus. Fuga, quae est sint accusamus sed quisquam! Laudantium tempora sapiente, explicabo provident facere omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero ipsa numquam eos, perferendis quaerat! Ipsa perferendis minima deserunt nostrum pariatur ex consectetur hic, molestias cumque, dolorem deleniti ea. Eveniet!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique exercitationem corporis, voluptas totam maxime unde iure quod, dicta magni nobis excepturi minima praesentium quasi molestias, eos ipsum odio repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima voluptatem exercitationem, laboriosam asperiores iusto nisi obcaecati praesentium magnam omnis officia ab doloremque eius itaque atque modi repudiandae? Possimus, quo?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat at cupiditate vero et sapiente sed, iusto vitae inventore dignissimos? Atque reiciendis nesciunt sed hic accusantium maxime corporis dicta deserunt obcaecati?"],
+    description: ["This was a submission for TOHacks 2021 Hackathon! I worked with two UX/UI designers within a span of 24 hours to come up with an application that acts as a virtual record for traveling.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique exercitationem corporis, voluptas totam maxime unde iure quod, dicta magni nobis excepturi minima praesentium quasi molestias, eos ipsum odio repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima voluptatem exercitationem, laboriosam asperiores iusto nisi obcaecati praesentium magnam omnis officia ab doloremque eius itaque atque modi repudiandae? Possimus, quo?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat at cupiditate vero et sapiente sed, iusto vitae inventore dignissimos? Atque reiciendis nesciunt sed hic accusantium maxime corporis dicta deserunt obcaecati?"],
     stack: "React NodeJS API",
-    github: "https://github.com",
+    github: "https://github.com/rohkevin/vaxport",
     live: "https://google.com",
     sliderImages: [
       "/mockup1.jpg",
@@ -74,8 +74,8 @@ export const projects = [
   },
   {
     id: "project04",
-    name: "project4",
-    summary: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
+    name: "Vaxport",
+    summary: "A vaccine passport for travelers internationally!",
     description: ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium ex sint facere, architecto quisquam natus. Fuga, quae est sint accusamus sed quisquam! Laudantium tempora sapiente, explicabo provident facere omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero ipsa numquam eos, perferendis quaerat! Ipsa perferendis minima deserunt nostrum pariatur ex consectetur hic, molestias cumque, dolorem deleniti ea. Eveniet!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique exercitationem corporis, voluptas totam maxime unde iure quod, dicta magni nobis excepturi minima praesentium quasi molestias, eos ipsum odio repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima voluptatem exercitationem, laboriosam asperiores iusto nisi obcaecati praesentium magnam omnis officia ab doloremque eius itaque atque modi repudiandae? Possimus, quo?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat at cupiditate vero et sapiente sed, iusto vitae inventore dignissimos? Atque reiciendis nesciunt sed hic accusantium maxime corporis dicta deserunt obcaecati?"],
     stack: "React NodeJS API",
     github: "https://github.com",

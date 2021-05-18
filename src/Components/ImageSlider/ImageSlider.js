@@ -60,7 +60,7 @@ function ImageSlider({ id, projectName, sliderImages }) {
       <>
         <div className={imageModal ? 'image-overlay' : 'display-none'} onClick={handleOutsideClick}>
           <figure>
-            <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}${images[imageIndex]}`} alt={`${projectName} img-${imageIndex} full`}  onClick={() => null}/>
+            <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/0${id}${images[imageIndex]}`} alt={`${projectName} img-${imageIndex} full`}  onClick={() => null}/>
           </figure>
         </div>
         <div id="image-slider">

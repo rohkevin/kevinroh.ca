@@ -238,27 +238,27 @@ export const musings = [
 ]
 export const photos = [
   {
-    path: "/Edited/vn1.jpg",
+    path: "/Edited/compressed/vn1.jpg",
     name: "Vietnamese roads"
   },
   {
-    path: "/Edited/vn4.jpg",
+    path: "/Edited/compressed/vn4.jpg",
     name: "Trang An rivers"
   },
   {
-    path: "/Edited/vn5.jpg",
+    path: "/Edited/compressed/vn5.jpg",
     name: "After a storm in Ha Long Bay"
   },
   {
-    path: "/Edited/vn7.jpg",
+    path: "/Edited/compressed/vn7.jpg",
     name: "Lanterns in Hoi An"
   },
   {
-    path: "/Edited/ph1.jpg",
+    path: "/Edited/compressed/ph1.jpg",
     name: "Sunset in El Nido"
   },
   {
-    path: "/Edited/ph2.jpg",
+    path: "/Edited/compressed/ph2.jpg",
     name: "Morning sunrise in Oslob"
   },
 ]

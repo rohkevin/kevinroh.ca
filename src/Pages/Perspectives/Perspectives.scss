@@ -96,4 +96,12 @@
   .my-masonry-grid_column > figure { 
     margin-bottom: 10px;
   }
+  .image-overlay {
+    figure {
+      img {
+        min-width: 1000px;
+        object-fit: cover;
+      }
+    }
+  }
 }

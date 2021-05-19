@@ -261,4 +261,16 @@ export const photos = [
     path: "/Edited/compressed/ph2.jpg",
     name: "Morning sunrise in Oslob"
   },
+  {
+    path: "/Edited/compressed/ams-desktop.jpg",
+    name: "AmsterDAM"
+  },
+  {
+    path: "/Edited/compressed/ldnh1.jpg",
+    name: "London"
+  },
+  {
+    path: "/Edited/compressed/japan1.jpg",
+    name: "Temples of Kyoto"
+  },
 ]

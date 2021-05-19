@@ -34,7 +34,7 @@ function Home() {
           <Link to="/works" className="h2 section-title"><span className="highlight">Works</span></Link>
           
           <div className="home-works">
-            {projectsData.slice(0,3).map((project, index) => {
+            {projectsData.slice(0,4).map((project, index) => {
               return (
                 <ProjectPreview key={project.id} index={index} img={project.sliderImages[0]} {...project}/>
               )

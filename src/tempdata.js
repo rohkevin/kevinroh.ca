@@ -37,10 +37,17 @@ export const projects = [
     github: "https://github.com/rohkevin/growup-v2",
     live: "https://grow-up-app.web.app/",
     sliderImages: [
-      "/mockup1.jpg",
-      "/mockup1.jpg",
-      "/mockup1.jpg",
-      "/mockup1.jpg",
+      "/GU01.png",
+      "/GU02.png",
+      "/GU03.png",
+      "/GU04.png",
+      "/GU05.png",
+      "/GU06.png",
+      "/GU07.png",
+      "/GU08.png",
+      "/GU09.png",
+      "/GU10.png",
+      "/GU11.png",
     ]
   },
   {

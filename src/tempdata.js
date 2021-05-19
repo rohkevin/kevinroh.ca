@@ -31,7 +31,7 @@ export const projects = [
   {
     id: "project01",
     name: "Grow Up",
-    summary: "A blogging website made by young adults, on growing up and the steps of becoming \"more\" adult",
+    summary: "A journalist site made by young adults, for young adults, on growing up and the steps of becoming \"more\" adult",
     description: ["You're in your twenties and you just finished college / university / in your first or second job. You feel like you've got a few things figured out but there's still a ton of other things you feel unconfident about. Does this describe you? Well you're on the right track, so are we! This website is dedicated to those of us feeling lost, need a bit of guidance, or could use another \"life-hack\". This is a blog on growing up, and we share a bit of our insight on what we've found out so far.", "The purpose of this blog was to create a journalist site for a client on daily topics for an adult. The client requested ad-space allocated.", "The blog is built using React with its context API. Users can be authenticated using Firebase Auth, allowing sign-up through email or Google. Authentication levels are currently restricted to those who have new blog-writing rights, managed through a private context. All posts are managed through Firebase's Firestore Database, with write access to only authenticated users."],
     stack: "React Firebase",
     github: "https://github.com/rohkevin/growup-v2",

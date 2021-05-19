@@ -1,7 +1,4 @@
 #works {
-  h1{
-    margin-bottom: 2rem;
-  }
 }
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   #works {
@@ -24,7 +21,7 @@
   }
   .works-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
   }
 }

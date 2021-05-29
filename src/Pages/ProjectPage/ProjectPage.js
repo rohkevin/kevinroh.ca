@@ -46,10 +46,17 @@ const ProjectPage = () => {
 
           <ImageSlider id={id} projectName={projectName} sliderImages={sliderImages} />
 
-          {description.map((line, index)=>(
+          {
+            description.map((line, index)=>(
             <Fragment key={`descriptionline${index}`}>
               <p className="body1">{line}</p><br/>
-            </Fragment>))}
+            </Fragment>))
+          }
+          
+          {/* This works */}
+          <video width="640" height="auto" autoplay controls>
+            <source src={`${process.env.PUBLIC_URL}/assets/Images/Projects/project01/bose.mp4`} type="video/mp4" />
+          </video>
 
         </div>
       </main>

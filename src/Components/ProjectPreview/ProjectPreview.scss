@@ -67,11 +67,16 @@
       font-weight: var(--font-weight-bold);
     }
     .preview-icons-container{
+      position: relative;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      height: 100%;
+      height: auto;
+      max-height: 2rem;
+      margin: 0;
+      padding: 0;
       margin-right: 1rem;
+      width: 100%;
   
       .preview-btn{
         margin-right: 0.8rem;

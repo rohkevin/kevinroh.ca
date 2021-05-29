@@ -11,7 +11,6 @@ function ImageSlider({ id, projectName, sliderImages }) {
     if (sliderImages) {
       setImages(sliderImages);
     }
-    console.log(sliderImages);
   }, [sliderImages])
 
   useEffect(() => {

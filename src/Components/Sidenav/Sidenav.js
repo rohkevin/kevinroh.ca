@@ -38,7 +38,7 @@ function Sidenav() {
   return (
     <nav id="side-nav">
       <input id="sidenav-toggle" type="checkbox" onClick={toggleSidenav}/>
-      <label for="sidenav-toggle" className="display-none">Side navigation</label>
+      <label htmlFor="sidenav-toggle" className="display-none">Side navigation</label>
       <span className={sidenavOpen ? "first show-first" : "first"}></span>
       {/* <span className="first"></span> */}
       <span className={sidenavOpen ? "second show-second" : "second"}></span>   {/* <!--nth-last-child(3)!--> */}

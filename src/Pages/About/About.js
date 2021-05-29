@@ -30,9 +30,9 @@ function About() {
 
         <section className="page about-container">
           <div className="max-width">
-            <p className="body1">An aspiring solo sky-diver, good-vibes enthusiast, and an all-around-the-world backpacker, I strive to be see life from as many perspectives possible.</p>
+            <p className="body1">An aspiring solo sky-diver, good-vibes enthusiast, and an all-around-the-world backpacker, I strive to see life from as many perspectives as possible.</p>
             <br/>
-            <p className="body1">My love for life translates directly into my daily works. Whether it was engineering solutions to manufacturing problems, to currently programming functionally exceptional applications, every project is an opportunity to learn something new. </p>
+            <p className="body1">My love for life translates directly into my daily works. Whether it was engineering solutions to manufacturing problems, to currently programming functionally exceptional applications, every project is an opportunity to learn something new.</p>
             <br/>
             <p className="body1">Daily I am reminded on the wealth of knowledge left behind by what others have built to date. On this small but beautiful planet, I am grateful to have the opportunity to contribute to better-ing our world. Today gives another chance to be a part of unending change, and to relentlessly chase our dreams so they become reality.</p>
             <br/>

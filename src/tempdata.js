@@ -46,27 +46,27 @@ export const projects = [
 
       "Vaxport was built for TOHacks 2021 Hackathon, with two UX designers and myself as the dev. A large portion of it was built in the 24h hackathon, with a few touchups afterwards."
     ],
-    stack: "React Firebase(Auth, Firestore Database, Storage) API-Integration",
+    stack: "React | Firebase(Auth, Firestore Database, Storage) | SASS | API-Integration",
     github: "https://github.com/vaxport",
     live: "https://vaxport-app.web.app/",
     sliderImages: [
-      "00-Home.png",
-      "01-Registration.png",
-      "02-Passport.png",
-      "03-Record.png",
-      "03a-RecordUpload.png",
-      "03b-UploadComplete.png",
-      "04-PendingPage.png",
-      "05-Dashboard.png",
-      "05a-DashboardProfile.png",
-      "05b-DashboardNews.png",
-      "06-QRBadge.png",
-      "07-LoggedinHome.png",
-      "08-HomeNav.png",
-      "09-LoginAdmin.png",
-      "10-AdminDashboard.png",
-      "11-ScanQR.png",
-      "12-LoadQR.png"
+      "/00-Home.png",
+      "/01-Registration.png",
+      "/02-Passport.png",
+      "/03-Record.png",
+      "/03a-RecordUpload.png",
+      "/03b-UploadComplete.png",
+      "/04-PendingPage.png",
+      "/05-Dashboard.png",
+      "/05a-DashboardProfile.png",
+      "/05b-DashboardNews.png",
+      "/06-QRBadge.png",
+      "/07-LoggedinHome.png",
+      "/08-HomeNav.png",
+      "/09-LoginAdmin.png",
+      "/10-AdminDashboard.png",
+      "/11-ScanQR.png",
+      "/12-LoadQR.png"
     ]
   },
   {
@@ -74,7 +74,7 @@ export const projects = [
     name: "Grow Up",
     summary: "A journalist site made by young adults, for young adults, on growing up and the steps of becoming \"more\" adult",
     description: ["You're in your twenties and you just finished college / university / in your first or second job. You feel like you've got a few things figured out but there's still a ton of other things you feel unconfident about. Does this describe you? Well you're on the right track, so are we! This website is dedicated to those of us feeling lost, need a bit of guidance, or could use another \"life-hack\". This is a blog on growing up, and we share a bit of our insight on what we've found out so far.", "The purpose of this blog was to create a journalist site for a client on daily topics for an adult. The client requested ad-space allocated.", "The blog is built using React with its context API. Users can be authenticated using Firebase Auth, allowing sign-up through email or Google. Authentication levels are currently restricted to those who have new blog-writing rights, managed through a private context. All posts are managed through Firebase's Firestore Database, with write access to only authenticated users."],
-    stack: "React Firebase(Auth, Firestore)",
+    stack: "React | Firebase(Auth, Firestore)",
     github: "https://github.com/rohkevin/growup-v2",
     live: "https://grow-up-app.web.app/",
     sliderImages: [
@@ -100,36 +100,12 @@ export const projects = [
       "Built with React", 
       "Lighthouse score"
     ],
-    stack: "React Sass Netlify",
+    stack: "React | Sass | Netlify",
     github: "https://github.com/rohkevin/kevinroh.ca",
     live: "https://kevinroh.ca",
     sliderImages: [
       "/mockup1.jpg",
 
-    ]
-  },
-  {
-    id: "project04",
-    name: "CocktailDB",
-    summary: "A database for all your favorite cocktails",
-    description: ["This was a submission for TOHacks 2021 Hackathon! I worked with two UX/UI designers within a span of 24 hours to come up with an application that acts as a virtual record for traveling.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique exercitationem corporis, voluptas totam maxime unde iure quod, dicta magni nobis excepturi minima praesentium quasi molestias, eos ipsum odio repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima voluptatem exercitationem, laboriosam asperiores iusto nisi obcaecati praesentium magnam omnis officia ab doloremque eius itaque atque modi repudiandae? Possimus, quo?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat at cupiditate vero et sapiente sed, iusto vitae inventore dignissimos? Atque reiciendis nesciunt sed hic accusantium maxime corporis dicta deserunt obcaecati?"],
-    stack: "React NodeJS API",
-    github: "https://github.com/rohkevin/vaxport",
-    live: "https://google.com",
-    sliderImages: [
-      "/mockup1.jpg",
-    ]
-  },
-  {
-    id: "project05",
-    name: "project5",
-    summary: "Short description Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum adipisci consequatur iure deserunt.",
-    description: ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium ex sint facere, architecto quisquam natus. Fuga, quae est sint accusamus sed quisquam! Laudantium tempora sapiente, explicabo provident facere omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero ipsa numquam eos, perferendis quaerat! Ipsa perferendis minima deserunt nostrum pariatur ex consectetur hic, molestias cumque, dolorem deleniti ea. Eveniet!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique exercitationem corporis, voluptas totam maxime unde iure quod, dicta magni nobis excepturi minima praesentium quasi molestias, eos ipsum odio repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima voluptatem exercitationem, laboriosam asperiores iusto nisi obcaecati praesentium magnam omnis officia ab doloremque eius itaque atque modi repudiandae? Possimus, quo?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat at cupiditate vero et sapiente sed, iusto vitae inventore dignissimos? Atque reiciendis nesciunt sed hic accusantium maxime corporis dicta deserunt obcaecati?"],
-    stack: "React NodeJS API",
-    github: "https://github.com",
-    live: "https://google.com",
-    sliderImages: [
-      "/mockup1.jpg",
     ]
   },
 ]

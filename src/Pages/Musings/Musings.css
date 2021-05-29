@@ -1,0 +1,28 @@
+#musings {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#musings .musings-intro h1 {
+  margin-bottom: 2rem;
+}
+
+#musings .musings-container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 6rem;
+}
+
+#musings .musings-container .view-more-btn {
+  background: inherit;
+  border: 2px solid var(--accent1-main);
+  color: var(--accent1-main);
+  padding: 0.25rem 1rem;
+}
+
+#musings .musings-container .view-more-btn:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=Musings.css.map */

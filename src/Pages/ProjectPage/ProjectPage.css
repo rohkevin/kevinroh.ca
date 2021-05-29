@@ -1,0 +1,62 @@
+#project-page img {
+  width: 100%;
+}
+
+.back-to {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--url-link-color);
+  margin-bottom: 4rem;
+}
+
+.back-to svg {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.back-to:hover {
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+  color: var(--url-link-hover);
+}
+
+.back-to:hover p {
+  color: var(--url-link-hover);
+}
+
+.project-subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.project-subheader .stack {
+  margin-right: 1rem;
+}
+
+.summary {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.preview-icons {
+  margin-right: 1rem;
+  color: var(--url-link-color);
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+  height: 100%;
+  font-size: 1rem;
+}
+
+.preview-icons:hover {
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+  cursor: pointer;
+  color: var(--accent1-main);
+}
+/*# sourceMappingURL=ProjectPage.css.map */

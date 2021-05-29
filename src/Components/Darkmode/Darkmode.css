@@ -1,0 +1,48 @@
+/*
+TODO:
+> MAKE ICONS ROTATE LIKE SUN IS SETTING (TRANSFORM ORIGIN)
+*/
+.button {
+  border: 1px solid var(--gray500);
+  border-radius: 12px;
+  background-color: inherit;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transition: var(--transition-fast2);
+  transition: var(--transition-fast2);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  border: 1px solid var(--gray400);
+  -webkit-transition: var(--transition-fast2);
+  transition: var(--transition-fast2);
+}
+
+.button svg {
+  -webkit-transition: var(--transition-fast2);
+  transition: var(--transition-fast2);
+}
+
+.button:hover svg {
+  color: var(--text-primary);
+  -webkit-transition: var(--transition-fast2);
+  transition: var(--transition-fast2);
+}
+
+.moon {
+  color: var(--gray500);
+}
+
+.sun {
+  color: var(--gray500);
+}
+/*# sourceMappingURL=Darkmode.css.map */

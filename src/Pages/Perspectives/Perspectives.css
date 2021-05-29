@@ -1,0 +1,108 @@
+#perspectives {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 4rem;
+}
+
+#perspectives h1 {
+  font-size: 15vw;
+  margin-bottom: 2rem;
+}
+
+#perspectives .perspectives-figure img {
+  width: 100%;
+}
+
+.my-masonry-grid {
+  display: -webkit-box;
+  /* Not needed if autoprefixing */
+  display: -ms-flexbox;
+  /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px;
+  /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px;
+  /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > figure {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 8rem;
+}
+
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0000008c;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: 1200;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+}
+
+.image-overlay figure {
+  position: relative;
+}
+
+.image-overlay figure img {
+  max-width: 100%;
+  max-height: 90vh;
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1280px) {
+  #perspectives {
+    margin-bottom: 8rem;
+  }
+  #perspectives h1 {
+    font-size: 6rem;
+  }
+  .my-masonry-grid {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  .my-masonry-grid_column {
+    padding-left: 20px;
+  }
+  .my-masonry-grid_column > figure {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  #perspectives {
+    margin-bottom: 8rem;
+  }
+  #perspectives h1 {
+    font-size: 6rem;
+  }
+  .my-masonry-grid {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  .my-masonry-grid_column {
+    padding-left: 20px;
+  }
+  .my-masonry-grid_column > figure {
+    margin-bottom: 10px;
+  }
+  .image-overlay figure img {
+    min-width: 1000px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+/*# sourceMappingURL=Perspectives.css.map */

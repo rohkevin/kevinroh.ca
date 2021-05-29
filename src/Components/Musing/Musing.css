@@ -1,0 +1,25 @@
+.musing-card {
+  margin-bottom: 15rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.musing-card .divider {
+  margin-bottom: 15rem;
+}
+
+.musing-card .quote-icon {
+  margin-bottom: 1rem;
+  color: var(--accent1-main);
+}
+
+.musing-card .quote {
+  margin-bottom: 2rem;
+}
+
+.musing-card .author {
+  color: var(--accent1-main);
+}
+/*# sourceMappingURL=Musing.css.map */

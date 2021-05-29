@@ -1,0 +1,163 @@
+#side-nav {
+  padding: 10px;
+  padding-top: 14px;
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  z-index: 1200;
+  position: relative;
+}
+
+#side-nav input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1200;
+}
+
+#side-nav span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  margin-bottom: 5px;
+  background: var(--text-primary);
+  border-radius: 3px;
+  z-index: 1100;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#side-nav .first {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+#side-nav .second {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+#side-nav .third {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+#side-nav .show-first {
+  opacity: 0.9;
+  -webkit-transform: rotate(-45deg) translate(0, -2px);
+          transform: rotate(-45deg) translate(0, -2px);
+}
+
+#side-nav .show-second {
+  opacity: 0;
+  -webkit-transform: rotate(-45deg) scale(0.2, 0.2);
+          transform: rotate(-45deg) scale(0.2, 0.2);
+}
+
+#side-nav .show-third {
+  opacity: 0.9;
+  -webkit-transform: rotate(45deg) translate(0, 2px);
+          transform: rotate(45deg) translate(0, 2px);
+}
+
+/* Side nav slide-out */
+.sidenav-menu {
+  position: fixed;
+  z-index: 1000;
+  right: -100%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: var(--background-paper);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  opacity: 0;
+  visibility: none;
+}
+
+.sidenav-menu .side-menu-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.sidenav-menu .side-menu-container .sidenav-link * {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.sidenav-menu .side-menu-container .sidenav-link {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--text-primary);
+}
+
+.sidenav-menu .side-menu-container .sidenav-link .sidenav-chevron {
+  opacity: 0;
+  display: none;
+}
+
+.sidenav-menu .side-menu-container .sidenav-link:hover .sidenav-chevron {
+  opacity: 1;
+  display: block;
+}
+
+.sidenav-menu .side-menu-container .sidenav-link:hover p {
+  font-weight: 600;
+}
+
+.sidenav-menu .side-menu-container .sidenav-link p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.show-sidenav {
+  visibility: visible;
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+/*# sourceMappingURL=Sidenav.css.map */

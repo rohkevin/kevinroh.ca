@@ -1,0 +1,32 @@
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  #works {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1280px) {
+  #works {
+    margin-bottom: 8rem;
+  }
+  .works-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  #works {
+    margin-bottom: 8rem;
+  }
+  .works-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+  }
+}
+/*# sourceMappingURL=Works.css.map */

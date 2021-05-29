@@ -1,0 +1,120 @@
+footer {
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+  padding: 3rem 0 1rem;
+  background-color: var(--background-gray);
+}
+
+footer .footer-container {
+  padding: 0 1rem;
+}
+
+footer .footer-links {
+  margin: 3rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  justify-items: left;
+}
+
+footer .footer-nav {
+  margin: 1rem 0;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--url-link-color);
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+}
+
+footer .footer-nav:hover {
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--url-link-hover);
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+}
+
+footer .icon-list {
+  padding: 1rem 0 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .social-icon {
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+}
+
+footer .social-icon svg {
+  color: var(--url-link-color);
+}
+
+footer .social-icon:hover svg {
+  color: var(--url-link-hover);
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+}
+
+footer .copyright {
+  color: var(--url-link-color);
+  font-size: 0.625rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  footer .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .icon-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1280px) {
+  footer .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .icon-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  footer .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer-nav {
+    margin: 0 2rem;
+  }
+  footer .icon-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

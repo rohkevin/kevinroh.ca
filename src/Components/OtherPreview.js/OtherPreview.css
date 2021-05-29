@@ -1,0 +1,97 @@
+.others-card {
+  position: relative;
+  margin: 2rem 0;
+  padding: 6rem 1rem;
+  width: 100%;
+  min-height: 30vh;
+  background-color: var(--background-paper);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.others-card h5 {
+  color: var(--accent1-main);
+}
+
+.others-card p {
+  margin: 1rem 0;
+}
+
+.others-btn {
+  position: relative;
+  padding: 0.25rem 1rem;
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  border: 2px var(--accent1-main) solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow: hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+}
+
+.fill:hover {
+  color: var(--background-paper);
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: var(--accent1-main);
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 100%;
+  z-index: -1;
+  -webkit-transition: var(--transition-fast2);
+  transition: var(--transition-fast2);
+}
+
+.fill:hover:before {
+  right: 0;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .others-card {
+    min-height: 0;
+    margin: 0;
+    padding: 4rem 2rem;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1280px) {
+  .others-card {
+    min-height: 0;
+    margin: 0;
+    padding: 6rem 2rem;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .others-card {
+    min-height: 0;
+    margin: 0;
+    padding: 8rem 4rem;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=OtherPreview.css.map */

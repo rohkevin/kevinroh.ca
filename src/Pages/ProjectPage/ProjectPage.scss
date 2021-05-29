@@ -1,6 +1,5 @@
 #project-page{
   img { width: 100%; }
-  
 }
 .back-to{
   display: flex;
@@ -23,7 +22,7 @@
 .project-subheader {
   display: flex;
   margin: 1rem 0;
-
+  width: 100%;
   .stack {
     margin-right: 1rem;
   }
@@ -34,6 +33,7 @@
 }
 .preview-icons {
   margin-right: 1rem;
+  margin-bottom: 1rem;
   color: var(--url-link-color);
   transition: var(--transition-fast1);
   height: 100%;

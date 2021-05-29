@@ -57,12 +57,16 @@ function ImageSlider({ id, projectName, sliderImages }) {
     )
   } else {
     return (
-      <>
+      <div className="slider-component-container">
+
+        {/* onClick modal */}
         <div className={imageModal ? 'image-overlay' : 'display-none'} onClick={handleOutsideClick}>
           <figure>
             <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}${images[imageIndex]}`} alt={`${projectName} img-${imageIndex} full`}  onClick={() => null}/>
           </figure>
         </div>
+
+        {/* Regular image slider */}
         <div id="image-slider">
           <div className="image-container">
             {images.map((image, index) => {
@@ -98,7 +102,7 @@ function ImageSlider({ id, projectName, sliderImages }) {
           <button onClick={() => setImageIndex(imageIndex - 1)} className={images.length > 1 ? "img-btn left" : "display-none"}><FaChevronLeft /></button>
           <button onClick={() => setImageIndex(imageIndex + 1)} className={images.length > 1 ? "img-btn right" : "display-none"}><FaChevronRight /></button>
         </div>
-      </>
+      </div>
     )
   }
 }

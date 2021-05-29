@@ -25,8 +25,7 @@ function Home() {
       <div className="max-width">
         <section className="home-intro full full-mid">
           <h1>Hi I'm Kevin</h1>
-          <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>full stack software engineer</Link> from Toronto.</p>
-          <p className="subtitle2">I love clean design & clean code.</p>
+          <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>full stack software engineer</Link> from Toronto</p>
         </section>
 
         {/* WORKS SECTION */}

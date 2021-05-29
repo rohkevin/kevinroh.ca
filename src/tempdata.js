@@ -50,7 +50,6 @@ export const projects = [
     github: "https://github.com/vaxport",
     live: "https://vaxport-app.web.app/",
     sliderImages: [
-      "/nara.ogg",
       "00-Home.png",
       "01-Registration.png",
       "02-Passport.png",

@@ -31,13 +31,43 @@ export const projects = [
   {
     id: "project01",
     name: "Vaxport",
-    summary: "A vaccine passport for travelers internationally!",
-    description: ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium ex sint facere, architecto quisquam natus. Fuga, quae est sint accusamus sed quisquam! Laudantium tempora sapiente, explicabo provident facere omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero ipsa numquam eos, perferendis quaerat! Ipsa perferendis minima deserunt nostrum pariatur ex consectetur hic, molestias cumque, dolorem deleniti ea. Eveniet!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet similique exercitationem corporis, voluptas totam maxime unde iure quod, dicta magni nobis excepturi minima praesentium quasi molestias, eos ipsum odio repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima voluptatem exercitationem, laboriosam asperiores iusto nisi obcaecati praesentium magnam omnis officia ab doloremque eius itaque atque modi repudiandae? Possimus, quo?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat at cupiditate vero et sapiente sed, iusto vitae inventore dignissimos? Atque reiciendis nesciunt sed hic accusantium maxime corporis dicta deserunt obcaecati?"],
-    stack: "React NodeJS API",
-    github: "https://github.com",
-    live: "https://google.com",
+    summary: "A digital vaccine passport for travelers internationally.",
+    description: [
+      "Vaxport is a mobile application designed to serve as a digital vaccine passport. With vaccines rolling out internationally, countries are starting to open up borders again. The process of providing health records is not standardized, making the process different for each country visited.", 
+      "Vaxport aims to simplify this process digitally. The application is designed to send user-uploaded vaccination record image files to government database to verify that the user is truly vaccinated. This provides a secure method of knowing that vaccination records are not falsified, as well as removing the need to carry a physical record card.", 
+      "A few initial assumptions we've made while building this app were:",
+      "1. A government database exists where Vaxport app is able to interact with, and obtain verified user data",
+      "2. ",
+      "3. ",
+      "In the future we would like to work towards the following",
+      "1. ",
+      "1. ",
+      "1. ",
+
+      "Vaxport was built for TOHacks 2021 Hackathon, with two UX designers and myself as the dev. A large portion of it was built in the 24h hackathon, with a few touchups afterwards."
+    ],
+    stack: "React Firebase(Auth, Firestore Database, Storage) API-Integration",
+    github: "https://github.com/vaxport",
+    live: "https://vaxport-app.web.app/",
     sliderImages: [
-      "/mockup1.jpg",
+      "/nara.ogg",
+      "00-Home.png",
+      "01-Registration.png",
+      "02-Passport.png",
+      "03-Record.png",
+      "03a-RecordUpload.png",
+      "03b-UploadComplete.png",
+      "04-PendingPage.png",
+      "05-Dashboard.png",
+      "05a-DashboardProfile.png",
+      "05b-DashboardNews.png",
+      "06-QRBadge.png",
+      "07-LoggedinHome.png",
+      "08-HomeNav.png",
+      "09-LoginAdmin.png",
+      "10-AdminDashboard.png",
+      "11-ScanQR.png",
+      "12-LoadQR.png"
     ]
   },
   {
@@ -45,7 +75,7 @@ export const projects = [
     name: "Grow Up",
     summary: "A journalist site made by young adults, for young adults, on growing up and the steps of becoming \"more\" adult",
     description: ["You're in your twenties and you just finished college / university / in your first or second job. You feel like you've got a few things figured out but there's still a ton of other things you feel unconfident about. Does this describe you? Well you're on the right track, so are we! This website is dedicated to those of us feeling lost, need a bit of guidance, or could use another \"life-hack\". This is a blog on growing up, and we share a bit of our insight on what we've found out so far.", "The purpose of this blog was to create a journalist site for a client on daily topics for an adult. The client requested ad-space allocated.", "The blog is built using React with its context API. Users can be authenticated using Firebase Auth, allowing sign-up through email or Google. Authentication levels are currently restricted to those who have new blog-writing rights, managed through a private context. All posts are managed through Firebase's Firestore Database, with write access to only authenticated users."],
-    stack: "React Firebase",
+    stack: "React Firebase(Auth, Firestore)",
     github: "https://github.com/rohkevin/growup-v2",
     live: "https://grow-up-app.web.app/",
     sliderImages: [

@@ -9,10 +9,15 @@ import ImageSlider from '../../Components/ImageSlider/ImageSlider'
 
 const ProjectPage = () => {
   const [project, setProject] = useState(null);
-  const [doc, setDoc] = useState('');
-  const { setPageName, projectsData, setIsLoading, attachName } = useGlobalContext();
+  const [videoWidth, setVideoWidth] = useState(window.innerWidth);
+  const { setPageName, projectsData, setIsLoading, attachName, windowSize } = useGlobalContext();
   const { projectName } = useParams();
 
+  useEffect(() => {
+    if (windowSize > 1281) {
+      setVideoWidth(1200)
+    }
+  }, [])
   
   useEffect(() => {
     setIsLoading(true);
@@ -34,31 +39,34 @@ const ProjectPage = () => {
     const { id, name, stack, github, live, summary, sliderImages, description } = project;
 
     return (
-      <main className="page" id="project-page">
+      <main id="project-page">
         <div className="max-width">
-          <Link to="/works" className="back-to"><FaChevronLeft /><p className="url-link">Back to Works</p></Link>
-          <h1 className="h2">{name}</h1>
+          <div className="non-media">
+            <Link to="/works" className="back-to"><FaChevronLeft /><p className="url-link">Back to Works</p></Link>
+            <h1 className="h2">{name}</h1>
 
-          <div className="project-subheader">
-            <p className="subtitle1 stack">{stack}</p>
+            <div className="project-subheader">
+              <p className="subtitle1 stack">{stack}</p>
+            </div>
+            <a href={github} target="_blank" rel="noopener noreferrer" ><FaGithub className="preview-icons" /></a>
+            <a href={live} target="_blank" rel="noopener noreferrer" ><FaExternalLinkAlt className="preview-icons" /></a>
+
+            <p className="subtitle1 summary">{summary}</p>
           </div>
-          <a href={github} target="_blank" rel="noopener noreferrer" ><FaGithub className="preview-icons" /></a>
-          <a href={live} target="_blank" rel="noopener noreferrer" ><FaExternalLinkAlt className="preview-icons" /></a>
-
-          <p className="subtitle1 summary">{summary}</p>
 
           <ImageSlider id={id} projectName={projectName} sliderImages={sliderImages} />
+          <div className="non-media">
+            {
+              description.map((line, index)=>(
+              <Fragment key={`descriptionline${index}`}>
+                <p className="body1">{line}</p><br/>
+              </Fragment>))
+            }
+          </div>
 
-          {
-            description.map((line, index)=>(
-            <Fragment key={`descriptionline${index}`}>
-              <p className="body1">{line}</p><br/>
-            </Fragment>))
-          }
-
-          {/* <video width="640" height="auto" controls>
+          <video width={videoWidth} height="auto" controls>
             <source src={`${process.env.PUBLIC_URL}/assets/Images/Projects/project01/bose.mp4`} type="video/mp4" />
-          </video> */}
+          </video>
 
         </div>
       </main>

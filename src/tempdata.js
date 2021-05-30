@@ -94,9 +94,9 @@ export const projects = [
   {
     id: "project03",
     name: "Personal Website",
-    summary: "Third iteration of my personal website, and what you're currently seeing.",
+    summary: "Iteration version 3 of my personal website! This is what you're currently seeing.",
     description: [
-      "Personal website description", 
+      "You are currently viewing the live demo of this project! Previous versions were built more for hobby, until I realized I could see myself doing this as a job.", 
       "Built with React", 
       "Lighthouse score"
     ],
@@ -104,7 +104,7 @@ export const projects = [
     github: "https://github.com/rohkevin/kevinroh.ca",
     live: "https://kevinroh.ca",
     sliderImages: [
-      "/mockup1.jpg",
+      "/pw01.png",
 
     ]
   },

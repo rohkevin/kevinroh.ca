@@ -6,19 +6,14 @@ import './ProjectPage.scss'
 
 import Loading from '../../Components/Loading'
 import ImageSlider from '../../Components/ImageSlider/ImageSlider'
+import DemoVideo from '../../Components/DemoVideo/DemoVideo'
 
 const ProjectPage = () => {
-  const [project, setProject] = useState(null);
-  const [videoWidth, setVideoWidth] = useState(window.innerWidth);
-  const { setPageName, projectsData, setIsLoading, attachName, windowSize } = useGlobalContext();
+  const { setPageName, projectsData, setIsLoading, attachName } = useGlobalContext();
   const { projectName } = useParams();
+  const [project, setProject] = useState(null);
+  const [videoModal, setVideoModal] = useState(false);
 
-  useEffect(() => {
-    if (windowSize > 1281) {
-      setVideoWidth(1200)
-    }
-  }, [])
-  
   useEffect(() => {
     setIsLoading(true);
     const pageProject = projectsData.find((data)=> attachName(data.name) === projectName);
@@ -32,12 +27,23 @@ const ProjectPage = () => {
       setPageName(project.name.charAt(0).toUpperCase() + project.name.slice(1));
     }
   }, [project, setPageName])
+  
+  const handleOutsideClick = (e) => {
+    if (e.target.classList.contains('video-modal')){
+      setVideoModal(false);
+    }
+  }
+  
+  
 
   if (!project) {
     return <Loading/>
   } else {
     const { id, name, stack, github, live, summary, sliderImages, description } = project;
-
+    let demoVideo = null;
+    if ("demoVideo" in project) {
+      demoVideo = project.demoVideo;
+    }
     return (
       <main id="project-page">
         <div className="max-width">
@@ -48,9 +54,16 @@ const ProjectPage = () => {
             <div className="project-subheader">
               <p className="subtitle1 stack">{stack}</p>
             </div>
-            <a href={github} target="_blank" rel="noopener noreferrer" ><FaGithub className="preview-icons" /></a>
-            <a href={live} target="_blank" rel="noopener noreferrer" ><FaExternalLinkAlt className="preview-icons" /></a>
+            <div className="project-subheader">
+              <a href={github} target="_blank" rel="noopener noreferrer" ><FaGithub className="preview-icons" /></a>
+              <a href={live} target="_blank" rel="noopener noreferrer" ><FaExternalLinkAlt className="preview-icons" /></a>
+              {
+                demoVideo && (
+                  <button type="button" onClick={() => setVideoModal(true)} className="demo-btn">Watch Demo</button>
+                )
+              }
 
+            </div>
             <p className="subtitle1 summary">{summary}</p>
           </div>
 
@@ -63,10 +76,14 @@ const ProjectPage = () => {
               </Fragment>))
             }
           </div>
-
-          <video width={videoWidth} height="auto" controls>
-            <source src={`${process.env.PUBLIC_URL}/assets/Images/Projects/project01/bose.mp4`} type="video/mp4" />
-          </video>
+          
+          {
+            demoVideo && (
+              <div className={videoModal ? 'video-modal' : 'display-none'} onClick={handleOutsideClick}>
+                <DemoVideo id={id} clip={demoVideo} videoModal={videoModal}/>
+              </div>
+            )
+          }
 
         </div>
       </main>

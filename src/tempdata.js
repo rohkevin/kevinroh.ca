@@ -66,7 +66,8 @@ export const projects = [
       "/10-AdminDashboard.png",
       "/11-ScanQR.png",
       "/12-LoadQR.png"
-    ]
+    ],
+    demoVideo: "/Vaxport.mp4"
   },
   {
     id: "project02",

@@ -9,7 +9,7 @@ function DemoVideo({ id, clip, videoModal }) {
     if (windowSize > 1281) {
       setVideoWidth(1200)
     }
-  }, [])
+  }, [windowSize])
 
   if (id && clip && videoModal) {
     return (

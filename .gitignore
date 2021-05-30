@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 /public/assets/Images/Not Edited Yet
+/public/assets/Images/Projects/MockupTemplates

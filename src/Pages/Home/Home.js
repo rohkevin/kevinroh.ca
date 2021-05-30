@@ -23,7 +23,7 @@ function Home() {
   return (
     <main id="home" className="page">
       <div className="max-width">
-        <section className="home-intro full full-mid">
+        <section className="home-intro full-mid">
           <h1>Hi I'm Kevin</h1>
           <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>full stack software engineer</Link> from Toronto</p>
         </section>

@@ -3,6 +3,7 @@
 }
 .home-intro{
   position: relative;
+  min-height: 70vh;
   h1 {
     font-weight: 700;
   }
@@ -108,7 +109,7 @@
       gap: 4rem;
     }
     .home-more {
-      margin: 16rem 0;
+      margin: 10rem 0;
     }
   }
 } 

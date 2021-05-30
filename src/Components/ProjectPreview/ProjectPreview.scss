@@ -10,6 +10,7 @@
   .image-container {
     width: 100%;
     figure {
+      display: flex;
       align-self: center;
       position: relative;
       z-index: 100;
@@ -34,7 +35,7 @@
       &:hover{
         transform: translateX(0.4rem) translateY(0.3rem);
         &::after{
-          transform: translateX(0.3rem) translateY(0.1rem);
+          transform: translateX(0.1rem) translateY(0.1rem);
           transition: var(--transition-fast1);
         }
       }

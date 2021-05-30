@@ -55,7 +55,7 @@ function Home() {
             />
             <OtherPreview 
               title="I collect quotes"
-              subtitle="Some wonderful sayings that have shaped who I am today"
+              subtitle="Some sayings that shaped who I am today"
               linkTitle="Read my thoughts"
               link="/musings"
             />

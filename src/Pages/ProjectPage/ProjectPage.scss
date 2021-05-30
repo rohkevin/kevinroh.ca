@@ -6,6 +6,20 @@
   display: grid;
   place-items: center;
 
+  .preview-icons {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    color: var(--url-link-color);
+    transition: var(--transition-fast1);
+    height: 100%;
+    font-size: 1rem;
+    &:hover {
+      transition: var(--transition-fast1);
+      cursor: pointer;
+      color: var(--accent1-main);
+    }
+  }
+
 }
 .non-media {
   padding: 0 1rem;
@@ -39,17 +53,4 @@
 .summary {
   color: var(--text-secondary);
   margin-bottom: 2rem;
-}
-.preview-icons {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  color: var(--url-link-color);
-  transition: var(--transition-fast1);
-  height: 100%;
-  font-size: 1rem;
-  &:hover {
-    transition: var(--transition-fast1);
-    cursor: pointer;
-    color: var(--accent1-main);
-  }
 }

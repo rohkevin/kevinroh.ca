@@ -90,10 +90,10 @@
 }
 @media only screen and (min-width: 1281px) {
   .home-works {
-    margin: 4rem 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    margin-bottom: 2rem;
   }
   .displace-btn-up {
     margin-bottom: 4rem;

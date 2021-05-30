@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 body.light {
   --primary-light: #7986cb;
   --primary-main: #7986cb;
@@ -129,7 +130,7 @@ body.dark {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px;
-  font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
+  font-family: 'Open Sans', Helvetica, "Trebuchet MS", Verdana, sans-serif;
   text-decoration: none;
 }
 

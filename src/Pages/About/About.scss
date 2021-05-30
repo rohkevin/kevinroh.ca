@@ -1,6 +1,6 @@
 .about-header{
   margin-top: 8rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   figure {
     width: 100%;
     img {
@@ -12,7 +12,7 @@
   }
 }
 .about-container{
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   width: 100%;
   display: grid;
   place-items: center;
@@ -25,6 +25,15 @@
     img{
       position: relative;
       width: 100%;
+    }
+  }
+  ul {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    li {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: var(--text-primary);
     }
   }
 }

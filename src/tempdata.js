@@ -96,9 +96,7 @@ export const projects = [
     name: "Personal Website",
     summary: "Iteration version 3 of my personal website! This is what you're currently seeing.",
     description: [
-      "You are currently viewing the live demo of this project! Previous versions were built more for hobby, until I realized I could see myself doing this as a job.", 
-      "Built with React", 
-      "Lighthouse score"
+      "You are currently viewing the live demo of this project! Previous versions were built more for hobby, until I realized I could see myself doing this as a job."
     ],
     stack: "React | Sass | Netlify",
     github: "https://github.com/rohkevin/kevinroh.ca",

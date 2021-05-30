@@ -18,19 +18,19 @@
       transition: var(--transition-fast1);
       margin: 2rem 0;
 
-      &::after{
-        content: "";
-        z-index: -1;
-        width: 98%;
-        height: 95%;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border: 2px solid var(--accent1-main);
-        border-radius: 3px;
-        transform: translateX(1rem) translateY(1rem);
-        transition: var(--transition-fast1);
-      }
+      // &::after{
+      //   content: "";
+      //   z-index: -1;
+      //   width: 98%;
+      //   height: 95%;
+      //   position: absolute;
+      //   bottom: 0;
+      //   right: 0;
+      //   border: 2px solid var(--accent1-main);
+      //   border-radius: 3px;
+      //   transform: translateX(1rem) translateY(1rem);
+      //   transition: var(--transition-fast1);
+      // }
   
       &:hover{
         transform: translateX(0.4rem) translateY(0.3rem);

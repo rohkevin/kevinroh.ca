@@ -30,7 +30,7 @@ function Perspectives() {
   }, []);
 
   const handleOutsideClick = (e) => {
-    if (e.target.classList.contains('image-overlay')){
+    if (e.target.classList.contains('full-image-overlay')){
       setImageModal(false);
     }
   }
@@ -54,10 +54,10 @@ function Perspectives() {
           <p className="subtitle1">It's incredible to know that everyone interprets the world in their own way. Let me share with you a bit of what I've seen from my perspective.</p>
 
         </div>
-
+        {/* Full Image on click */}
         {
           imageModal && modalImage ? 
-            <div className={imageModal && modalImage ? 'image-overlay' : 'display-none'} onClick={handleOutsideClick}>
+            <div className={imageModal && modalImage ? 'full-image-overlay' : 'display-none'} onClick={handleOutsideClick}>
               <figure>
                 <img src={process.env.PUBLIC_URL + `/assets/Images${modalImage.path}`} alt={modalImage.name} onClick={()=>setImageModal(false)}/>
               </figure>
@@ -65,7 +65,8 @@ function Perspectives() {
           :
             null
         }
-
+        
+        {/* Masonry container */}
         <div className="perspectives-container">
           <Masonry
             breakpointCols={breakpoints}
@@ -75,7 +76,16 @@ function Perspectives() {
           {images ? images.map(image => {
             return (
               <figure key={image.name} className="perspectives-figure" >
+
+                <div className="image-overlay" onClick={()=> handleImageClick(image)}/>
+                <div className="image-details fadeIn-bottom" onClick={()=> handleImageClick(image)}>
+                  <p className="image-details-title">{image.name}</p>
+                  <p className="image-details-location">{image.location}</p>
+                </div>
+                
                 <img src={process.env.PUBLIC_URL + `/assets/Images${image.path}`} alt={image.name} onClick={()=> handleImageClick(image)}/>
+
+
               </figure>
             )
           }) : null}

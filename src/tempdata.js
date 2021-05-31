@@ -242,38 +242,79 @@ export const musings = [
 export const photos = [
   {
     path: "/Edited/compressed/vn1.jpg",
-    name: "Vietnamese roads"
+    name: "Moped Haven",
+    location: "Hanoi, Vietnam"
   },
   {
     path: "/Edited/compressed/vn4.jpg",
-    name: "Trang An rivers"
+    name: "Rivers, paddies, and hidden caves",
+    location: "Trang An, Vietnam"
   },
   {
     path: "/Edited/compressed/vn5.jpg",
-    name: "After a storm in Ha Long Bay"
+    name: "Passing storm ",
+    location: "Ha Long Bay, Vietnam"
   },
   {
     path: "/Edited/compressed/vn7.jpg",
-    name: "Lanterns in Hoi An"
+    name: "Town of Lanterns ",
+    location: "Hoi An, Vietnam"
   },
   {
     path: "/Edited/compressed/ph1.jpg",
-    name: "Sunset in El Nido"
+    name: "After a 2 hour moped ride in the rain",
+    location: "El Nido, Philippines"
   },
   {
     path: "/Edited/compressed/ph2.jpg",
-    name: "Morning sunrise in Oslob"
+    name: "Morning sunrise before seeing the whales",
+    location: "Oslob, Philippines"
   },
   {
     path: "/Edited/compressed/ams-desktop.jpg",
-    name: "AmsterDAM"
+    name: "AmsterDAM",
+    location: "Amsterdam, Netherlands"
   },
   {
     path: "/Edited/compressed/ldnh1.jpg",
-    name: "London"
+    name: "Chinatown",
+    location: "London, UK"
   },
   {
     path: "/Edited/compressed/japan1.jpg",
-    name: "Temples of Kyoto"
+    name: "Sunset Temples",
+    location: "Kyoto, Japan"
   },
+  {
+    path: "/Edited/compressed/paris3.jpg",
+    name: "Bonjour Paris!",
+    location: "Paris, France"
+  },
+  {
+    path: "/Edited/compressed/segovia1.jpg",
+    name: "Castles of Europe",
+    location: "Segovia, Spain"
+  },
+  {
+    path: "/Edited/compressed/sevilla1.jpg",
+    name: "Vinos and tapas",
+    location: "Sevilla, Spain"
+  },
+  {
+    path: "/Edited/compressed/lisbon3.jpg",
+    name: "Fado and the revolution",
+    location: "Lisbon, Portugal"
+  },
+  {
+    path: "/Edited/compressed/swiss18.png",
+    name: "The most amount of peace I've felt from a place",
+    location: "Interlaken, Switzerland"
+  },
+  {
+    path: "/Edited/compressed/swiss5.jpg",
+    name: "Unreal",
+    location: "Interlaken, Switzerland"
+  },
+
+
 ]

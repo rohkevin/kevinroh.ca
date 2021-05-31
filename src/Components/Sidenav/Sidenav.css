@@ -13,9 +13,9 @@
       -ms-flex-align: center;
           align-items: center;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   z-index: 1200;
   position: relative;
 }
@@ -159,5 +159,11 @@
   opacity: 1;
   -webkit-transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+@media only screen and (min-width: 800px) {
+  #side-nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Sidenav.css.map */

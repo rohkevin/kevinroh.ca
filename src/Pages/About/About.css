@@ -1,6 +1,6 @@
 .about-header {
   margin-top: 8rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
 .about-header figure {
@@ -16,7 +16,7 @@
 }
 
 .about-container {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -32,6 +32,17 @@
 .about-container figure img {
   position: relative;
   width: 100%;
+}
+
+.about-container ul {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-container ul li {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--text-primary);
 }
 
 .page-nomargin {

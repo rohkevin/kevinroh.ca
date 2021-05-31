@@ -10,8 +10,75 @@
   margin-bottom: 2rem;
 }
 
+#perspectives .perspectives-figure {
+  position: relative;
+}
+
 #perspectives .perspectives-figure img {
+  display: block;
+  opacity: 1;
   width: 100%;
+  height: auto;
+}
+
+#perspectives .perspectives-figure .image-overlay {
+  background-color: #0000008c;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: var(--transition-fast1);
+  transition: var(--transition-fast1);
+  z-index: 100;
+}
+
+#perspectives .perspectives-figure:hover .image-overlay {
+  z-index: 800;
+  opacity: 1;
+  z-index: 100;
+}
+
+#perspectives .perspectives-figure:hover .image-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  z-index: 200;
+}
+
+#perspectives .perspectives-figure .image-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: var(--transition-fast2);
+  transition: var(--transition-fast2);
+  z-index: 200;
+}
+
+#perspectives .perspectives-figure .image-details .image-details-title {
+  font-size: 0.8rem;
+  color: #ffffff;
+  z-index: 300;
+}
+
+#perspectives .perspectives-figure .image-details .image-details-location {
+  font-size: 0.7rem;
+  color: #ffffffad;
+  z-index: 300;
+}
+
+#perspectives .perspectives-figure .fadeIn-bottom {
+  top: 80%;
 }
 
 .my-masonry-grid {
@@ -37,16 +104,22 @@
   margin-bottom: 8rem;
 }
 
-.image-overlay {
+.full-image-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: #0000008c;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1200;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -54,13 +127,20 @@
   transition: var(--transition-fast1);
 }
 
-.image-overlay figure {
+.full-image-overlay figure {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  border: 1px solid;
 }
 
-.image-overlay figure img {
+.full-image-overlay figure img {
   max-width: 100%;
   max-height: 90vh;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1280px) {
@@ -99,7 +179,7 @@
   .my-masonry-grid_column > figure {
     margin-bottom: 10px;
   }
-  .image-overlay figure img {
+  .full-image-overlay figure img {
     min-width: 1000px;
     -o-object-fit: cover;
        object-fit: cover;

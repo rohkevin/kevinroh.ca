@@ -11,7 +11,7 @@ function Navbar() {
         links.map(link=>{
           const { linkIndex, name, path } = link;
           return (
-            <Link key={linkIndex + name} to={path} className="link-container"><p className="link-index">{linkIndex}</p><p className="link-name">{name}</p></Link>
+            <Link key={linkIndex + name} to={path} className="link-container"><p className="link-index">{linkIndex}</p><p className="link-name highlight">{name}</p></Link>
           )
         })
       }

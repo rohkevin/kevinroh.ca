@@ -46,7 +46,7 @@ export const projects = [
       "Vaxport was built for TOHacks 2021 Hackathon, with two UX designers and myself as the dev. A large portion of it was built in the 24h hackathon, with a few touchups afterwards."
     ],
     stack: "React | Firebase (Auth, Firestore Database, Storage) | SASS | API-Integration",
-    github: "https://github.com/vaxport",
+    github: "https://github.com/rohkevin/vaxport",
     live: "https://vaxport-app.web.app/",
     sliderImages: [
       "/00-Home.png",

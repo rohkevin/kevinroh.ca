@@ -1,4 +1,31 @@
 import { FaLinkedinIn, FaGithub, FaRegEnvelopeOpen, FaInstagram, FaSpotify } from 'react-icons/fa'
+export const links = [
+  {
+    linkIndex: "01",
+    name: "home",
+    path: "/"
+  },
+  {
+    linkIndex: "02",
+    name: "works",
+    path: "/works"
+  },
+  {
+    linkIndex: "03",
+    name: "perspectives",
+    path: "/perspectives"
+  },
+  {
+    linkIndex: "04",
+    name: "musings",
+    path: "/musings"
+  },
+  {
+    linkIndex: "05",
+    name: "about",
+    path: "/about"
+  },
+];
 
 export const social = [
   {

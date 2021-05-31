@@ -3,29 +3,9 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context'
 import './Sidenav.scss'
 import { FaChevronRight } from 'react-icons/fa'
+import { links } from '../../tempdata'
 
-const links = [
-  {
-    name: "home",
-    path: "/"
-  },
-  {
-    name: "works",
-    path: "/works"
-  },
-  {
-    name: "perspectives",
-    path: "/perspectives"
-  },
-  {
-    name: "musings",
-    path: "/musings"
-  },
-  {
-    name: "about",
-    path: "/about"
-  },
-];
+
 
 function Sidenav() {
   const { sidenavOpen, setSidenavOpen, toggleSidenav } = useGlobalContext();

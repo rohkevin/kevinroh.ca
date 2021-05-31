@@ -1,0 +1,28 @@
+#navbar {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  #navbar {
+    display: flex;
+    margin-right: 1rem;
+
+    .link-container {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      margin-left: 2rem;
+      color: var(--text-primary);
+      
+      .link-index {
+        font-weight: var(--font-weight-bold);
+        font-size: 0.7rem;
+      }
+      .link-name {
+        margin-left: 5px;
+        font-size: 0.7rem;
+      }
+    }
+
+  }
+}

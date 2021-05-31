@@ -1,22 +1,44 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../context'
 
 import Contact from '../Contact/Contact'
 import Darkmode from '../Darkmode/Darkmode'
 import Footer from '../Footer/Footer'
-import Navbar from '../Navbar'
+import Navbar from '../Navbar/Navbar'
 import Sidenav from '../Sidenav/Sidenav'
 import './Layout.scss'
 
 function Layout({ children }) {
-  const {isLoading} = useGlobalContext();
+  const {isLoading, windowSize} = useGlobalContext();
+
+  useEffect(() => {
+    if (windowSize > 800) {
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("nav").style.top=0;
+        } else {
+          document.getElementById("nav").style.top='-70px';
+        }
+        prevScrollpos = currentScrollPos;
+      }
+
+    } else {
+      window.onscroll = function() {
+        document.getElementById("nav").style.top=0;
+      }
+    }
+  }, [windowSize])
+
   if (isLoading) {
     return <h1>Loading...</h1>
   }
+
   return (
     <div className="layout-container">
-      <Navbar />
-      <div className="layout-side-top">
+      <div id="nav" className="layout-side-top">
+        <Navbar />
         <Sidenav />
         <Darkmode />
       </div>

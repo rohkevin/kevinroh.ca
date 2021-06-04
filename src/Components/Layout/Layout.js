@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context'
 
@@ -11,9 +11,10 @@ import './Layout.scss'
 
 function Layout({ children }) {
   const {isLoading, windowSize} = useGlobalContext();
+  const [componentsLoaded, setComponentsLoaded] = useState({nav: false, sidenav: false, darkmode: false})
 
   useEffect(() => {
-    if (document.getElementById("nav")) {
+    if (componentsLoaded.nav && componentsLoaded.sidenav && componentsLoaded.darkmode) {
       if (windowSize > 800) {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
@@ -32,7 +33,7 @@ function Layout({ children }) {
         }
       }
     }
-  }, [windowSize])
+  }, [windowSize, componentsLoaded])
 
   if (isLoading) {
     return <h1>Loading...</h1>
@@ -41,9 +42,9 @@ function Layout({ children }) {
   return (
     <div className="layout-container">
       <div id="nav" className="layout-side-top">
-        <Navbar />
-        <Sidenav />
-        <Darkmode />
+        <Navbar setLoaded={setComponentsLoaded}/>
+        <Sidenav setLoaded={setComponentsLoaded}/>
+        <Darkmode setLoaded={setComponentsLoaded}/>
       </div>
       <div className="layout-side-bottom">
         <Contact />

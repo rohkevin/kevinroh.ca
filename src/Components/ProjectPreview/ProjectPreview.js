@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../context'
 import './ProjectPreview.scss'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { MdLightbulbOutline } from 'react-icons/md'
-function ProjectPreview({ index, id, name, img, summary, description, stack, github, live }) {
+function ProjectPreview({ index, id, name, coverImage, summary, description, stack, github, live }) {
   const projectName = name.replace(/\s/g, '');
   const { windowSize } = useGlobalContext();
 
@@ -18,7 +18,7 @@ function ProjectPreview({ index, id, name, img, summary, description, stack, git
         className="image-container"
         style={check ? {order: 1, marginRight: '4rem'} : {order: 2, marginRight: 0}}>
         <figure className="preview-pic">
-          <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}/${img}`} alt={name} />
+          <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}/${coverImage}`} alt={name} />
         </figure>
       </Link>
       <div 

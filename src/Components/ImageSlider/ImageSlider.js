@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { useGlobalContext } from '../../context';
 import './ImageSlider.scss'
 
-function ImageSlider({ id, projectName, sliderImages }) {
+function ImageSlider({ id, projectName, sliderImages, demoVideo }) {
+  const { windowSize } = useGlobalContext();
   const [images, setImages] = useState(null);
   const [imageIndex, setImageIndex] = useState(0);
   const [imageModal, setImageModal] = useState(false);
+  const [videoWidth, setVideoWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    if (windowSize > 1281) {
+      setVideoWidth(1200)
+    }
+  }, [windowSize])
 
   useEffect(() => {
     if (sliderImages) {
@@ -68,22 +77,42 @@ function ImageSlider({ id, projectName, sliderImages }) {
 
         {/* Regular image slider */}
         <div id="image-slider">
+
           <div className="image-container">
             {images.map((image, index) => {
               let position = 'next-slide';
               if (index === imageIndex) {
                 position = 'active-slide';
               }
-              
               if (index === imageIndex - 1 || (imageIndex === 0 && index === images.length - 1 && images.length > 1) || imageIndex > index) {
                 position = 'last-slide';
               }
-              if (imageIndex < index) {position='next-slide'};
-              return (
-                <figure className={`image-slide ${position}`} key={`${projectName} img-${index}`}>
-                  <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}${image}`} alt={`${projectName} img-${index}`}  onClick={() => setImageModal(true)}/>
-                </figure>
-              )
+              if (imageIndex < index) {
+                position='next-slide'
+              }
+              if (image.includes('.mp4')){
+                return (
+                  <video 
+                    width={videoWidth} 
+                    height="auto" 
+                    controls 
+                    key={`${projectName} img-${index}`}
+                    className={imageIndex=== 0 ? "demo-video-container" : "display-none"}
+                  >
+                    <source 
+                      src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}${image}`} 
+                      type="video/mp4" 
+                      className="demo-video"
+                    />
+                  </video>
+                )
+              } else {
+                return (
+                  <figure className={`image-slide ${position}`} key={`${projectName} img-${index}`}>
+                    <img src={`${process.env.PUBLIC_URL}/assets/Images/Projects/${id}${image}`} alt={`${projectName} img-${index}`}  onClick={() => setImageModal(true)}/>
+                  </figure>
+                )
+              }
             })}
           </div>
 

@@ -6,7 +6,6 @@ import './ProjectPage.scss'
 
 import Loading from '../../Components/Loading'
 import ImageSlider from '../../Components/ImageSlider/ImageSlider'
-import DemoVideo from '../../Components/DemoVideo/DemoVideo'
 
 const ProjectPage = () => {
   const { setPageName, projectsData, setIsLoading, attachName } = useGlobalContext();
@@ -40,10 +39,6 @@ const ProjectPage = () => {
     return <Loading/>
   } else {
     const { id, name, stack, github, live, summary, sliderImages, description } = project;
-    let demoVideo = null;
-    if ("demoVideo" in project) {
-      demoVideo = project.demoVideo;
-    }
     return (
       <main id="project-page">
         <div className="max-width">
@@ -57,18 +52,13 @@ const ProjectPage = () => {
             <div className="project-subheader">
               <a href={github} target="_blank" rel="noopener noreferrer" ><FaGithub className="preview-icons" /></a>
               <a href={live} target="_blank" rel="noopener noreferrer" ><FaExternalLinkAlt className="preview-icons" /></a>
-              {
-                demoVideo && (
-                  <button type="button" onClick={() => setVideoModal(true)} className="demo-btn">Watch Demo</button>
-                )
-              }
 
             </div>
             <p className="subtitle1 summary">{summary}</p>
           </div>
 
           <ImageSlider id={id} projectName={projectName} sliderImages={sliderImages} />
-          
+
           <div className="non-media">
             {
               description.map((line, index)=>(
@@ -77,14 +67,6 @@ const ProjectPage = () => {
               </Fragment>))
             }
           </div>
-          
-          {
-            demoVideo && (
-              <div className={videoModal ? 'video-modal' : 'display-none'} onClick={handleOutsideClick}>
-                <DemoVideo id={id} clip={demoVideo} videoModal={videoModal}/>
-              </div>
-            )
-          }
 
         </div>
       </main>

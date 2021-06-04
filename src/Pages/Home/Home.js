@@ -35,7 +35,12 @@ function Home() {
           <div className="home-works">
             {projectsData.slice(0,4).map((project, index) => {
               return (
-                <ProjectPreview key={project.id} index={index} img={project.sliderImages[0]} {...project}/>
+                <ProjectPreview 
+                  key={project.id} 
+                  index={index} 
+                  coverImage={project.coverImage} 
+                  {...project}
+                />
               )
             })}
           </div>

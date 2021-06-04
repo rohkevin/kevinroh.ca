@@ -20,7 +20,7 @@ function AppProvider({ children }) {
     return () => {
       window.removeEventListener('resize',checkSize);
     }
-  },[])
+  })
   
   useEffect(() => {
     document.title = pageName;

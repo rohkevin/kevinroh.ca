@@ -75,7 +75,9 @@ export const projects = [
     stack: "React | Firebase (Auth, Firestore Database, Storage) | SASS | API-Integration",
     github: "https://github.com/rohkevin/vaxport",
     live: "https://vaxport-app.web.app/",
+    coverImage: "/00-Home.png",
     sliderImages: [
+      "/Vaxport.mp4",
       "/00-Home.png",
       "/01-Registration.png",
       "/02-Passport.png",
@@ -93,8 +95,7 @@ export const projects = [
       "/10-AdminDashboard.png",
       "/11-ScanQR.png",
       "/12-LoadQR.png"
-    ],
-    demoVideo: "/Vaxport.mp4"
+    ]
   },
   {
     id: "project02",
@@ -104,6 +105,7 @@ export const projects = [
     stack: "React | Firebase (Auth, Firestore)",
     github: "https://github.com/rohkevin/growup-v2",
     live: "https://grow-up-app.web.app/",
+    coverImage: "/GU01.png",
     sliderImages: [
       "/GU01.png",
       "/GU02.png",
@@ -128,6 +130,7 @@ export const projects = [
     stack: "React | Sass | Netlify",
     github: "https://github.com/rohkevin/kevinroh.ca",
     live: "https://kevinroh.ca",
+    coverImage: "/pw01.png",
     sliderImages: [
       "/pw01.png",
 

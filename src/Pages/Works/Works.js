@@ -22,7 +22,12 @@ function Works() {
           {
           projectsData.map((project, index) => {
             return (
-              <ProjectPreview key={project.id} index={index} img={project.sliderImages[0]} {...project}/>
+              <ProjectPreview 
+                key={project.id} 
+                index={index} 
+                coverImage={project.coverImage} 
+                {...project}
+              />
             )
           })
         }

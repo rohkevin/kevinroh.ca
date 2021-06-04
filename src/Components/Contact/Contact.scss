@@ -32,6 +32,7 @@
   transform: rotate(225deg);
   transition: var(--transition-fast2);
 }
+
 .contact-form-mask{
   visibility: hidden;
   opacity: 0;
@@ -60,31 +61,57 @@
   position: absolute;
   right: 10vw;
   width: 80vw;
-  min-height: 50vh;
+  max-width: 100%;
+  min-height: 30vh;
+  max-height: 90vh;
   display: grid;
   place-items: center;
-  padding: 2rem;
+  padding: 0 1rem;
   background: var(--background-default);
   border-radius: 10px;
   transition: var(--transition-fast2);
+  overflow-y: scroll;
+
+  border: 1px solid;
 
   form {
     display: grid;
     place-items: center;
     width: 100%;
     color: var(--text-primary);
+    position: relative;
   }
   a {
     color: var(--accent1-main);
   }
   p {
-    padding: 0 0.5rem;
     margin: 1rem 0;
+    max-width: 100%;
   }
   h1 {
-    margin: 2rem 0;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     color: var(--accent1-main);
     text-align: center;
+  }
+  .icon-list {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .social-icon{
+    transition: var(--transition-fast1);
+    svg {
+      color: var(--url-link-color);
+    }
+    &:hover {
+      svg{
+        color: var(--url-link-hover);
+        transition: var(--transition-fast1);
+      }
+    }
   }
 }
 .show-contact{
@@ -99,15 +126,20 @@
   position: relative;
   margin: 0.25rem 0;
   padding: 0.5rem;
+  min-width: 100%;
   width: 100%;
+  max-width: 100%;
   border: 1px solid transparent;
   border-radius: 5px;
   font-size: 0.75rem;
   background: inherit;
   color: var(--text-primary);
-
+  transition: var(--transition-fast1);
+  
   &:focus{
     outline: none;
+    border: 1px solid var(--text-primary-hover);
+    transition: var(--transition-fast2);
   }
   
 }
@@ -121,14 +153,17 @@ textarea {
 
 .submit-btn{
   position: relative;
+  min-width: 0;
   width: 100%;
+  max-width: 300px;
   border: 1px solid;
   border-radius: 5px;
   margin: 1rem 0;
   padding: 0.5rem 0;
   background: var(--button-background);
-  color: var(--text-primary);
+  // color: var(--text-primary);
   transition: var(--transition-fast1);
+
   &:hover{
     background: var(--button-hover);
     color: var(--button-hover-color);
@@ -136,7 +171,6 @@ textarea {
     transition: var(--transition-fast1);
   }
 }
-
 .success {
   border: 1px solid var(--success-light);
   background: var(--success-light);
@@ -150,38 +184,44 @@ textarea {
     color: var(--url-link-hover);
   }
 }
-.icon-list {
-  padding: 1rem 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.social-icon{
-  margin: 0 0.5rem;
-  transition: var(--transition-fast1);
-  svg {
-    color: var(--url-link-color);
-  }
-  &:hover {
-    svg{
-      color: var(--url-link-hover);
-      transition: var(--transition-fast1);
-    }
-  }
-}
+
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
+  .contact-form{
+    .icon-list {
+      justify-content: center;
+    }
+    .social-icon{
+      margin: 0 0.5rem;
+    }
+  }
 
 }
 @media only screen and (min-width: 901px) and (max-width: 1280px)  {
   .contact-form {
     right: 20vw;
     width: 60vw;
+    .icon-list {
+      justify-content: center;
+    }
+    .social-icon{
+      margin: 0 0.5rem;
+    }
   }
 }
 @media only screen and (min-width: 1281px) {
   .contact-form {
-    right: 30vw;
-    width: 40vw;
+    position: relative;
+    right: 0;
+    left: 0;
+    max-width: 700px;
+    // right: 30vw;
+    // width: 40vw;
+    .icon-list {
+      justify-content: center;
+    }
+    .social-icon{
+      margin: 0 0.5rem;
+    }
   }
 }

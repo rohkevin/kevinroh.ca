@@ -102,8 +102,9 @@ function Contact() {
       <div className={contactModal ? 'contact-form-mask show-mask' : 'contact-form-mask'} onClick={handleOutsideClick}>
         <div className={contactModal ? 'contact-form show-contact' : 'contact-form'} >
           <FaTimes className="close" onClick={()=>setContactModal(false)}/>
-          <h1 className="h4">Connect with me</h1>
-          <p className="body2">Feel free to get in touch if you'd like to discuss work, share your stories, or debate on why "Let Me Love You" by Mario is the best R&B song up to date. Any constructive feedback is very much appreciated! You can also email me at: <a href="mailto:kevinrohmail@gmail.com" className="body2 email">kevinrohmail@gmail.com</a></p>
+          <h1 className="h5">Connect with me</h1>
+          <p className="body2">Feel free to get in touch if you'd like to discuss work, share your stories, or debate on why "Let Me Love You" by Mario is the best R&B song to date. Any constructive feedback is very much appreciated! You can also email me at: <a href="mailto:kevinrohmail@gmail.com" className="body2 email">kevinrohmail@gmail.com</a></p>
+          
           <form noValidate autoComplete="off" onSubmit={handleSubmit}>
             <input 
               value={name}
@@ -124,13 +125,13 @@ function Contact() {
               onChange={handleMessageChange}
               className={messageError ? "contact-input error" : "contact-input"}
               name="message"
-              placeholder="What would you like to ask?"
+              placeholder="Your message"
             />
             <button type="submit" className={success ? "submit-btn success" : "submit-btn"}>{success ? "Sent!" : "Submit"}</button>
-            <div className="icon-list">
-              {socialData.map(social => <a key={social.name} href={social.url} className="social-icon" target="_blank" rel="noopener noreferrer">{social.icon}</a>)}
-            </div>
           </form>
+          <div className="icon-list">
+            {socialData.map(social => <a key={social.name} href={social.url} className="social-icon" target="_blank" rel="noopener noreferrer">{social.icon}</a>)}
+          </div>
         </div>
       </div>
     </>

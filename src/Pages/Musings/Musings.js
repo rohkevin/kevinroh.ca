@@ -20,7 +20,6 @@ function Musings() {
         <div className="musings-intro full full-mid">
           <h1>Musings</h1>
           <p className="subtitle1">These are a collection of some famous sayings that help me stay inspired. The amount of wisdom left by those gone before us feels so incredibly valuable.</p>
-          <p className="subtitle1">If you have a saying you'd like to share, please do. I'd love to add it to my list!</p>
 
         </div>
         <section className="musings-container">

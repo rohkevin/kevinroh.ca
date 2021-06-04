@@ -67,6 +67,7 @@ function Home() {
           <div className="home-more">
             <h2 className="h3">Want to know more?</h2>
             <p className="subtitle1">Check out my <Link to="/about" className="highlight">bio here</Link> or just <span onClick={openContact} className=" highlight">say hi!</span></p>
+            <p classsName="subtitle1">Alternatively, you can email me directly at <a href="mailto:kevinrohmail@gmail.com" className="email-link">kevinrohmail@gmail.com</a></p>
           </div>
         </section>
       </div>

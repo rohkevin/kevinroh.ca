@@ -27,7 +27,12 @@
   font-size: 16px;
   font-family: 'Open Sans', Helvetica, "Trebuchet MS", Verdana, sans-serif ;
   text-decoration: none;
+
+  &::before, &::after {
+    box-sizing: inherit;
+  }
 }
+
 body {
   background-color: var(--background-default);
 }
@@ -40,6 +45,7 @@ main {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   width: 100%;
+  max-width: 100vw;
 }
 h1, .h1{
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
@@ -121,6 +127,16 @@ h6, .h6{
   letter-spacing: 0.01071em;
   color: var(--text-primary);
 }
+.email-link {
+  color: var(--accent1-main);
+  font-size: inherit;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--accent1-main);
+  }
+}
 button {
   font-family: 'Open Sans', 'Helvetica', 'Arial' sans-serif;
   font-weight: 600;
@@ -138,6 +154,7 @@ span {
 }
 .page {
   width: 100%;
+  max-width: 100vw;
   height: 100%;
   padding: 2rem 1rem;
   display: grid;
@@ -210,7 +227,7 @@ span {
 .fill {
   position: relative;
   color: var(--text-primary);
-  border: 2px var(--accent1-main) solid;
+  border: 1px var(--text-secondary) solid;
   outline: 0;
   overflow:hidden;
   background: none;
@@ -227,6 +244,7 @@ span {
   content: "";
   position: absolute;
   background: var(--accent1-main);
+  // background: var(--text-secondary);
   bottom: 0;
   left: 0;
   top: 0;

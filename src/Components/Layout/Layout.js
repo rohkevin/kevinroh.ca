@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context'
 
 import Contact from '../Contact/Contact'
@@ -12,21 +13,23 @@ function Layout({ children }) {
   const {isLoading, windowSize} = useGlobalContext();
 
   useEffect(() => {
-    if (windowSize > 800) {
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("nav").style.top=0;
-        } else {
-          document.getElementById("nav").style.top='-70px';
+    if (document.getElementById("nav")) {
+      if (windowSize > 800) {
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("nav").style.top=0;
+          } else {
+            document.getElementById("nav").style.top='-70px';
+          }
+          prevScrollpos = currentScrollPos;
         }
-        prevScrollpos = currentScrollPos;
-      }
-
-    } else {
-      window.onscroll = function() {
-        document.getElementById("nav").style.top=0;
+  
+      } else {
+        window.onscroll = function() {
+          document.getElementById("nav").style.top=0;
+        }
       }
     }
   }, [windowSize])
@@ -45,6 +48,7 @@ function Layout({ children }) {
       <div className="layout-side-bottom">
         <Contact />
       </div>
+
 
       <div className="layout-children">
         { children }

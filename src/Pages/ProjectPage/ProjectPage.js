@@ -68,6 +68,7 @@ const ProjectPage = () => {
           </div>
 
           <ImageSlider id={id} projectName={projectName} sliderImages={sliderImages} />
+          
           <div className="non-media">
             {
               description.map((line, index)=>(

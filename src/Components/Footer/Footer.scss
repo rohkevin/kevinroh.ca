@@ -25,9 +25,17 @@ footer {
 
     &:hover{
       cursor: pointer;
-      font-weight: 400;
+      font-weight: 600;
       color: var(--url-link-hover);
-      transition: var(--transition-fast1);
+      // transition: var(--transition-fast1);
+    }
+    &::before {
+      display: block;
+      content: attr(title);
+      font-weight: 600;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
     }
   }
   .icon-list {
@@ -64,6 +72,9 @@ footer {
     .icon-list {
       justify-content: center;
     }
+    .social-icon{
+      margin: 0 0.5rem;
+    }
   }
 }
 @media only screen and (min-width: 901px) and (max-width: 1280px)  {
@@ -74,6 +85,9 @@ footer {
     }
     .icon-list {
       justify-content: center;
+    }
+    .social-icon{
+      margin: 0 0.5rem;
     }
   }
   
@@ -89,6 +103,9 @@ footer {
     }
     .icon-list {
       justify-content: center;
+    }
+    .social-icon{
+      margin: 0 0.5rem;
     }
   }
   

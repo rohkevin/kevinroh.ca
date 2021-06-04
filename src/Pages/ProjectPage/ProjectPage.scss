@@ -39,12 +39,21 @@
 }
 .non-media {
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  h1 {
+    margin-top: 3rem;
+  }
 }
 .back-to{
+  position: absolute;
+  top: 0;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   color: var(--url-link-color);
-  margin-bottom: 4rem;
 
   svg{
     font-size: 0.8rem;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context'
 import './ProjectPreview.scss'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-
+import { MdLightbulbOutline } from 'react-icons/md'
 function ProjectPreview({ index, id, name, img, summary, description, stack, github, live }) {
   const projectName = name.replace(/\s/g, '');
   const { windowSize } = useGlobalContext();
@@ -29,9 +29,25 @@ function ProjectPreview({ index, id, name, img, summary, description, stack, git
         <p className="subtitle2 stack">{stack}</p>
 
         <div className="preview-icons-container">
-          <Link to={`/works/${projectName}`}><button className="fill preview-btn">Go to project</button></Link>
-          <a href={github} target="_blank" rel="noopener noreferrer" ><FaGithub className="preview-icons" /></a>
-          <a href={live} target="_blank" rel="noopener noreferrer" ><FaExternalLinkAlt className="preview-icons" /></a>
+          <Link to={`/works/${projectName}`}>
+            <button className="fill preview-btn"
+              ><MdLightbulbOutline style={{transform: 'scale(1.1)'}}/>Details
+            </button>
+          </Link>
+          <a 
+            href={live} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="fill preview-btn"
+            ><FaExternalLinkAlt style={{transform: 'scale(0.85)'}}/>Live
+          </a>
+          <a 
+            href={github} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="fill preview-btn"
+            ><FaGithub />Github
+          </a>
         </div>
       </div>
     </div>

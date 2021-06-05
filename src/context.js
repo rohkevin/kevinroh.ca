@@ -39,9 +39,6 @@ function AppProvider({ children }) {
   }, []);
 
   // Leisure sub-menu for nav
-  const openLeisure = () => {
-    setLeisureModal(true);
-  }
   const closeLeisure = () => {
     setLeisureModal(false);
   }

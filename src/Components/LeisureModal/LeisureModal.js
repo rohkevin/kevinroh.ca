@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../../context';
 import './LeisureModal.scss'
 
 function LeisureModal({ modal, location }) {
-  
+  const { closeLeisure } = useGlobalContext();
   const leisureRef = useRef(null);
   
   useEffect(() => {
@@ -17,11 +18,11 @@ function LeisureModal({ modal, location }) {
     <div 
       className={modal ? "leisure-modal show-leisure" : "leisure-modal"} 
       ref={leisureRef}>
-      <Link to="/perspectives" className="leisure-link-container">
+      <Link to="/perspectives" className="leisure-link-container" onClick={closeLeisure}>
         <p className="leisure-link-index"></p>
         <p className="leisure-link-name" title="perspectives">perspectives</p>
       </Link>
-      <Link to="/musings" className="leisure-link-container">
+      <Link to="/musings" className="leisure-link-container" onClick={closeLeisure}>
         <p className="leisure-link-index"></p>
         <p className="leisure-link-name" title="musings">musings</p>
       </Link>

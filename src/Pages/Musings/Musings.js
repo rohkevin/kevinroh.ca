@@ -17,7 +17,7 @@ function Musings() {
   return (
     <main id="musings" className="page">
       <div className="max-width">
-        <div className="musings-intro full full-mid">
+        <div className="musings-intro full full-mid" data-aos="fade-up" data-aos-duration="1000">
           <h1>Musings</h1>
           <p className="subtitle1">These are a collection of some famous sayings that help me stay inspired. The amount of wisdom left by those gone before us feels so incredibly valuable.</p>
 

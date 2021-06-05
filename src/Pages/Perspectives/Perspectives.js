@@ -49,7 +49,7 @@ function Perspectives() {
   return (
     <main id="perspectives">
       <div className="max-width">
-        <div className="page full full-mid">
+        <div className="page full full-mid" data-aos="fade-up" data-aos-duration="1000">
           <h1>Perspectives</h1>
           <p className="subtitle1">It's incredible to know that everyone interprets the world in their own way. Let me share with you a bit of what I've seen from my perspective.</p>
 
@@ -75,7 +75,7 @@ function Perspectives() {
           >
           {images ? images.map(image => {
             return (
-              <figure key={image.name} className="perspectives-figure" >
+              <figure key={image.name} className="perspectives-figure" data-aos="fade-up" data-aos-duration="1000">
 
                 <div className="image-overlay" onClick={()=> handleImageClick(image)}/>
                 <div className="image-details fadeIn-bottom" onClick={()=> handleImageClick(image)}>

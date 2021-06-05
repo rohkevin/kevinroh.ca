@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import './theme.scss'
 import Layout from './Components/Layout/Layout'
 import Error from './Components/Error'
@@ -21,6 +22,7 @@ function ScrollToTop(){
 }
 
 function App() {
+  Aos.init();
   return (
     <Router>
       <ScrollToTop/>

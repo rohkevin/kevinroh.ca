@@ -13,12 +13,15 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  width: 100%;
 
   .section-title {
     width: auto;
     margin-bottom: 2rem;
   }
-  
+  .home-works {
+    width: 100%;
+  }
   .home-others{
     padding: 4rem 0;
     width: 100%;

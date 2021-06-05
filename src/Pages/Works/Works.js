@@ -12,7 +12,7 @@ function Works() {
   return (
     <main id="works" className="page" >
       <div className="max-width">
-        <section className="full full-mid works-intro">
+        <section className="full full-mid works-intro" data-aos="fade-up" data-aos-duration="1000">
           <h1>Works</h1>
           <p className="subtitle1">I've worked on multiple applications over my coding career, as well as passion projects and helping friends build their personal brands.</p>
           <p className="subtitle1">You can check them out here or go straight to my <a className="highlight" href="https://github.com/rohkevin" target="_blank" rel="noreferrer noopener">Github</a>.</p>

@@ -12,7 +12,7 @@ function ProjectPreview({ index, id, name, coverImage, summary, description, sta
   const check = ((windowSize > 600 && index % 2 === 0) || windowSize < 600 || windowSize > 900);
 
   return (
-    <div className="preview-card">
+    <div className="preview-card" data-aos="fade-up" data-aos-duration="1000">
       <Link 
         to={`/works/${projectName}`} 
         className="image-container"

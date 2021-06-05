@@ -23,14 +23,14 @@ function Home() {
   return (
     <main id="home" className="page">
       <div className="max-width">
-        <section className="home-intro full-mid">
+        <section className="home-intro full-mid" data-aos="fade-right" data-aos-duration="1000">
           <h1>Hi I'm Kevin</h1>
           <p className="subtitle2">I'm a <Link to="/about" className={darkMode ? "bold" : "highlight"}>full stack software engineer</Link> from Toronto</p>
         </section>
 
         {/* WORKS SECTION */}
-        <section className="home-section-outer">
-          <Link to="/works" className="h2 section-title"><span className="highlight">Works</span></Link>
+        <section className="home-section-outer" >
+          <Link to="/works" className="h2 section-title" data-aos="fade-up" data-aos-duration="1000"><span className="highlight">Works</span></Link>
           
           <div className="home-works">
             {projectsData.slice(0,4).map((project, index) => {
@@ -40,6 +40,7 @@ function Home() {
                   index={index} 
                   coverImage={project.coverImage} 
                   {...project}
+
                 />
               )
             })}
@@ -51,7 +52,7 @@ function Home() {
 
         {/* OTHERS SECTION */}
         <section className="home-section-outer">
-          <div className="home-others">
+          <div className="home-others" data-aos="fade-up" data-aos-duration="1000">
             <OtherPreview 
               title="I take pictures sometimes"
               subtitle="About life, travels, and whatever catches my attention"
@@ -68,11 +69,11 @@ function Home() {
         </section>
         <div className="divider"></div>
 
-        <section className="home-section-outer">
+        <section className="home-section-outer" data-aos="fade-up" data-aos-duration="1000">
           <div className="home-more">
             <h2 className="h3">Want to know more?</h2>
             <p className="subtitle1">Check out my <Link to="/about" className="highlight">bio here</Link> or just <span onClick={openContact} className=" highlight">say hi!</span></p>
-            <p classsName="subtitle1">Alternatively, you can email me directly at <a href="mailto:kevinrohmail@gmail.com" className="email-link">kevinrohmail@gmail.com</a></p>
+            <p className="subtitle1">Alternatively, you can email me directly at <a href="mailto:kevinrohmail@gmail.com" className="email-link">kevinrohmail@gmail.com</a></p>
           </div>
         </section>
       </div>

@@ -101,10 +101,6 @@
       transition: var(--transition-fast2);
       position: relative;
     }
-    .sidenav-chevron {
-      color: var(--text-primary);
-      font-weight: 300;
-    }
 
     .sidenav-link *{
       transition: none;
@@ -116,8 +112,9 @@
       color: var(--text-primary);
 
       .sidenav-chevron {
-        visibility: hidden;
-        opacity: 0;
+        color: var(--text-primary);
+        // visibility: hidden;
+        // opacity: 0;
         transition: var(--transition-fast1);
       }
       .rotate-chevron {

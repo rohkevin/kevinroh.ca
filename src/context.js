@@ -10,6 +10,8 @@ function AppProvider({ children }) {
   const [projectsData, setProjectsData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [leisureModal, setLeisureModal] = useState(false);
+  const [leisureLocation, setLeisureLocation] = useState({})
 
   const checkSize = () => {
     setWindowSize(window.innerWidth);
@@ -36,7 +38,26 @@ function AppProvider({ children }) {
     setIsLoading(false);
   }, []);
 
-
+  // Leisure sub-menu for nav
+  const openLeisure = () => {
+    setLeisureModal(true);
+  }
+  const closeLeisure = () => {
+    setLeisureModal(false);
+  }
+  const toggleLeisure = () => {
+    const leisureLink = document.getElementById("leisure-link");
+    const leisureLocator = leisureLink.getBoundingClientRect();
+    const left = (leisureLocator.left);
+    const bottom = (leisureLocator.bottom);
+    setLeisureLocation({left, bottom})
+    setLeisureModal(!leisureModal);
+  }
+  const handleOutsideClick = (e) => {
+    if (!e.target.classList.contains("show-leisure")) {
+      closeLeisure();
+    }
+  }
   const toggleSidenav = () => {
     setSidenavOpen(!sidenavOpen);
   }
@@ -54,6 +75,7 @@ function AppProvider({ children }) {
         windowSize,
         isLoading, setIsLoading,
         sidenavOpen, setSidenavOpen, toggleSidenav,
+        leisureModal, setLeisureModal, leisureLocation, setLeisureLocation, toggleLeisure, handleOutsideClick, closeLeisure,
         contactModal, setContactModal, openContact,
         socialData,
         projectsData,

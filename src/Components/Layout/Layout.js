@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context'
 
 import Contact from '../Contact/Contact'
@@ -10,7 +9,7 @@ import Sidenav from '../Sidenav/Sidenav'
 import './Layout.scss'
 
 function Layout({ children }) {
-  const {isLoading, windowSize} = useGlobalContext();
+  const {isLoading, windowSize, handleOutsideClick, leisureModal, closeLeisure} = useGlobalContext();
 
   useEffect(() => {
 
@@ -24,6 +23,9 @@ function Layout({ children }) {
             document.getElementById("nav").style.top='-70px';
           }
           prevScrollpos = currentScrollPos;
+          if (leisureModal) {
+            closeLeisure();
+          }
         }
   
       } else {
@@ -31,14 +33,14 @@ function Layout({ children }) {
           document.getElementById("nav").style.top=0;
         }
       }
-  }, [windowSize])
+  }, [windowSize, leisureModal])
 
   if (isLoading) {
     return <h1>Loading...</h1>
   }
 
   return (
-    <div className="layout-container">
+    <div className="layout-container" >
       <div id="nav" className="layout-side-top">
         <Navbar />
         <Sidenav />
@@ -49,10 +51,10 @@ function Layout({ children }) {
       </div>
 
 
-      <div className="layout-children">
+      <div className="layout-children" onClick={handleOutsideClick} >
         { children }
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

@@ -7,24 +7,24 @@ export const links = [
   },
   {
     linkIndex: "02",
-    name: "works",
-    path: "/works"
-  },
-  {
-    linkIndex: "03",
-    name: "perspectives",
-    path: "/perspectives"
-  },
-  {
-    linkIndex: "04",
-    name: "musings",
-    path: "/musings"
-  },
-  {
-    linkIndex: "05",
     name: "about",
     path: "/about"
   },
+  {
+    linkIndex: "03",
+    name: "works",
+    path: "/works"
+  },
+  // {
+  //   linkIndex: "04",
+  //   name: "perspectives",
+  //   path: "/perspectives"
+  // },
+  // {
+  //   linkIndex: "05",
+  //   name: "musings",
+  //   path: "/musings"
+  // },
 ];
 
 export const social = [

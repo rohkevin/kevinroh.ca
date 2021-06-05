@@ -3,15 +3,23 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context'
 import './Sidenav.scss'
 import { links } from '../../tempdata';
-import { FaChevronRight } from 'react-icons/fa'
+import { FiChevronDown } from 'react-icons/fi'
 
 function Sidenav() {
-  const { sidenavOpen, setSidenavOpen, toggleSidenav } = useGlobalContext();
+  const { sidenavOpen, setSidenavOpen, toggleSidenav, openContact } = useGlobalContext();
   const [showChevron, setShowChevron] = useState(false);
-  
-  const hoverLink = (e) => {
+  const [showSidenavLeisure, setShowSidenavLeisure] = useState(false);
+
+  const hoverLink = () => {
     setShowChevron(!showChevron);
   } 
+  const handleContactClick = () => {
+    setSidenavOpen(false);
+    openContact()
+  }
+  const toggleShowLeisure = () => {
+    setShowSidenavLeisure(!showSidenavLeisure);
+  }
 
   if (links) {
     return (
@@ -25,20 +33,33 @@ function Sidenav() {
         
         <div className={sidenavOpen ? 'sidenav-menu show-sidenav' : 'sidenav-menu'}> {/* <!--nth-last-child(1)!--> */}
           <div className="side-menu-container">
-          {
-            links.map((link) => {
+            {links.map((link) => {
               return (
-                <Link key={link.name} to={link.path} className="sidenav-link" onMouseOver={()=>hoverLink} onClick={()=>setSidenavOpen(false)}>
-                  <FaChevronRight className="sidenav-chevron"/>
+                <Link key={link.name} to={link.path} className="sidenav-link" onClick={()=>setSidenavOpen(false)}>
                   <p>{link.name.toUpperCase()}</p>
                 </Link>
               )
-            })
-          }
-          <a href="https://docs.google.com/document/d/1RH3yHIID9b1HuYIIrAjrS2_I9f9cm9kvGVAvKd8EcWQ/edit?usp=sharing" rel="noreferrer" target="_blank" className="sidenav-link">
-            <FaChevronRight className="sidenav-chevron"/>
-            <p>RESUME</p>
-          </a>
+            })}
+
+            <div className="sidenav-link" onMouseOver={hoverLink} onClick={toggleShowLeisure}>
+              <p>LEISURE <FiChevronDown className={showSidenavLeisure ? "sidenav-chevron rotate-chevron" : "sidenav-chevron"}/></p>
+            </div>
+
+            <div className={showSidenavLeisure ? "sidenav-leisure show-side-leisure" : "sidenav-leisure"} >
+              <Link to="/perspectives" className="sidenav-link" onClick={()=>setSidenavOpen(false)}>
+                <p>PERSPECTIVES</p>
+              </Link>
+              <Link to="/musings" className="sidenav-link" onClick={()=>setSidenavOpen(false)}>
+                <p>MUSINGS</p>
+              </Link>
+            </div>
+            
+            <div className="sidenav-link" onClick={handleContactClick}>
+              <p>CONTACT</p>
+            </div>
+            <a href="https://docs.google.com/document/d/1RH3yHIID9b1HuYIIrAjrS2_I9f9cm9kvGVAvKd8EcWQ/edit?usp=sharing" rel="noreferrer" target="_blank" className="sidenav-link">
+              <p>RESUME</p>
+            </a>
           </div>
         </div>
       </nav>

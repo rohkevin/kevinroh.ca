@@ -11,10 +11,9 @@ import './Layout.scss'
 
 function Layout({ children }) {
   const {isLoading, windowSize} = useGlobalContext();
-  const [componentsLoaded, setComponentsLoaded] = useState({nav: false, sidenav: false, darkmode: false})
 
   useEffect(() => {
-    if (componentsLoaded.nav && componentsLoaded.sidenav && componentsLoaded.darkmode) {
+
       if (windowSize > 800) {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
@@ -32,8 +31,7 @@ function Layout({ children }) {
           document.getElementById("nav").style.top=0;
         }
       }
-    }
-  }, [windowSize, componentsLoaded])
+  }, [windowSize])
 
   if (isLoading) {
     return <h1>Loading...</h1>
@@ -42,9 +40,9 @@ function Layout({ children }) {
   return (
     <div className="layout-container">
       <div id="nav" className="layout-side-top">
-        <Navbar setLoaded={setComponentsLoaded}/>
-        <Sidenav setLoaded={setComponentsLoaded}/>
-        <Darkmode setLoaded={setComponentsLoaded}/>
+        <Navbar />
+        <Sidenav />
+        <Darkmode />
       </div>
       <div className="layout-side-bottom">
         <Contact />

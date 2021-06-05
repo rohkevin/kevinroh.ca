@@ -11,7 +11,6 @@ const ProjectPage = () => {
   const { setPageName, projectsData, setIsLoading, attachName } = useGlobalContext();
   const { projectName } = useParams();
   const [project, setProject] = useState(null);
-  const [videoModal, setVideoModal] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -20,20 +19,11 @@ const ProjectPage = () => {
     setIsLoading(false);
   }, [projectsData, projectName, attachName, setIsLoading])
   
-  
   useEffect(()=> {
     if (project) {
       setPageName(project.name.charAt(0).toUpperCase() + project.name.slice(1));
     }
   }, [project, setPageName])
-  
-  const handleOutsideClick = (e) => {
-    if (e.target.classList.contains('video-modal')){
-      setVideoModal(false);
-    }
-  }
-  
-  
 
   if (!project) {
     return <Loading/>

@@ -72,8 +72,6 @@
   transition: var(--transition-fast2);
   overflow-y: scroll;
 
-  border: 1px solid;
-
   form {
     display: grid;
     place-items: center;
@@ -156,7 +154,8 @@ textarea {
   min-width: 0;
   width: 100%;
   max-width: 300px;
-  border: 1px solid;
+  border: 1px solid var(--url-link-color);
+  color: var(--url-link-color);
   border-radius: 5px;
   margin: 1rem 0;
   padding: 0.5rem 0;

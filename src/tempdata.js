@@ -60,17 +60,60 @@ export const projects = [
     name: "Vaxport",
     summary: "A digital vaccine passport for travelers.",
     description: [
-      "Vaxport is a mobile application designed to serve as a digital vaccine passport. With vaccines rolling out internationally, countries are starting to open up borders again. The process of providing health records is not standardized, making the process different for each country visited.", 
-      "Vaxport aims to simplify this process digitally. The application is designed to send user-uploaded vaccination record image files to government database to verify that the user is truly vaccinated. This provides a secure method of knowing that vaccination records are not falsified, as well as removing the need to carry a physical record card.", 
-      "A few initial assumptions we've made while building this app were:",
-      "1. The app is built for international travelers so they require a passport",
-      "2. A government database exists where Vaxport app is able to interact with, and obtain verified user data. We will simulate this data since we don't have direct access to government databases",
-      "3. Users are fully vaccinated, not partially",
-      "In the future we would like to work towards the following",
-      "1. Incorporate image to text recognition for uploaded records, which will add an extra layer of verifying user records",
-      "2. Connect to international databases that contain COVID vaccinated individuals",
+      {
+        sectionTitle: "Intro",
+        content: ["Vaxport is a mobile application designed to serve as a digital vaccine passport. With vaccines rolling out internationally, countries are starting to open up borders again. The process of providing health records is not standardized, making the process different for each country visited."]
+      },
+      {
+        sectionTitle: "Objective",
+        content: ["Vaxport aims to simplify the vaccination verification process digitally. The application will send user-uploaded vaccination record images to government databases, which verify that the user is  vaccinated. Ultimately, this data can be used to check the user's healths and determine next steps (i.e. full quarantine, shortened quarantine, etc)."]
+      }, 
+      {
+        sectionTitle: "Assumptions",
+        content: ["A few initial assumptions we've made while building this app were:"],
+        list: [
+          "User is an international traveler, meaning they  are in possession of a valid passport",
+          "A government database exists where Vaxport app is able to interact with to obtain verified user data.",
+          "User is fully vaccinated (not partially)",
+          "User has access to working technologies (internet access & phone w/camera) to access the web application",
+        ]
+      },
+      {
+        sectionTitle: "Technologies Used",
+        content: [
+          "React is used for the front end of the application for multiple reasons. Asides from the fast performance of the React library, it has great community resources such as the react-webcam and react-qr-scanner packages. This enabled faster deployment of a working prototype which would not have been possible if the entire camera interface had to be programmed.",
+          "On the back end, Firebase is used. Firebase was chosen for the ease of implementation to robust back end services. Features used include: Firebase Authentication, Firebase Firestore Database, and the Firebase Storage for cloud image storing.",
+          "For additional features, we've used the NewsAPI to share the most up to date news around the world. The API integration is not visible in the live demo due to a subscription requirement for live deployed applications."
+        ]
+      },
+      {
+        sectionTitle: "Challenges",
+        content: [
+          "We ran across a few challenges through the development of this application.",
+          "The first challenge was to determine if this should be a web application or a native application. A few factors went into considerations, including: functionality, security, compatibility with platforms, maintenance, deployment time, and app store approval. Since the nature of this application was to target international travelers, accesibility was an important factor. Furthermore, for the purpose of a hackathon, it was important that we have a functional demo product. As a result, we decided on utilizing React to build a web application which is much easier to build and more compatible with devices around the world than a native app.",
+          "Another challenge was the short amount of time we had (24 hours) to deploy a working demo for the hackathon. As the only developer on the team, I had to strategically plan the application under a short amount of time with my team which consisted of two other UX designers. It was critical that I didn't just rush into the application without thinking. Although this application does have a highly complex architecture design, it was imperative that I don't underestimate the problem from the start.",
+          "Finally, implementation of the camera interface, QR generator, and the QR scanner was another hurdle. Since this was a web application using React, we did not have readily-available device components that React Native offers out of the box. Thankfully, similar camera technologies existed on NPM. It was my first time utilizing these technologies, so it took time to understand how each would work within the stack, select the correct packages, and initialize the packages with correct dependencies.", 
+          "Overall it was a great learning experience and I found very cool packages to work with!"
+        ]
+      },
+      {
+        sectionTitle: "Going Forward",
+        content: ["In the future we would like to work towards the following:"],
+        list: [
+          "Considering the use of utilizing a native app builder such as React Native or Flutter. The web app is great for accessibility and fast deployment, but an actual app will have better speed, stability, cleaner functionality with native mobile features, and offline availability.",
+          "Incorporate image to text recognition for uploaded records, which will add an extra layer of verifying user records. This will eventually be a key step towards automating the vaccination verification.",
+          "Work with the Canadian government to start connecting to health database systems. Work within North America first and then move outwards. Connect to international databases that contain COVID vaccinated individuals.",
+        ]
+      },
+      {
+        sectionTitle: "",
+        content: ["Vaxport was built for TOHacks 2021 Hackathon, with two UX designers and myself as the dev. A large portion of it was built in the 24h hackathon, with a few touchups afterwards."]
+      }
+      
+      
+      
 
-      "Vaxport was built for TOHacks 2021 Hackathon, with two UX designers and myself as the dev. A large portion of it was built in the 24h hackathon, with a few touchups afterwards."
+      
     ],
     stack: "React | Firebase (Auth, Firestore Database, Storage) | SASS | API-Integration",
     github: "https://github.com/rohkevin/vaxport",
@@ -101,7 +144,43 @@ export const projects = [
     id: "project02",
     name: "Grow Up",
     summary: "A journalist site made by young adults, for young adults, on growing up and the steps of becoming \"more\" adult",
-    description: ["You're in your twenties and you just finished college / university / in your first or second job. You feel like you've got a few things figured out but there's still a ton of other things you feel unconfident about. Does this describe you? Well you're on the right track, so are we! This website is dedicated to those of us feeling lost, need a bit of guidance, or could use another \"life-hack\". This is a blog on growing up, and we share a bit of our insight on what we've found out so far.", "The purpose of this blog was to create a journalist site for a client on daily topics for an adult. The client requested ad-space allocated.", "The blog is built using React with its context API. Users can be authenticated using Firebase Auth, allowing sign-up through email or Google. Authentication levels are currently restricted to those who have new blog-writing rights, managed through a private context. All posts are managed through Firebase's Firestore Database, with write access to only authenticated users."],
+    
+    description: [
+      {
+        sectionTitle: "Intro",
+        content: ["GrowUp is an educational resource hub on topics such as financial literacy, housing markets, entertainment, life advisory, and more."]
+      },
+      {
+        sectionTitle: "Objective",
+        content: ["The client requested a site where they would be able to have multiple journalists write columns on various topics. A few of the requirements included user-authentication, journalist writing privileges, administrative access for the client, fast and responsive application, and blank HTML space to accommodate ads in the future."]
+      }, 
+      {
+        sectionTitle: "Technologies Used",
+        content: [
+          "The blog is built using React with its powerful context API. Users can be authenticated using Firebase Auth, allowing sign-up through email or Google. Authentication levels are currently restricted to those who have new blog-writing rights, managed through a private context. All posts are managed through Firebase's Firestore Database, with write access to only authenticated users.",
+          "When it comes to handling the application resources, a web host (Firebase) is used. The target audience is currently only within the client's country (Canada), and so a geolocated web host is better suited. Further more, the client did not predict the website to have exponential growth in its starting stages, and so a CDN is not required."
+        ]
+      },
+      {
+        sectionTitle: "Challenges",
+        content: [
+          "To deliver a successful product, we had to tackle performance as well as accessibility.",
+          "To optimize performance, it was critical to identify what utilizes the highest computing power and memory when rendering.",
+          "One of these were images, where excessively large images were loaded on page load. Ideally, the images would be compressed files using GUI tools like ImageOptim or Squoosh. This would've been a potential solution since our site was small enough to handle all the manual image optimizations. However, images on GrowUp were being rendered through an external image API. This meant querying the right image sizes was critical to having optimized images. By utilizing React Hooks, the images were rendered such that it would not exceed the maximum window size. To further reduce the time taken to render image components, JSX elements were rendered with initialized width and height that created placeholders for images, reducing the cumulative layout shift at page load.",
+          "For accessibility, we made a conscious effort to follow the guidelines outlined by WCAG (Web Content Accessibility Guideline) developed through the W3C Process. This included creating aria-labels where text labels are not visible, alt text for images, utilizing the correct HTML elements for their functionalities (<button> tags for buttons, etc.), and working towards sufficient contrast ratios between backgrounds and the components. This was a challenge in a sense that accessibility is not always the first thing on a programmer's mind when creating an application. By going over the code and reviewing the guidelines, it allowed me to ensure inclusivity through good practices.",
+        ]
+      },
+      {
+        sectionTitle: "Going Forward",
+        content: ["We are currently launching production of this site. I am excited to see what challenges may arise in the production setting. With that said, a few notes going forward with this project:"],
+        list: [
+          "Tracking production related issues by wrapping the application with tools that give observability like Splunk. Setting error boundaries to capture points of failure.",
+          "Implementing Google Anayltics to analyse user traffic and other metrics",
+          "Continuously working with the client to get a iterative feedback loop going"
+        ]
+      },
+
+    ],
     stack: "React | Firebase (Auth, Firestore)",
     github: "https://github.com/rohkevin/growup-v2",
     live: "https://grow-up-app.web.app/",

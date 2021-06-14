@@ -51,12 +51,34 @@ const ProjectPage = () => {
 
           <div className="non-media">
             {
+              description.map((section)=> {
+                const { sectionTitle, content } = section;
+                return (
+                  <div key={`${id}-${sectionTitle}`} className="description-section-container">
+                    <p className="h5">{sectionTitle}</p>
+                    {content.map((line, index) => (
+                      <p key={`${id}-${sectionTitle}-content-${index}`} className="body1 description-line">{line}</p>
+                    ))}
+                    {section.list && (
+                      <ol>
+                        {section.list.map((listItem, index) => <li key={`${sectionTitle}-listItem-${index}`} className="body1">{listItem}</li>)}
+                      </ol>
+                    )}
+                  </div>
+                )
+              })
+                
+              
+            }
+          </div>
+          {/* <div className="non-media">
+            {
               description.map((line, index)=>(
               <Fragment key={`descriptionline${index}`}>
                 <p className="body1">{line}</p><br/>
               </Fragment>))
             }
-          </div>
+          </div> */}
 
         </div>
       </main>

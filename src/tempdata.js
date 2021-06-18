@@ -202,9 +202,12 @@ export const projects = [
   {
     id: "project03",
     name: "Personal Website",
-    summary: "Version 3 of my personal website! This is what you're currently seeing.",
+    summary: "Version 3 of my personal website. This is what you're currently seeing.",
     description: [
-      "You are currently viewing this project! Previous versions were built more for hobby, until I realized I could see myself doing this as a job."
+      {
+        content: ["You are currently viewing the live version of this website. Previous versions were built out of interest in web development. Currently I mainly use this site to showcase projects and a few of my hobbies."]
+      },
+
     ],
     stack: "React | Sass | Netlify",
     github: "https://github.com/rohkevin/kevinroh.ca",
